@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		828F24F723B7A1FA00B87743 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F24F623B7A1FA00B87743 /* AppDelegate.swift */; };
+		828F24F923B7A1FA00B87743 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F24F823B7A1FA00B87743 /* SceneDelegate.swift */; };
+		828F24FB23B7A1FA00B87743 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F24FA23B7A1FA00B87743 /* ContentView.swift */; };
+		828F24FD23B7A1FB00B87743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 828F24FC23B7A1FB00B87743 /* Assets.xcassets */; };
+		828F250023B7A1FB00B87743 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 828F24FF23B7A1FB00B87743 /* Preview Assets.xcassets */; };
+		828F250323B7A1FB00B87743 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 828F250123B7A1FB00B87743 /* LaunchScreen.storyboard */; };
+		828F250E23B7A1FB00B87743 /* LolWaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F250D23B7A1FB00B87743 /* LolWaterTests.swift */; };
+		828F251923B7A1FB00B87743 /* LolWaterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F251823B7A1FB00B87743 /* LolWaterUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		828F250A23B7A1FB00B87743 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 828F24EB23B7A1FA00B87743 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 828F24F223B7A1FA00B87743;
+			remoteInfo = LolWater;
+		};
+		828F251523B7A1FB00B87743 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 828F24EB23B7A1FA00B87743 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 828F24F223B7A1FA00B87743;
+			remoteInfo = LolWater;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		828F24F323B7A1FA00B87743 /* LolWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LolWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		828F24F623B7A1FA00B87743 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		828F24F823B7A1FA00B87743 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		828F24FA23B7A1FA00B87743 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		828F24FC23B7A1FB00B87743 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		828F24FF23B7A1FB00B87743 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		828F250223B7A1FB00B87743 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		828F250423B7A1FB00B87743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		828F250923B7A1FB00B87743 /* LolWaterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LolWaterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		828F250D23B7A1FB00B87743 /* LolWaterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolWaterTests.swift; sourceTree = "<group>"; };
+		828F250F23B7A1FB00B87743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		828F251423B7A1FB00B87743 /* LolWaterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LolWaterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		828F251823B7A1FB00B87743 /* LolWaterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolWaterUITests.swift; sourceTree = "<group>"; };
+		828F251A23B7A1FB00B87743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		828F24F023B7A1FA00B87743 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		828F250623B7A1FB00B87743 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		828F251123B7A1FB00B87743 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		828F24EA23B7A1FA00B87743 = {
+			isa = PBXGroup;
+			children = (
+				828F24F523B7A1FA00B87743 /* LolWater */,
+				828F250C23B7A1FB00B87743 /* LolWaterTests */,
+				828F251723B7A1FB00B87743 /* LolWaterUITests */,
+				828F24F423B7A1FA00B87743 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		828F24F423B7A1FA00B87743 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				828F24F323B7A1FA00B87743 /* LolWater.app */,
+				828F250923B7A1FB00B87743 /* LolWaterTests.xctest */,
+				828F251423B7A1FB00B87743 /* LolWaterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		828F24F523B7A1FA00B87743 /* LolWater */ = {
+			isa = PBXGroup;
+			children = (
+				828F24F623B7A1FA00B87743 /* AppDelegate.swift */,
+				828F24F823B7A1FA00B87743 /* SceneDelegate.swift */,
+				828F24FA23B7A1FA00B87743 /* ContentView.swift */,
+				828F24FC23B7A1FB00B87743 /* Assets.xcassets */,
+				828F250123B7A1FB00B87743 /* LaunchScreen.storyboard */,
+				828F250423B7A1FB00B87743 /* Info.plist */,
+				828F24FE23B7A1FB00B87743 /* Preview Content */,
+			);
+			path = LolWater;
+			sourceTree = "<group>";
+		};
+		828F24FE23B7A1FB00B87743 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				828F24FF23B7A1FB00B87743 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		828F250C23B7A1FB00B87743 /* LolWaterTests */ = {
+			isa = PBXGroup;
+			children = (
+				828F250D23B7A1FB00B87743 /* LolWaterTests.swift */,
+				828F250F23B7A1FB00B87743 /* Info.plist */,
+			);
+			path = LolWaterTests;
+			sourceTree = "<group>";
+		};
+		828F251723B7A1FB00B87743 /* LolWaterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				828F251823B7A1FB00B87743 /* LolWaterUITests.swift */,
+				828F251A23B7A1FB00B87743 /* Info.plist */,
+			);
+			path = LolWaterUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		828F24F223B7A1FA00B87743 /* LolWater */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 828F251D23B7A1FB00B87743 /* Build configuration list for PBXNativeTarget "LolWater" */;
+			buildPhases = (
+				828F24EF23B7A1FA00B87743 /* Sources */,
+				828F24F023B7A1FA00B87743 /* Frameworks */,
+				828F24F123B7A1FA00B87743 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LolWater;
+			productName = LolWater;
+			productReference = 828F24F323B7A1FA00B87743 /* LolWater.app */;
+			productType = "com.apple.product-type.application";
+		};
+		828F250823B7A1FB00B87743 /* LolWaterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 828F252023B7A1FB00B87743 /* Build configuration list for PBXNativeTarget "LolWaterTests" */;
+			buildPhases = (
+				828F250523B7A1FB00B87743 /* Sources */,
+				828F250623B7A1FB00B87743 /* Frameworks */,
+				828F250723B7A1FB00B87743 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				828F250B23B7A1FB00B87743 /* PBXTargetDependency */,
+			);
+			name = LolWaterTests;
+			productName = LolWaterTests;
+			productReference = 828F250923B7A1FB00B87743 /* LolWaterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		828F251323B7A1FB00B87743 /* LolWaterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 828F252323B7A1FB00B87743 /* Build configuration list for PBXNativeTarget "LolWaterUITests" */;
+			buildPhases = (
+				828F251023B7A1FB00B87743 /* Sources */,
+				828F251123B7A1FB00B87743 /* Frameworks */,
+				828F251223B7A1FB00B87743 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				828F251623B7A1FB00B87743 /* PBXTargetDependency */,
+			);
+			name = LolWaterUITests;
+			productName = LolWaterUITests;
+			productReference = 828F251423B7A1FB00B87743 /* LolWaterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		828F24EB23B7A1FA00B87743 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Daniel Gaeta";
+				TargetAttributes = {
+					828F24F223B7A1FA00B87743 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					828F250823B7A1FB00B87743 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 828F24F223B7A1FA00B87743;
+					};
+					828F251323B7A1FB00B87743 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 828F24F223B7A1FA00B87743;
+					};
+				};
+			};
+			buildConfigurationList = 828F24EE23B7A1FA00B87743 /* Build configuration list for PBXProject "LolWater" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 828F24EA23B7A1FA00B87743;
+			productRefGroup = 828F24F423B7A1FA00B87743 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				828F24F223B7A1FA00B87743 /* LolWater */,
+				828F250823B7A1FB00B87743 /* LolWaterTests */,
+				828F251323B7A1FB00B87743 /* LolWaterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		828F24F123B7A1FA00B87743 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				828F250323B7A1FB00B87743 /* LaunchScreen.storyboard in Resources */,
+				828F250023B7A1FB00B87743 /* Preview Assets.xcassets in Resources */,
+				828F24FD23B7A1FB00B87743 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		828F250723B7A1FB00B87743 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		828F251223B7A1FB00B87743 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		828F24EF23B7A1FA00B87743 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				828F24F723B7A1FA00B87743 /* AppDelegate.swift in Sources */,
+				828F24F923B7A1FA00B87743 /* SceneDelegate.swift in Sources */,
+				828F24FB23B7A1FA00B87743 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		828F250523B7A1FB00B87743 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				828F250E23B7A1FB00B87743 /* LolWaterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		828F251023B7A1FB00B87743 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				828F251923B7A1FB00B87743 /* LolWaterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		828F250B23B7A1FB00B87743 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 828F24F223B7A1FA00B87743 /* LolWater */;
+			targetProxy = 828F250A23B7A1FB00B87743 /* PBXContainerItemProxy */;
+		};
+		828F251623B7A1FB00B87743 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 828F24F223B7A1FA00B87743 /* LolWater */;
+			targetProxy = 828F251523B7A1FB00B87743 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		828F250123B7A1FB00B87743 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				828F250223B7A1FB00B87743 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		828F251B23B7A1FB00B87743 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		828F251C23B7A1FB00B87743 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		828F251E23B7A1FB00B87743 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"LolWater/Preview Content\"";
+				DEVELOPMENT_TEAM = ZMA9KZ76AN;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = LolWater/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dangaeta.LolWater;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		828F251F23B7A1FB00B87743 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"LolWater/Preview Content\"";
+				DEVELOPMENT_TEAM = ZMA9KZ76AN;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = LolWater/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dangaeta.LolWater;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		828F252123B7A1FB00B87743 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZMA9KZ76AN;
+				INFOPLIST_FILE = LolWaterTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dangaeta.LolWaterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LolWater.app/LolWater";
+			};
+			name = Debug;
+		};
+		828F252223B7A1FB00B87743 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZMA9KZ76AN;
+				INFOPLIST_FILE = LolWaterTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dangaeta.LolWaterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LolWater.app/LolWater";
+			};
+			name = Release;
+		};
+		828F252423B7A1FB00B87743 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZMA9KZ76AN;
+				INFOPLIST_FILE = LolWaterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dangaeta.LolWaterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LolWater;
+			};
+			name = Debug;
+		};
+		828F252523B7A1FB00B87743 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZMA9KZ76AN;
+				INFOPLIST_FILE = LolWaterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dangaeta.LolWaterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LolWater;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		828F24EE23B7A1FA00B87743 /* Build configuration list for PBXProject "LolWater" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				828F251B23B7A1FB00B87743 /* Debug */,
+				828F251C23B7A1FB00B87743 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		828F251D23B7A1FB00B87743 /* Build configuration list for PBXNativeTarget "LolWater" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				828F251E23B7A1FB00B87743 /* Debug */,
+				828F251F23B7A1FB00B87743 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		828F252023B7A1FB00B87743 /* Build configuration list for PBXNativeTarget "LolWaterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				828F252123B7A1FB00B87743 /* Debug */,
+				828F252223B7A1FB00B87743 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		828F252323B7A1FB00B87743 /* Build configuration list for PBXNativeTarget "LolWaterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				828F252423B7A1FB00B87743 /* Debug */,
+				828F252523B7A1FB00B87743 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 828F24EB23B7A1FA00B87743 /* Project object */;
+}
