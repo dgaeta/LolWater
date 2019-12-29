@@ -1,0 +1,19 @@
+//
+//  lolWaterData.json
+//  LolWater
+//
+//  Created by Daniel Gaeta on 12/28/19.
+//  Copyright © 2019 Daniel Gaeta. All rights reserved.
+//
+
+{
+    "phone": "8156510526"
+    "name": "Dan Gaeta",
+    "email": "gaeta.d@gmail.com",
+    "cupsPerHour": [
+        0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0
+    ]
+    "badges": ["First Tracked Cup", "2 cups in 1 hour"]
+}
