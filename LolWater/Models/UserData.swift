@@ -12,6 +12,9 @@ import Combine
 final class UserData: ObservableObject {
     @Published var amCups = Array(repeating: 0, count: 12)
     @Published var pmCups = Array(repeating: 0, count: 12)
+    @Published var weekCups = Array(repeating: 0, count: 7)
+    @Published var todayIndex = 4
     @Published var activeHour = 4
     @Published var activeHourSuffix = "PM"
+    @Published var profile = Profile.default
 }

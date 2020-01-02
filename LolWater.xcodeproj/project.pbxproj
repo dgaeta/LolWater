@@ -21,6 +21,10 @@
 		828F253423B7DCBB00B87743 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F253323B7DCBB00B87743 /* Data.swift */; };
 		828F253623B7DDA500B87743 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F253523B7DDA500B87743 /* Day.swift */; };
 		828F253923B7FE1A00B87743 /* GraphCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F253823B7FE1A00B87743 /* GraphCapsule.swift */; };
+		828F253B23BE8C1400B87743 /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F253A23BE8C1400B87743 /* Week.swift */; };
+		828F253D23BEAD6A00B87743 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F253C23BEAD6A00B87743 /* Profile.swift */; };
+		828F253F23BEB19F00B87743 /* ProfileSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F253E23BEB19F00B87743 /* ProfileSummary.swift */; };
+		828F254123BEB52B00B87743 /* ProfileEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F254023BEB52B00B87743 /* ProfileEditor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,10 @@
 		828F253323B7DCBB00B87743 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		828F253523B7DDA500B87743 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		828F253823B7FE1A00B87743 /* GraphCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphCapsule.swift; sourceTree = "<group>"; };
+		828F253A23BE8C1400B87743 /* Week.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
+		828F253C23BEAD6A00B87743 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		828F253E23BEB19F00B87743 /* ProfileSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSummary.swift; sourceTree = "<group>"; };
+		828F254023BEB52B00B87743 /* ProfileEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +126,6 @@
 				828F252623B7A24400B87743 /* Home */,
 				828F24F623B7A1FA00B87743 /* AppDelegate.swift */,
 				828F24F823B7A1FA00B87743 /* SceneDelegate.swift */,
-				828F253523B7DDA500B87743 /* Day.swift */,
 				828F24FC23B7A1FB00B87743 /* Assets.xcassets */,
 				828F250123B7A1FB00B87743 /* LaunchScreen.storyboard */,
 				828F250423B7A1FB00B87743 /* Info.plist */,
@@ -165,6 +172,8 @@
 			isa = PBXGroup;
 			children = (
 				828F252A23B7A2A300B87743 /* ProfileHost.swift */,
+				828F253E23BEB19F00B87743 /* ProfileSummary.swift */,
+				828F254023BEB52B00B87743 /* ProfileEditor.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -174,6 +183,7 @@
 			children = (
 				828F252D23B7B62400B87743 /* UserData.swift */,
 				828F253323B7DCBB00B87743 /* Data.swift */,
+				828F253C23BEAD6A00B87743 /* Profile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,7 +199,9 @@
 		828F253723B7F4CC00B87743 /* Supporting Views */ = {
 			isa = PBXGroup;
 			children = (
+				828F253523B7DDA500B87743 /* Day.swift */,
 				828F253823B7FE1A00B87743 /* GraphCapsule.swift */,
+				828F253A23BE8C1400B87743 /* Week.swift */,
 			);
 			path = "Supporting Views";
 			sourceTree = "<group>";
@@ -328,12 +340,16 @@
 			files = (
 				828F253423B7DCBB00B87743 /* Data.swift in Sources */,
 				828F252E23B7B62400B87743 /* UserData.swift in Sources */,
+				828F254123BEB52B00B87743 /* ProfileEditor.swift in Sources */,
 				828F253623B7DDA500B87743 /* Day.swift in Sources */,
 				828F24F723B7A1FA00B87743 /* AppDelegate.swift in Sources */,
+				828F253D23BEAD6A00B87743 /* Profile.swift in Sources */,
 				828F24F923B7A1FA00B87743 /* SceneDelegate.swift in Sources */,
+				828F253B23BE8C1400B87743 /* Week.swift in Sources */,
 				828F253923B7FE1A00B87743 /* GraphCapsule.swift in Sources */,
 				828F252823B7A25C00B87743 /* Home.swift in Sources */,
 				828F252B23B7A2A300B87743 /* ProfileHost.swift in Sources */,
+				828F253F23BEB19F00B87743 /* ProfileSummary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

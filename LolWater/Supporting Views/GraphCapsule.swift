@@ -9,9 +9,9 @@
 import SwiftUI
 
 struct GraphCapsule: View {
-    var hour: String
-    var hourSuffix: String
+    var label: String
     var cups: Int
+    var targetCups: Int
     var active: Bool
     
     var body: some View {
@@ -34,8 +34,16 @@ struct GraphCapsule: View {
                         alignment: .bottom
                     )
             )
-            
-            Text(hour + "\(self.hourSuffix)")
+            .overlay(
+                Capsule(style: .continuous)
+                    .stroke(Color.green, style: StrokeStyle(lineWidth: 5, dash: [10]))
+                    .frame(
+                        height: CGFloat(10 * targetCups),
+                        alignment: .bottom
+                    )
+            )
+        
+            Text("\(self.label)")
                 .font(.caption)
         }
     }
@@ -44,8 +52,8 @@ struct GraphCapsule: View {
 struct GraphCapsule_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            GraphCapsule(hour: "2am", hourSuffix: "am", cups: 2, active: true)
-            GraphCapsule(hour: "6pm", hourSuffix: "pm", cups: 6, active: false)
+            GraphCapsule(label: "2am", cups: 2, targetCups: 8, active: true)
+            GraphCapsule(label: "6pm", cups: 6, targetCups: 8, active: false)
         }
     }
 }

@@ -22,6 +22,9 @@ struct Home: View {
         } else {
             self.userData.pmCups[self.userData.activeHour] += 1
         }
+        if self.userData.weekCups[self.userData.todayIndex] < 10 {
+            self.userData.weekCups[self.userData.todayIndex] += 1
+        }
         print(self.userData.pmCups[self.userData.activeHour])
     }
     
@@ -38,6 +41,11 @@ struct Home: View {
                 self.userData.pmCups[self.userData.activeHour] -= 1
             }
         }
+        
+        if self.userData.weekCups[self.userData.todayIndex] > 0 {
+            self.userData.weekCups[self.userData.todayIndex] -= 1
+        }
+        
         print(self.userData.pmCups[self.userData.activeHour])
     }
     
@@ -81,7 +89,7 @@ struct Home: View {
         NavigationView {
             
             VStack {
-                Day()
+                Week()
                     .frame(height: 300)
                     .padding(.bottom, 70.0)
                 
@@ -98,6 +106,7 @@ struct Home: View {
             .navigationBarItems(trailing: profileButton)
             .sheet(isPresented: $showingProfile) {
                 ProfileHost()
+                .environmentObject(self.userData)
             }
         }
     }

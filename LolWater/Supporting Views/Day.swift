@@ -23,9 +23,9 @@ struct Day: View {
                 ForEach((0...11), id: \.self) { hour in
                     Button(action: { self.userData.activeHour = hour; self.userData.activeHourSuffix = "AM" }) {
                         GraphCapsule(
-                            hour: self.labels[hour],
-                            hourSuffix: "AM",
+                            label: "\(self.labels[hour])AM",
                             cups: self.userData.amCups[hour],
+                            targetCups: 10,
                             active: self.userData.activeHour == hour && self.userData.activeHourSuffix == "AM")
                     }
                 }
@@ -34,9 +34,9 @@ struct Day: View {
               ForEach((0...11), id: \.self) { hour in
                 Button(action: { self.userData.activeHour = hour; self.userData.activeHourSuffix = "PM" }) {
                   GraphCapsule(
-                    hour: self.labels[hour],
-                    hourSuffix: "PM",
+                    label: "\(self.labels[hour])PM",
                     cups: self.userData.pmCups[hour],
+                    targetCups: 10,
                     active: self.userData.activeHour == hour && self.userData.activeHourSuffix == "PM")
                 }
               }
@@ -51,6 +51,6 @@ struct Day: View {
 struct Day_Previews: PreviewProvider {
 
     static var previews: some View {
-        Day()
+        Day().environmentObject(UserData())
     }
 }
