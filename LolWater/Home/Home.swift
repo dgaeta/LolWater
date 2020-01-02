@@ -11,18 +11,34 @@ import SwiftUI
 struct Home: View {
     @EnvironmentObject var userData: UserData
     @State var showingProfile = false
-    @State var cups = 0
-    @State var currentHour = 12
 
     
     func increment() {
-        self.cups += 1
+        print(self.userData.activeHour)
+        print(self.userData.activeHourSuffix)
+        print(self.userData.pmCups[self.userData.activeHour])
+        if self.userData.activeHourSuffix == "AM" {
+            self.userData.amCups[self.userData.activeHour] += 1
+        } else {
+            self.userData.pmCups[self.userData.activeHour] += 1
+        }
+        print(self.userData.pmCups[self.userData.activeHour])
     }
     
     func decrement() {
-        if self.cups > 0 {
-            self.cups -= 1
+        print(self.userData.activeHour)
+        print(self.userData.activeHourSuffix)
+        print(self.userData.pmCups[self.userData.activeHour])
+        if self.userData.activeHourSuffix == "AM" {
+            if self.userData.amCups[self.userData.activeHour] > 0 {
+               self.userData.amCups[self.userData.activeHour] -= 1
+            }
+        } else {
+            if self.userData.pmCups[self.userData.activeHour] > 0 {
+                self.userData.pmCups[self.userData.activeHour] -= 1
+            }
         }
+        print(self.userData.pmCups[self.userData.activeHour])
     }
     
     var profileButton: some View {
@@ -35,7 +51,7 @@ struct Home: View {
     }
     
     var addButton: some View {
-        Button(action: increment) {
+        Button(action: { self.increment() }) {
             Image(systemName: "plus.circle.fill")
                 .imageScale(.large)
                 .accessibility(label: Text("Add Cup"))
@@ -44,7 +60,7 @@ struct Home: View {
     }
     
     var removeButton: some View {
-        Button(action: decrement) {
+        Button(action: { self.decrement() }) {
             Image(systemName: "minus.circle.fill")
                 .imageScale(.large)
                 .accessibility(label: Text("Add Cup"))
@@ -52,32 +68,31 @@ struct Home: View {
         }
     }
     
-    var amCups: [Int] = Array(0...11)
-    var pmCups: [Int] = Array(0...11)
-    var now: Int = 17
+//    var df : DateFormatter = {
+//        let formatter = DateFormatter()
+//        formatter.dateFormat = "a" // "a" prints "pm" or "am"
+//        return formatter
+//    }()
+//    df.dateFormat = "a" // "a" prints "pm" or "am"
+//    var hourString = formatter.string(from: Date()) // "12 AM"
+    // Calendar.current.component(.hour, from: Date())
     
     var body: some View {
         NavigationView {
             
             VStack {
-                Day(
-                    amHours: amCups,
-                    pmHours: pmCups)
+                Day()
                     .frame(height: 300)
                     .padding(.bottom, 70.0)
                 
-                Text("\(self.cups)")
-                    .font(.caption)
                 HStack {
                     addButton
                     removeButton
                 }
-                Text("Button here to increase water count")
+                Text("Cups you drank")
                 
                 Spacer()
             }
-            
-                
             
             .navigationBarTitle(Text("LolWater"))
             .navigationBarItems(trailing: profileButton)
@@ -89,6 +104,7 @@ struct Home: View {
 }
 
 struct Home_Previews: PreviewProvider {
+    
     static var previews: some View {
         Home().environmentObject(UserData())
     }

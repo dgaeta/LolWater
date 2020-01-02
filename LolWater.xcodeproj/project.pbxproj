@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		828F24F723B7A1FA00B87743 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F24F623B7A1FA00B87743 /* AppDelegate.swift */; };
 		828F24F923B7A1FA00B87743 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F24F823B7A1FA00B87743 /* SceneDelegate.swift */; };
-		828F24FB23B7A1FA00B87743 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F24FA23B7A1FA00B87743 /* ContentView.swift */; };
 		828F24FD23B7A1FB00B87743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 828F24FC23B7A1FB00B87743 /* Assets.xcassets */; };
 		828F250023B7A1FB00B87743 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 828F24FF23B7A1FB00B87743 /* Preview Assets.xcassets */; };
 		828F250323B7A1FB00B87743 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 828F250123B7A1FB00B87743 /* LaunchScreen.storyboard */; };
@@ -45,7 +44,6 @@
 		828F24F323B7A1FA00B87743 /* LolWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LolWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		828F24F623B7A1FA00B87743 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		828F24F823B7A1FA00B87743 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		828F24FA23B7A1FA00B87743 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		828F24FC23B7A1FB00B87743 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		828F24FF23B7A1FB00B87743 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		828F250223B7A1FB00B87743 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -120,7 +118,6 @@
 				828F252623B7A24400B87743 /* Home */,
 				828F24F623B7A1FA00B87743 /* AppDelegate.swift */,
 				828F24F823B7A1FA00B87743 /* SceneDelegate.swift */,
-				828F24FA23B7A1FA00B87743 /* ContentView.swift */,
 				828F253523B7DDA500B87743 /* Day.swift */,
 				828F24FC23B7A1FB00B87743 /* Assets.xcassets */,
 				828F250123B7A1FB00B87743 /* LaunchScreen.storyboard */,
@@ -337,7 +334,6 @@
 				828F253923B7FE1A00B87743 /* GraphCapsule.swift in Sources */,
 				828F252823B7A25C00B87743 /* Home.swift in Sources */,
 				828F252B23B7A2A300B87743 /* ProfileHost.swift in Sources */,
-				828F24FB23B7A1FA00B87743 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

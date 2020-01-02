@@ -10,6 +10,8 @@ import SwiftUI
 import Combine
 
 final class UserData: ObservableObject {
-    @Published var waterThisWeek = Array(repeating: 0, count: 24)
-    // @Published var lolWater = lolWaterData
+    @Published var amCups = Array(repeating: 0, count: 12)
+    @Published var pmCups = Array(repeating: 0, count: 12)
+    @Published var activeHour = 4
+    @Published var activeHourSuffix = "PM"
 }
