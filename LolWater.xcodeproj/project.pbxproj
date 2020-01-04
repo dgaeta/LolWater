@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		824B159F23BF9D4500666BFD /* BadgeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B159E23BF9D4500666BFD /* BadgeBackground.swift */; };
+		824B15A123BF9EA600666BFD /* BadgeSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15A023BF9EA600666BFD /* BadgeSymbol.swift */; };
+		824B15A323C1142900666BFD /* RotatedBadgeSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15A223C1142900666BFD /* RotatedBadgeSymbol.swift */; };
+		824B15A623C119DB00666BFD /* WaterBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15A523C119DB00666BFD /* WaterBadge.swift */; };
 		828F24F723B7A1FA00B87743 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F24F623B7A1FA00B87743 /* AppDelegate.swift */; };
 		828F24F923B7A1FA00B87743 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F24F823B7A1FA00B87743 /* SceneDelegate.swift */; };
 		828F24FD23B7A1FB00B87743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 828F24FC23B7A1FB00B87743 /* Assets.xcassets */; };
@@ -25,6 +29,8 @@
 		828F253D23BEAD6A00B87743 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F253C23BEAD6A00B87743 /* Profile.swift */; };
 		828F253F23BEB19F00B87743 /* ProfileSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F253E23BEB19F00B87743 /* ProfileSummary.swift */; };
 		828F254123BEB52B00B87743 /* ProfileEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F254023BEB52B00B87743 /* ProfileEditor.swift */; };
+		828F254423BEBE7000B87743 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F254323BEBE7000B87743 /* Badge.swift */; };
+		828F254623BEBEA200B87743 /* HexagonParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F254523BEBEA200B87743 /* HexagonParameters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +51,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		824B159E23BF9D4500666BFD /* BadgeBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeBackground.swift; sourceTree = "<group>"; };
+		824B15A023BF9EA600666BFD /* BadgeSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeSymbol.swift; sourceTree = "<group>"; };
+		824B15A223C1142900666BFD /* RotatedBadgeSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatedBadgeSymbol.swift; sourceTree = "<group>"; };
+		824B15A523C119DB00666BFD /* WaterBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterBadge.swift; sourceTree = "<group>"; };
 		828F24F323B7A1FA00B87743 /* LolWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LolWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		828F24F623B7A1FA00B87743 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		828F24F823B7A1FA00B87743 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +79,8 @@
 		828F253C23BEAD6A00B87743 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		828F253E23BEB19F00B87743 /* ProfileSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSummary.swift; sourceTree = "<group>"; };
 		828F254023BEB52B00B87743 /* ProfileEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditor.swift; sourceTree = "<group>"; };
+		828F254323BEBE7000B87743 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
+		828F254523BEBEA200B87743 /* HexagonParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonParameters.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +108,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		824B15A423C1198B00666BFD /* Badge */ = {
+			isa = PBXGroup;
+			children = (
+				828F254223BEBE5C00B87743 /* BadgeBase */,
+				824B15A523C119DB00666BFD /* WaterBadge.swift */,
+			);
+			path = Badge;
+			sourceTree = "<group>";
+		};
 		828F24EA23B7A1FA00B87743 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +140,7 @@
 		828F24F523B7A1FA00B87743 /* LolWater */ = {
 			isa = PBXGroup;
 			children = (
+				824B15A423C1198B00666BFD /* Badge */,
 				828F253723B7F4CC00B87743 /* Supporting Views */,
 				828F252F23B7D6BB00B87743 /* Resources */,
 				828F252C23B7ABF400B87743 /* Models */,
@@ -204,6 +226,18 @@
 				828F253A23BE8C1400B87743 /* Week.swift */,
 			);
 			path = "Supporting Views";
+			sourceTree = "<group>";
+		};
+		828F254223BEBE5C00B87743 /* BadgeBase */ = {
+			isa = PBXGroup;
+			children = (
+				828F254323BEBE7000B87743 /* Badge.swift */,
+				828F254523BEBEA200B87743 /* HexagonParameters.swift */,
+				824B159E23BF9D4500666BFD /* BadgeBackground.swift */,
+				824B15A023BF9EA600666BFD /* BadgeSymbol.swift */,
+				824B15A223C1142900666BFD /* RotatedBadgeSymbol.swift */,
+			);
+			path = BadgeBase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,10 +372,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				828F254623BEBEA200B87743 /* HexagonParameters.swift in Sources */,
 				828F253423B7DCBB00B87743 /* Data.swift in Sources */,
 				828F252E23B7B62400B87743 /* UserData.swift in Sources */,
 				828F254123BEB52B00B87743 /* ProfileEditor.swift in Sources */,
 				828F253623B7DDA500B87743 /* Day.swift in Sources */,
+				824B15A323C1142900666BFD /* RotatedBadgeSymbol.swift in Sources */,
+				824B15A123BF9EA600666BFD /* BadgeSymbol.swift in Sources */,
+				824B15A623C119DB00666BFD /* WaterBadge.swift in Sources */,
 				828F24F723B7A1FA00B87743 /* AppDelegate.swift in Sources */,
 				828F253D23BEAD6A00B87743 /* Profile.swift in Sources */,
 				828F24F923B7A1FA00B87743 /* SceneDelegate.swift in Sources */,
@@ -349,6 +387,8 @@
 				828F253923B7FE1A00B87743 /* GraphCapsule.swift in Sources */,
 				828F252823B7A25C00B87743 /* Home.swift in Sources */,
 				828F252B23B7A2A300B87743 /* ProfileHost.swift in Sources */,
+				828F254423BEBE7000B87743 /* Badge.swift in Sources */,
+				824B159F23BF9D4500666BFD /* BadgeBackground.swift in Sources */,
 				828F253F23BEB19F00B87743 /* ProfileSummary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

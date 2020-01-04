@@ -29,6 +29,27 @@ struct ProfileSummary: View {
             Text("Seasonal Photos: \(self.profile.seasonalPhoto.rawValue)")
             
             Text("Goal Date: \(self.profile.goalDate, formatter: Self.goalFormat)")
+            
+            VStack(alignment: .leading) {
+                Text("Completed Badges")
+                    .font(.headline)
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        WaterBadge(name: "Beginner Badge")
+                        
+                        WaterBadge(name: "8 cups Badge")
+                            .hueRotation(Angle(degrees: 90))
+                        
+                        
+                        WaterBadge(name: "1 week Badge")
+                            .grayscale(0.5)
+                            .hueRotation(Angle(degrees: 45))
+                    }
+                }
+                .frame(height: 140)
+                
+            }
         }
     }
 }

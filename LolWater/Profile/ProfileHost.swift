@@ -11,7 +11,6 @@ import SwiftUI
 struct ProfileHost: View {
     @Environment(\.editMode) var mode
     @EnvironmentObject var userData: UserData
-    // To avoid updating the global app state before confirming any edits — such as while the user enters their name — the editing view operates on a copy of itself.
     @State var draftProfile = Profile.default
 
     var body: some View {
@@ -29,7 +28,7 @@ struct ProfileHost: View {
             }
             
             if self.mode?.wrappedValue == .inactive {
-                ProfileSummary(profile: draftProfile)
+                ProfileSummary(profile: userData.profile)
             } else {
                 ProfileEditor(profile: $draftProfile)
                 .onAppear {
