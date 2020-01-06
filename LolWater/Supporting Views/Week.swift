@@ -14,23 +14,69 @@ struct Week: View {
     
     var labels: [String] = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     
+    func increment() {
+        if self.userData.weekCups[self.userData.todayIndex] < 10 {
+            self.userData.weekCups[self.userData.todayIndex] += 1
+        }
+    }
+    
+    func decrement() {
+        if self.userData.weekCups[self.userData.todayIndex] > 0 {
+            self.userData.weekCups[self.userData.todayIndex] -= 1
+        }
+    }
+    
+    var addButton: some View {
+        Button(action: { self.increment() }) {
+            Image(systemName: "plus.circle.fill")
+                .imageScale(.large)
+                .accessibility(label: Text("Add Cup"))
+                .padding()
+        }
+    }
+    
+    var removeButton: some View {
+        Button(action: { self.decrement() }) {
+            Image(systemName: "minus.circle.fill")
+                .imageScale(.large)
+                .accessibility(label: Text("Add Cup"))
+                .padding()
+        }
+    }
+    
     var body: some View {
-        VStack {
-            Text("Cups of Water drank this week")
-                .font(.headline)
-                .padding(.leading, 15)
-                .padding(.top, 5)
+        GeometryReader { geometry in
+            VStack {
+            
             HStack(alignment: .bottom) {
                 ForEach((0...6), id: \.self) { dayIndex in
                     Button(action: { self.userData.todayIndex = dayIndex;}) {
-                        GraphCapsule(
-                            label: self.labels[dayIndex],
-                            cups: self.userData.weekCups[dayIndex],
-                            targetCups: self.dailyCupTarget,
-                            active: self.userData.todayIndex == dayIndex)
+                        
+                        VStack {
+                            ForEach(
+                                Array(repeating: 0, count: self.userData.weekCups[dayIndex] ),
+                                id: \.self
+                                ) {cup in
+                                    WaterCup().frame(
+                                        width: geometry.size.width/14,
+                                        height: geometry.size.height/19)
+                            }
+                        }
                     }
                 }
+            }.frame(height: geometry.size.height/2)
+                
+            HStack {
+                self.addButton
+                self.removeButton
             }
+            
+            Text("Cups of Water drank this week")
+            .font(.headline)
+            .padding(.leading, 15)
+            .padding(.top, 5)
+            }
+        
         }
     }
 }

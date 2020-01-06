@@ -13,8 +13,51 @@ struct Day: View {
     
     var labels: [String] = ["12", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"]
     
+    func increment() {
+        if self.userData.activeHourSuffix == "AM" {
+            self.userData.amCups[self.userData.activeHour] += 1
+        } else {
+            self.userData.pmCups[self.userData.activeHour] += 1
+        }
+    }
+    
+    func decrement() {
+        if self.userData.activeHourSuffix == "AM" {
+            if self.userData.amCups[self.userData.activeHour] > 0 {
+               self.userData.amCups[self.userData.activeHour] -= 1
+            }
+        } else {
+            if self.userData.pmCups[self.userData.activeHour] > 0 {
+                self.userData.pmCups[self.userData.activeHour] -= 1
+            }
+        }
+    }
+    
+    var addButton: some View {
+        Button(action: { self.increment() }) {
+            Image(systemName: "plus.circle.fill")
+                .imageScale(.large)
+                .accessibility(label: Text("Add Cup"))
+                .padding()
+        }
+    }
+    
+    var removeButton: some View {
+        Button(action: { self.decrement() }) {
+            Image(systemName: "minus.circle.fill")
+                .imageScale(.large)
+                .accessibility(label: Text("Add Cup"))
+                .padding()
+        }
+    }
+    
     var body: some View {
         VStack {
+            HStack {
+                addButton
+                removeButton
+            }
+            
             Text("Cups of Water drank today")
                 .font(.headline)
                 .padding(.leading, 15)
