@@ -13,6 +13,7 @@ struct Week: View {
     var dailyCupTarget: Int = 8
     
     var labels: [String] = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    var labels1: [String] = ["S", "M", "Tu", "W", "Th", "F", "S"]
     
     func increment() {
         if self.userData.weekCups[self.userData.todayIndex] < 10 {
@@ -53,6 +54,8 @@ struct Week: View {
                     Button(action: { self.userData.todayIndex = dayIndex;}) {
                         
                         VStack {
+                            Text(self.labels1[dayIndex])
+                                .font(.headline)
                             Person(lineWidth: CGFloat(2))
                             ForEach(
                                 Array(repeating: 0, count: self.userData.weekCups[dayIndex] ),
