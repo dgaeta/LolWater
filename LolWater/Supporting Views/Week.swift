@@ -49,36 +49,47 @@ struct Week: View {
         GeometryReader { geometry in
             VStack {
             
-            HStack(alignment: .bottom) {
-                ForEach((0...6), id: \.self) { dayIndex in
-                    Button(action: { self.userData.todayIndex = dayIndex;}) {
-                        
-                        VStack {
-                            Text(self.labels1[dayIndex])
-                                .font(.headline)
-                            Person(lineWidth: CGFloat(2))
-                            ForEach(
-                                Array(repeating: 0, count: self.userData.weekCups[dayIndex] ),
-                                id: \.self
-                                ) {cup in
-                                    WaterCup().frame(
-                                        width: geometry.size.width/14,
-                                        height: geometry.size.height/19)
+                HStack(alignment: .bottom) {
+                    
+                    ForEach((0...6), id: \.self) { dayIndex in
+                        Button(action: { self.userData.todayIndex = dayIndex;}) {
+                            
+                            VStack {
+                                Text(self.labels1[dayIndex])
+                                    .font(.headline)
+                                
+                                Person(lineWidth: CGFloat(2))
+                                
+                                ForEach(
+                                    Array(repeating: 0, count: self.userData.weekCups[dayIndex] ),
+                                    id: \.self
+                                    ) {cup in
+                                        WaterCup().frame(
+                                            width: geometry.size.width/14,
+                                            height: geometry.size.height/19
+                                        )
+                                }
                             }
                         }
-                    }
-                }
-            }.frame(height: geometry.size.height/2)
+                    }.alignmentGuide(
+                        .bottom,
+                        computeValue: { d in d[.bottom] })
+                }.frame(height: geometry.size.height/2)
+                    
                 
-            HStack {
-                self.addButton
-                self.removeButton
-            }
-            
-            Text("Cups of Water drank this week")
-            .font(.headline)
-            .padding(.leading, 15)
-            .padding(.top, 5)
+                
+                
+                
+                
+                HStack {
+                    self.addButton
+                    self.removeButton
+                }
+                
+                Text("Cups of Water drank this week")
+                .font(.headline)
+                .padding(.leading, 15)
+                .padding(.top, 5)
             }
         
         }
