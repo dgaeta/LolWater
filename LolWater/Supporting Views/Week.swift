@@ -53,6 +53,7 @@ struct Week: View {
                     Button(action: { self.userData.todayIndex = dayIndex;}) {
                         
                         VStack {
+                            Person(lineWidth: CGFloat(2))
                             ForEach(
                                 Array(repeating: 0, count: self.userData.weekCups[dayIndex] ),
                                 id: \.self

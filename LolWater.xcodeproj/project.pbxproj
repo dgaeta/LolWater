@@ -14,6 +14,9 @@
 		824B15A823C2847900666BFD /* WaterCup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15A723C2847900666BFD /* WaterCup.swift */; };
 		824B15AB23C2B45400666BFD /* CupCap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15AA23C2B45400666BFD /* CupCap.swift */; };
 		824B15AD23C2B4A900666BFD /* Cup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15AC23C2B4A900666BFD /* Cup.swift */; };
+		824B15B023C3EF6E00666BFD /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15AF23C3EF6E00666BFD /* Person.swift */; };
+		824B15B123C3EF6E00666BFD /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15AF23C3EF6E00666BFD /* Person.swift */; };
+		824B15B223C3EF6E00666BFD /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15AF23C3EF6E00666BFD /* Person.swift */; };
 		828F24F723B7A1FA00B87743 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F24F623B7A1FA00B87743 /* AppDelegate.swift */; };
 		828F24F923B7A1FA00B87743 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F24F823B7A1FA00B87743 /* SceneDelegate.swift */; };
 		828F24FD23B7A1FB00B87743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 828F24FC23B7A1FB00B87743 /* Assets.xcassets */; };
@@ -61,6 +64,7 @@
 		824B15A723C2847900666BFD /* WaterCup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterCup.swift; sourceTree = "<group>"; };
 		824B15AA23C2B45400666BFD /* CupCap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupCap.swift; sourceTree = "<group>"; };
 		824B15AC23C2B4A900666BFD /* Cup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cup.swift; sourceTree = "<group>"; };
+		824B15AF23C3EF6E00666BFD /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		828F24F323B7A1FA00B87743 /* LolWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LolWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		828F24F623B7A1FA00B87743 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		828F24F823B7A1FA00B87743 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +137,14 @@
 			path = WaterCup;
 			sourceTree = "<group>";
 		};
+		824B15AE23C3EBCA00666BFD /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				824B15AF23C3EF6E00666BFD /* Person.swift */,
+			);
+			path = Person;
+			sourceTree = "<group>";
+		};
 		828F24EA23B7A1FA00B87743 = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +168,7 @@
 		828F24F523B7A1FA00B87743 /* LolWater */ = {
 			isa = PBXGroup;
 			children = (
+				824B15AE23C3EBCA00666BFD /* Person */,
 				824B15A923C2847F00666BFD /* WaterCup */,
 				824B15A423C1198B00666BFD /* Badge */,
 				828F253723B7F4CC00B87743 /* Supporting Views */,
@@ -393,6 +406,7 @@
 				828F253423B7DCBB00B87743 /* Data.swift in Sources */,
 				824B15A823C2847900666BFD /* WaterCup.swift in Sources */,
 				828F252E23B7B62400B87743 /* UserData.swift in Sources */,
+				824B15B023C3EF6E00666BFD /* Person.swift in Sources */,
 				828F254123BEB52B00B87743 /* ProfileEditor.swift in Sources */,
 				828F253623B7DDA500B87743 /* Day.swift in Sources */,
 				824B15A323C1142900666BFD /* RotatedBadgeSymbol.swift in Sources */,
@@ -417,6 +431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				824B15B123C3EF6E00666BFD /* Person.swift in Sources */,
 				828F250E23B7A1FB00B87743 /* LolWaterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				824B15B223C3EF6E00666BFD /* Person.swift in Sources */,
 				828F251923B7A1FB00B87743 /* LolWaterUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
