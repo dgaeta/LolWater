@@ -16,7 +16,7 @@ struct Week: View {
     var labels1: [String] = ["S", "M", "Tu", "W", "Th", "F", "S"]
     
     func increment() {
-        if self.userData.weekCups[self.userData.todayIndex] < 10 {
+        if self.userData.weekCups[self.userData.todayIndex] < 8 {
             self.userData.weekCups[self.userData.todayIndex] += 1
         }
     }
@@ -64,23 +64,22 @@ struct Week: View {
                                     Array(repeating: 0, count: self.userData.weekCups[dayIndex] ),
                                     id: \.self
                                     ) {cup in
-                                        WaterCup().frame(
+                                        WaterCup(
+                                            cupColor: Color.blue
+                                        ).frame(
                                             width: geometry.size.width/14,
                                             height: geometry.size.height/19
                                         )
                                 }
                             }
                         }
-                    }.alignmentGuide(
+                    }
+                    
+                    .alignmentGuide(
                         .bottom,
                         computeValue: { d in d[.bottom] })
-                }.frame(height: geometry.size.height/2)
-                    
-                
-                
-                
-                
-                
+                }
+            
                 HStack {
                     self.addButton
                     self.removeButton

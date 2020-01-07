@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct Cup: View {
+    @State var color: Color
+    
     var body: some View {
         GeometryReader { geometry in
             Path { p in
@@ -21,13 +23,13 @@ struct Cup: View {
                     style: .circular
                 )
             }
-            .fill(Color.blue)
+            .fill(self.color)
         }
     }
 }
 
 struct Cup_Previews: PreviewProvider {
     static var previews: some View {
-        Cup()
+        Cup(color: Color.blue)
     }
 }

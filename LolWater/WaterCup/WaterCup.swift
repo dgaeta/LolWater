@@ -9,11 +9,12 @@
 import SwiftUI
 
 struct WaterCup: View {
+    @State var cupColor: Color
     
     var body: some View {
         GeometryReader {geometry in
             CupCap()
-            Cup().overlay(
+            Cup(color: self.cupColor).overlay(
                 Text("Water")
                     .foregroundColor(Color.white)
                     .fontWeight(Font.Weight.bold)
@@ -27,6 +28,6 @@ struct WaterCup: View {
 
 struct WaterCup_Previews: PreviewProvider {
     static var previews: some View {
-        WaterCup()
+        WaterCup(cupColor: Color.blue)
     }
 }
