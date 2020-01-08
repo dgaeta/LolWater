@@ -17,6 +17,7 @@
 		824B15B023C3EF6E00666BFD /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15AF23C3EF6E00666BFD /* Person.swift */; };
 		824B15B123C3EF6E00666BFD /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15AF23C3EF6E00666BFD /* Person.swift */; };
 		824B15B223C3EF6E00666BFD /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15AF23C3EF6E00666BFD /* Person.swift */; };
+		824B15B423C56EAC00666BFD /* CupStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15B323C56EAB00666BFD /* CupStack.swift */; };
 		828F24F723B7A1FA00B87743 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F24F623B7A1FA00B87743 /* AppDelegate.swift */; };
 		828F24F923B7A1FA00B87743 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F24F823B7A1FA00B87743 /* SceneDelegate.swift */; };
 		828F24FD23B7A1FB00B87743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 828F24FC23B7A1FB00B87743 /* Assets.xcassets */; };
@@ -65,6 +66,7 @@
 		824B15AA23C2B45400666BFD /* CupCap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupCap.swift; sourceTree = "<group>"; };
 		824B15AC23C2B4A900666BFD /* Cup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cup.swift; sourceTree = "<group>"; };
 		824B15AF23C3EF6E00666BFD /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		824B15B323C56EAB00666BFD /* CupStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupStack.swift; sourceTree = "<group>"; };
 		828F24F323B7A1FA00B87743 /* LolWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LolWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		828F24F623B7A1FA00B87743 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		828F24F823B7A1FA00B87743 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				824B15A723C2847900666BFD /* WaterCup.swift */,
 				824B15AA23C2B45400666BFD /* CupCap.swift */,
 				824B15AC23C2B4A900666BFD /* Cup.swift */,
+				824B15B323C56EAB00666BFD /* CupStack.swift */,
 			);
 			path = WaterCup;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				828F252823B7A25C00B87743 /* Home.swift in Sources */,
 				828F252B23B7A2A300B87743 /* ProfileHost.swift in Sources */,
 				828F254423BEBE7000B87743 /* Badge.swift in Sources */,
+				824B15B423C56EAC00666BFD /* CupStack.swift in Sources */,
 				824B159F23BF9D4500666BFD /* BadgeBackground.swift in Sources */,
 				828F253F23BEB19F00B87743 /* ProfileSummary.swift in Sources */,
 			);

@@ -25,7 +25,21 @@ struct Home: View {
         NavigationView {
             
             VStack {
-                Week()
+                Week(
+                mActive: false,
+                tuActive: false,
+                wActive: true,
+                thActive: false,
+                fActive: false,
+                suActive: false,
+                saActive: false,
+                mCups: 1,
+                tuCups: 1,
+                wCups: 1,
+                thCups: 1,
+                fCups: 1,
+                suCups: 1,
+                saCups: 1)
                 
                 Text("Cups you drank")
                 
