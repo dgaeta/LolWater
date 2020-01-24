@@ -13,22 +13,30 @@ struct EntryPoint: View {
     // @State is a property wrapper from SwiftUI. It signifies that the property decorared with @State will be mutable, and that the struct will be in charge of updating it.
     // @State properties have to have a value so it is initialized with nil to start with
     @State var appleSignInDelegates: SignInWithAppleDelegates! = nil
+    @State var authenticated: Bool = false
     
     var body: some View {
         ZStack {
-            Color.blue.edgesIgnoringSafeArea(.all)
-            
-            VStack {
-                Image(systemName: "person.2.square.stack.fill")
-                    .resizable()
-                        .frame(width: 80, height: 100)
-                
-                UserAndPassword()
-                .padding()
-                
-                SignInWithApple()
-                    .frame(width: 200, height: 60)
-                    .onTapGesture(perform: showAppleLogin)
+            if !self.authenticated {
+                ZStack {
+                    Color.blue.edgesIgnoringSafeArea(.all)
+                    
+                    VStack {
+                        Image(systemName: "person.2.square.stack.fill")
+                            .resizable()
+                                .frame(width: 80, height: 100)
+                        
+                        UserAndPassword()
+                        .padding()
+                        
+                        SignInWithApple()
+                            .frame(width: 200, height: 60)
+                            .onTapGesture(perform: showAppleLogin)
+                    }
+                }
+            } else {
+                Home(showingProfile: false)
+                .environmentObject(WaterData())
             }
         }
     }
@@ -42,9 +50,11 @@ struct EntryPoint: View {
         appleSignInDelegates = SignInWithAppleDelegates() { success in
             
             if success {
-                // Update the UI
+                self.authenticated = true
+                print("authenticated true")
             } else {
                 // Show the user an error
+                print("authenticated false")
             }
             
         }

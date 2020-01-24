@@ -28,7 +28,7 @@ extension SignInWithAppleDelegates: ASAuthorizationControllerDelegate {
         let userData = UserData(email: credential.email!,
                                 name: credential.fullName!,
                                 identifier: credential.user)
-        
+
         let keychain = UserDataKeychain()
         do {
             // attempt to store the data in our remote user database - Ray
