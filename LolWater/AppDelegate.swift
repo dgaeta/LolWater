@@ -10,12 +10,59 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    let defaultSession = URLSession(configuration: .default)
+    var dataTask: URLSessionDataTask?
+    var errorMessage = ""
+    typealias JSONDictionary = [String: Any]
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        loadData()
         return true
+    }
+    
+    // MARK: Load Data
+    func loadData() {
+        let defaultSession = URLSession(configuration: .default)
+        
+        var dataTask: URLSessionDataTask?
+        
+        dataTask?.cancel()
+        
+        // 2
+        if var urlComponents = URLComponents(string: "https://bokunoheroacademia.fandom.com/wiki/Toshinori_Yagi") {
+          
+          // 3
+          guard let url = urlComponents.url else {
+            return
+          }
+          // 4
+          dataTask =
+            defaultSession.dataTask(with: url) { [weak self] data, response, error in
+            defer {
+              self?.dataTask = nil
+            }
+            // 5
+            if let error = error {
+              self?.errorMessage += "DataTask error: " +
+                                      error.localizedDescription + "\n"
+            } else if
+              let data = data,
+              let response = response as? HTTPURLResponse,
+              response.statusCode == 200 {
+              print(response)
+              // 6
+//              DispatchQueue.main.async {
+//                completion(self?.tracks, self?.errorMessage ?? "")
+//              }
+            }
+          }
+          // 7
+          dataTask?.resume()
+        }
+
+        
     }
 
     // MARK: UISceneSession Lifecycle

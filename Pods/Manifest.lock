@@ -1,0 +1,104 @@
+PODS:
+  - AWSAutoScaling (2.12.6):
+    - AWSCore (= 2.12.6)
+  - AWSCloudWatch (2.12.6):
+    - AWSCore (= 2.12.6)
+  - AWSCognito (2.12.6):
+    - AWSCore (= 2.12.6)
+  - AWSCognitoIdentityProvider (2.12.6):
+    - AWSCognitoIdentityProviderASF (= 1.0.1)
+    - AWSCore (= 2.12.6)
+  - AWSCognitoIdentityProviderASF (1.0.1)
+  - AWSCore (2.12.6)
+  - AWSDynamoDB (2.12.6):
+    - AWSCore (= 2.12.6)
+  - AWSEC2 (2.12.6):
+    - AWSCore (= 2.12.6)
+  - AWSElasticLoadBalancing (2.12.6):
+    - AWSCore (= 2.12.6)
+  - AWSIoT (2.12.6):
+    - AWSCore (= 2.12.6)
+  - AWSKinesis (2.12.6):
+    - AWSCore (= 2.12.6)
+  - AWSLambda (2.12.6):
+    - AWSCore (= 2.12.6)
+  - AWSMachineLearning (2.12.6):
+    - AWSCore (= 2.12.6)
+  - AWSMobileAnalytics (2.12.6):
+    - AWSCore (= 2.12.6)
+  - AWSS3 (2.12.6):
+    - AWSCore (= 2.12.6)
+  - AWSSES (2.12.6):
+    - AWSCore (= 2.12.6)
+  - AWSSimpleDB (2.12.6):
+    - AWSCore (= 2.12.6)
+  - AWSSNS (2.12.6):
+    - AWSCore (= 2.12.6)
+  - AWSSQS (2.12.6):
+    - AWSCore (= 2.12.6)
+
+DEPENDENCIES:
+  - AWSAutoScaling
+  - AWSCloudWatch
+  - AWSCognito
+  - AWSCognitoIdentityProvider
+  - AWSDynamoDB
+  - AWSEC2
+  - AWSElasticLoadBalancing
+  - AWSIoT
+  - AWSKinesis
+  - AWSLambda
+  - AWSMachineLearning
+  - AWSMobileAnalytics
+  - AWSS3
+  - AWSSES
+  - AWSSimpleDB
+  - AWSSNS
+  - AWSSQS
+
+SPEC REPOS:
+  trunk:
+    - AWSAutoScaling
+    - AWSCloudWatch
+    - AWSCognito
+    - AWSCognitoIdentityProvider
+    - AWSCognitoIdentityProviderASF
+    - AWSCore
+    - AWSDynamoDB
+    - AWSEC2
+    - AWSElasticLoadBalancing
+    - AWSIoT
+    - AWSKinesis
+    - AWSLambda
+    - AWSMachineLearning
+    - AWSMobileAnalytics
+    - AWSS3
+    - AWSSES
+    - AWSSimpleDB
+    - AWSSNS
+    - AWSSQS
+
+SPEC CHECKSUMS:
+  AWSAutoScaling: e300f5e41dac39b903aecb2b147bbcb845d0b575
+  AWSCloudWatch: c673290cafc08f1f59744cec7bcf03a37d7faded
+  AWSCognito: bad96ee62a670ae0e3d5b6cb93cff04154538272
+  AWSCognitoIdentityProvider: 9502438e528185a2c61b97baf66e2fd2ac6833f3
+  AWSCognitoIdentityProviderASF: f94f1a502e72ef3d0a1de93e10bf7a79c8698118
+  AWSCore: 48bb8d477d8137377e86b2ade9eb34a761f42df5
+  AWSDynamoDB: dc86a4cfcce42be6c18df744a2b2b4a85a98840c
+  AWSEC2: 44fb4b64b871b8c29c17123fb81cb89fe1cb9658
+  AWSElasticLoadBalancing: 3856ebcba89b6410cc0fe965ea64158baeccaec4
+  AWSIoT: a5eb15109f3add8fb48a0e2d11474cfbd2de59c3
+  AWSKinesis: 622914172de6fe812cab36e68715cc105430864c
+  AWSLambda: 4c55d8ba906503fe34bffd7ce86dd47723cffaae
+  AWSMachineLearning: 3cc1873904357a29fc80488c4a3b12b89532b624
+  AWSMobileAnalytics: 233b22675271198509ac7d7d5932922e1e676a43
+  AWSS3: 2850ae43b735697fdd0d0a4df40836cd6ac465ec
+  AWSSES: f13ee889bb3e3af89c02c6e843ee4438b8392937
+  AWSSimpleDB: 6cf2ab1041a0853391646b1dafa92ce16d0a5a77
+  AWSSNS: 211b916f27c3f127d9a73c57766e039cb8920343
+  AWSSQS: 45a4dc217305fda497717a813d8475c30e9b0305
+
+PODFILE CHECKSUM: a75874fb29ac6fae71972744a14141190a43bbf5
+
+COCOAPODS: 1.8.4

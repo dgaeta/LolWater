@@ -9,26 +9,26 @@
 import SwiftUI
 
 struct Day: View {
-    @EnvironmentObject var userData: UserData
+    @EnvironmentObject var waterData: WaterData
     
     var labels: [String] = ["12", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"]
     
     func increment() {
-        if self.userData.activeHourSuffix == "AM" {
-            self.userData.amCups[self.userData.activeHour] += 1
+        if self.waterData.activeHourSuffix == "AM" {
+            self.waterData.amCups[self.waterData.activeHour] += 1
         } else {
-            self.userData.pmCups[self.userData.activeHour] += 1
+            self.waterData.pmCups[self.waterData.activeHour] += 1
         }
     }
     
     func decrement() {
-        if self.userData.activeHourSuffix == "AM" {
-            if self.userData.amCups[self.userData.activeHour] > 0 {
-               self.userData.amCups[self.userData.activeHour] -= 1
+        if self.waterData.activeHourSuffix == "AM" {
+            if self.waterData.amCups[self.waterData.activeHour] > 0 {
+               self.waterData.amCups[self.waterData.activeHour] -= 1
             }
         } else {
-            if self.userData.pmCups[self.userData.activeHour] > 0 {
-                self.userData.pmCups[self.userData.activeHour] -= 1
+            if self.waterData.pmCups[self.waterData.activeHour] > 0 {
+                self.waterData.pmCups[self.waterData.activeHour] -= 1
             }
         }
     }
@@ -64,23 +64,23 @@ struct Day: View {
                 .padding(.top, 5)
             HStack(alignment: .bottom) {
                 ForEach((0...11), id: \.self) { hour in
-                    Button(action: { self.userData.activeHour = hour; self.userData.activeHourSuffix = "AM" }) {
+                    Button(action: { self.waterData.activeHour = hour; self.waterData.activeHourSuffix = "AM" }) {
                         GraphCapsule(
                             label: "\(self.labels[hour])AM",
-                            cups: self.userData.amCups[hour],
+                            cups: self.waterData.amCups[hour],
                             targetCups: 10,
-                            active: self.userData.activeHour == hour && self.userData.activeHourSuffix == "AM")
+                            active: self.waterData.activeHour == hour && self.waterData.activeHourSuffix == "AM")
                     }
                 }
             }
             HStack(alignment: .bottom) {
               ForEach((0...11), id: \.self) { hour in
-                Button(action: { self.userData.activeHour = hour; self.userData.activeHourSuffix = "PM" }) {
+                Button(action: { self.waterData.activeHour = hour; self.waterData.activeHourSuffix = "PM" }) {
                   GraphCapsule(
                     label: "\(self.labels[hour])PM",
-                    cups: self.userData.pmCups[hour],
+                    cups: self.waterData.pmCups[hour],
                     targetCups: 10,
-                    active: self.userData.activeHour == hour && self.userData.activeHourSuffix == "PM")
+                    active: self.waterData.activeHour == hour && self.waterData.activeHourSuffix == "PM")
                 }
               }
             }
@@ -94,6 +94,6 @@ struct Day: View {
 struct Day_Previews: PreviewProvider {
 
     static var previews: some View {
-        Day().environmentObject(UserData())
+        Day().environmentObject(WaterData())
     }
 }

@@ -9,7 +9,7 @@
 import SwiftUI
 import Combine
 
-final class UserData: ObservableObject {
+final class WaterData: ObservableObject {
     @Published var amCups = Array(repeating: 0, count: 12)
     @Published var pmCups = Array(repeating: 0, count: 12)
     @Published var weekCups = Array(1...7)

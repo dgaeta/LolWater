@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct CupStack: View {
-    @EnvironmentObject var userData: UserData
+    @EnvironmentObject var waterData: WaterData
     @State var cupCount: Int
     @State var color: Color
     @State var isActive: Bool
@@ -49,6 +49,6 @@ struct CupStack: View {
 
 struct CupStack_Previews: PreviewProvider {
     static var previews: some View {
-        CupStack(cupCount: 5, color: Color.blue, isActive: true).environmentObject(UserData())
+        CupStack(cupCount: 5, color: Color.blue, isActive: true).environmentObject(WaterData())
     }
 }

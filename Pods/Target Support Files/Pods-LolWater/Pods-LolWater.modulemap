@@ -1,0 +1,6 @@
+framework module Pods_LolWater {
+  umbrella header "Pods-LolWater-umbrella.h"
+
+  export *
+  module * { export * }
+}

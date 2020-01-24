@@ -40,7 +40,7 @@ struct BadgeBackground: View {
                         ),
                         control: .init(
                             x: xOffset + width * $0.useWidth.2 * $0.xFactors.2,
-                            y: height * $0.useHeight.2 * $0.yFactors.2
+                            y: height * $0.useHeight.2 * $0.yFactors.2 
                         )
                     )
                 }

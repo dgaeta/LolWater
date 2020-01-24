@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct Home: View {
-    @EnvironmentObject var userData: UserData
+    @EnvironmentObject var waterData: WaterData
     @State var showingProfile = false
     
     var profileButton: some View {
@@ -23,42 +23,51 @@ struct Home: View {
     
     var body: some View {
         NavigationView {
-            
-            VStack {
-                Week(
-                mActive: false,
-                tuActive: false,
-                wActive: true,
-                thActive: false,
-                fActive: false,
-                suActive: false,
-                saActive: false,
-                mCups: 1,
-                tuCups: 1,
-                wCups: 1,
-                thCups: 1,
-                fCups: 1,
-                suCups: 1,
-                saCups: 1)
+            GeometryReader { geometry in
+                VStack {
+                        Week(
+                        mActive: false,
+                        tuActive: false,
+                        wActive: true,
+                        thActive: false,
+                        fActive: false,
+                        suActive: false,
+                        saActive: false,
+                        mCups: 1,
+                        tuCups: 1,
+                        wCups: 1,
+                        thCups: 4,
+                        fCups: 1,
+                        suCups: 1,
+                        saCups: 1).frame(width: geometry.size.width * 0.95, height: geometry.size.height * 0.55)
+                        
+                        Text("Cups you drank")
+                        
+                        HStack {
+                            RemoveCup()
+                            AddCup()
+                        }
                 
-                Text("Cups you drank")
-                
-                Spacer()
+                        Spacer()
+                    }
+                    
+                    .navigationBarTitle(Text("LolWater"))
+                .navigationBarItems(trailing: self.profileButton)
+                .sheet(isPresented: self.$showingProfile) {
+                        ProfileHost()
+                        .environmentObject(self.waterData)
+                    }
             }
             
-            .navigationBarTitle(Text("LolWater"))
-            .navigationBarItems(trailing: profileButton)
-            .sheet(isPresented: $showingProfile) {
-                ProfileHost()
-                .environmentObject(self.userData)
-            }
+            
         }
     }
+    
 }
 
 struct Home_Previews: PreviewProvider {
     
     static var previews: some View {
-        Home().environmentObject(UserData())
+        Home().environmentObject(WaterData())
     }
 }

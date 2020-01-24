@@ -50,8 +50,8 @@ struct Week: View {
                                     WaterCup(
                                         cupColor: Color.blue
                                     ).frame(
-                                        width: geometry.size.width/14,
-                                        height: geometry.size.height/19
+                                        width: geometry.size.width/8,
+                                        height: geometry.size.height/8
                                     )
                             }
                         }
@@ -72,10 +72,10 @@ struct Week: View {
                                 ) {cup in
                                     WaterCup(
                                         cupColor: Color.blue
-                                    ).frame(
-                                        width: geometry.size.width/14,
-                                        height: geometry.size.height/19
-                                    )
+                                        ).frame(
+                                            width: geometry.size.width/8,
+                                            height: geometry.size.height/8
+                                        )
                             }
                         }
                     }
@@ -97,8 +97,8 @@ struct Week: View {
                                     WaterCup(
                                         cupColor: Color.blue
                                     ).frame(
-                                        width: geometry.size.width/14,
-                                        height: geometry.size.height/19
+                                        width: geometry.size.width/8,
+                                        height: geometry.size.height/8
                                     )
                             }
                         }
@@ -120,8 +120,8 @@ struct Week: View {
                                     WaterCup(
                                         cupColor: Color.blue
                                     ).frame(
-                                        width: geometry.size.width/14,
-                                        height: geometry.size.height/19
+                                        width: geometry.size.width/8,
+                                        height: geometry.size.height/8
                                     )
                             }
                         }
@@ -143,8 +143,8 @@ struct Week: View {
                                     WaterCup(
                                         cupColor: Color.blue
                                     ).frame(
-                                        width: geometry.size.width/14,
-                                        height: geometry.size.height/19
+                                        width: geometry.size.width/8,
+                                        height: geometry.size.height/8
                                     )
                             }
                         }
@@ -166,8 +166,8 @@ struct Week: View {
                                     WaterCup(
                                         cupColor: Color.blue
                                     ).frame(
-                                        width: geometry.size.width/14,
-                                        height: geometry.size.height/19
+                                        width: geometry.size.width/8,
+                                        height: geometry.size.height/8
                                     )
                             }
                         }
@@ -189,8 +189,8 @@ struct Week: View {
                                     WaterCup(
                                         cupColor: Color.blue
                                     ).frame(
-                                        width: geometry.size.width/14,
-                                        height: geometry.size.height/19
+                                        width: geometry.size.width/8,
+                                        height: geometry.size.height/8
                                     )
                             }
                         }
@@ -212,8 +212,8 @@ struct Week: View {
                                     WaterCup(
                                         cupColor: Color.blue
                                     ).frame(
-                                        width: geometry.size.width/14,
-                                        height: geometry.size.height/19
+                                        width: geometry.size.width/8,
+                                        height: geometry.size.height/8
                                     )
                             }
                         }
@@ -235,8 +235,8 @@ struct Week: View {
                                     WaterCup(
                                         cupColor: Color.blue
                                     ).frame(
-                                        width: geometry.size.width/14,
-                                        height: geometry.size.height/19
+                                        width: geometry.size.width/8,
+                                        height: geometry.size.height/8
                                     )
                             }
                         }
@@ -258,8 +258,8 @@ struct Week: View {
                                     WaterCup(
                                         cupColor: Color.blue
                                     ).frame(
-                                        width: geometry.size.width/14,
-                                        height: geometry.size.height/19
+                                        width: geometry.size.width/8,
+                                        height: geometry.size.height/8
                                     )
                             }
                         }
@@ -281,8 +281,8 @@ struct Week: View {
                                     WaterCup(
                                         cupColor: Color.blue
                                     ).frame(
-                                        width: geometry.size.width/14,
-                                        height: geometry.size.height/19
+                                        width: geometry.size.width/8,
+                                        height: geometry.size.height/8
                                     )
                             }
                         }
@@ -304,8 +304,8 @@ struct Week: View {
                                     WaterCup(
                                         cupColor: Color.blue
                                     ).frame(
-                                        width: geometry.size.width/14,
-                                        height: geometry.size.height/19
+                                        width: geometry.size.width/8,
+                                        height: geometry.size.height/8
                                     )
                             }
                         }
@@ -327,8 +327,8 @@ struct Week: View {
                                     WaterCup(
                                         cupColor: Color.blue
                                     ).frame(
-                                        width: geometry.size.width/14,
-                                        height: geometry.size.height/19
+                                        width: geometry.size.width/8,
+                                        height: geometry.size.height/8
                                     )
                             }
                         }
@@ -350,8 +350,8 @@ struct Week: View {
                                     WaterCup(
                                         cupColor: Color.blue
                                     ).frame(
-                                        width: geometry.size.width/14,
-                                        height: geometry.size.height/19
+                                        width: geometry.size.width/8,
+                                        height: geometry.size.height/8
                                     )
                             }
                         }

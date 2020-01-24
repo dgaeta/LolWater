@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		674AC7A732C265E97680C9BD /* Pods_LolWater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E442B1B7290FD34EE0AB38 /* Pods_LolWater.framework */; };
 		824B159F23BF9D4500666BFD /* BadgeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B159E23BF9D4500666BFD /* BadgeBackground.swift */; };
 		824B15A123BF9EA600666BFD /* BadgeSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15A023BF9EA600666BFD /* BadgeSymbol.swift */; };
 		824B15A323C1142900666BFD /* RotatedBadgeSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15A223C1142900666BFD /* RotatedBadgeSymbol.swift */; };
@@ -18,6 +19,18 @@
 		824B15B123C3EF6E00666BFD /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15AF23C3EF6E00666BFD /* Person.swift */; };
 		824B15B223C3EF6E00666BFD /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15AF23C3EF6E00666BFD /* Person.swift */; };
 		824B15B423C56EAC00666BFD /* CupStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15B323C56EAB00666BFD /* CupStack.swift */; };
+		824B15B923C69FC700666BFD /* AddCup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15B823C69FC700666BFD /* AddCup.swift */; };
+		824B15BD23C6A66300666BFD /* RemoveCup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15BC23C6A66300666BFD /* RemoveCup.swift */; };
+		8252592F23DA67CC00E266A8 /* SignInWithApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252592E23DA67CC00E266A8 /* SignInWithApple.swift */; };
+		8252593223DA6BCE00E266A8 /* EntryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252593123DA6BCE00E266A8 /* EntryPoint.swift */; };
+		8252593423DA759100E266A8 /* SignInWithAppleDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252593323DA759100E266A8 /* SignInWithAppleDelegates.swift */; };
+		8252593623DA7B9200E266A8 /* UserAndPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252593523DA7B9200E266A8 /* UserAndPassword.swift */; };
+		8252593923DA7BE900E266A8 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252593823DA7BE900E266A8 /* Keychain.swift */; };
+		8252593B23DA7BF800E266A8 /* SharedWebCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252593A23DA7BF800E266A8 /* SharedWebCredential.swift */; };
+		8252593D23DA7C0500E266A8 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252593C23DA7C0500E266A8 /* UserData.swift */; };
+		8252593F23DA7C2400E266A8 /* UserDataKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252593E23DA7C2400E266A8 /* UserDataKeychain.swift */; };
+		8252594123DA7C7200E266A8 /* WebApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252594023DA7C7200E266A8 /* WebApi.swift */; };
+		8252594323DA7C8E00E266A8 /* EnvironmentWindowKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252594223DA7C8E00E266A8 /* EnvironmentWindowKey.swift */; };
 		828F24F723B7A1FA00B87743 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F24F623B7A1FA00B87743 /* AppDelegate.swift */; };
 		828F24F923B7A1FA00B87743 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F24F823B7A1FA00B87743 /* SceneDelegate.swift */; };
 		828F24FD23B7A1FB00B87743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 828F24FC23B7A1FB00B87743 /* Assets.xcassets */; };
@@ -27,7 +40,7 @@
 		828F251923B7A1FB00B87743 /* LolWaterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F251823B7A1FB00B87743 /* LolWaterUITests.swift */; };
 		828F252823B7A25C00B87743 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F252723B7A25C00B87743 /* Home.swift */; };
 		828F252B23B7A2A300B87743 /* ProfileHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F252A23B7A2A300B87743 /* ProfileHost.swift */; };
-		828F252E23B7B62400B87743 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F252D23B7B62400B87743 /* UserData.swift */; };
+		828F252E23B7B62400B87743 /* WaterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F252D23B7B62400B87743 /* WaterData.swift */; };
 		828F253223B7D76400B87743 /* lolWaterData.json in Resources */ = {isa = PBXBuildFile; fileRef = 828F253123B7D76400B87743 /* lolWaterData.json */; };
 		828F253423B7DCBB00B87743 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F253323B7DCBB00B87743 /* Data.swift */; };
 		828F253623B7DDA500B87743 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F253523B7DDA500B87743 /* Day.swift */; };
@@ -38,6 +51,8 @@
 		828F254123BEB52B00B87743 /* ProfileEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F254023BEB52B00B87743 /* ProfileEditor.swift */; };
 		828F254423BEBE7000B87743 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F254323BEBE7000B87743 /* Badge.swift */; };
 		828F254623BEBEA200B87743 /* HexagonParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F254523BEBEA200B87743 /* HexagonParameters.swift */; };
+		F7D486C2DB94D0F6F24C5466 /* Pods_LolWaterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F5403202268A59703EEA670 /* Pods_LolWaterTests.framework */; };
+		F80D29C2141840CC5FBBE40F /* Pods_LolWater_LolWaterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B36840918258F48BA82DDF5 /* Pods_LolWater_LolWaterUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +73,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F5403202268A59703EEA670 /* Pods_LolWaterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LolWaterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B36840918258F48BA82DDF5 /* Pods_LolWater_LolWaterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LolWater_LolWaterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CECD06529B090680C572DC6 /* Pods-LolWaterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LolWaterTests.release.xcconfig"; path = "Target Support Files/Pods-LolWaterTests/Pods-LolWaterTests.release.xcconfig"; sourceTree = "<group>"; };
+		7DFB9C668B02E3D48832D756 /* Pods-LolWater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LolWater.release.xcconfig"; path = "Target Support Files/Pods-LolWater/Pods-LolWater.release.xcconfig"; sourceTree = "<group>"; };
 		824B159E23BF9D4500666BFD /* BadgeBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeBackground.swift; sourceTree = "<group>"; };
 		824B15A023BF9EA600666BFD /* BadgeSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeSymbol.swift; sourceTree = "<group>"; };
 		824B15A223C1142900666BFD /* RotatedBadgeSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatedBadgeSymbol.swift; sourceTree = "<group>"; };
@@ -67,6 +86,19 @@
 		824B15AC23C2B4A900666BFD /* Cup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cup.swift; sourceTree = "<group>"; };
 		824B15AF23C3EF6E00666BFD /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		824B15B323C56EAB00666BFD /* CupStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupStack.swift; sourceTree = "<group>"; };
+		824B15B823C69FC700666BFD /* AddCup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCup.swift; sourceTree = "<group>"; };
+		824B15BC23C6A66300666BFD /* RemoveCup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveCup.swift; sourceTree = "<group>"; };
+		8252592D23DA4A7F00E266A8 /* LolWater.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LolWater.entitlements; sourceTree = "<group>"; };
+		8252592E23DA67CC00E266A8 /* SignInWithApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithApple.swift; sourceTree = "<group>"; };
+		8252593123DA6BCE00E266A8 /* EntryPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryPoint.swift; sourceTree = "<group>"; };
+		8252593323DA759100E266A8 /* SignInWithAppleDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleDelegates.swift; sourceTree = "<group>"; };
+		8252593523DA7B9200E266A8 /* UserAndPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAndPassword.swift; sourceTree = "<group>"; };
+		8252593823DA7BE900E266A8 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		8252593A23DA7BF800E266A8 /* SharedWebCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedWebCredential.swift; sourceTree = "<group>"; };
+		8252593C23DA7C0500E266A8 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		8252593E23DA7C2400E266A8 /* UserDataKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataKeychain.swift; sourceTree = "<group>"; };
+		8252594023DA7C7200E266A8 /* WebApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebApi.swift; sourceTree = "<group>"; };
+		8252594223DA7C8E00E266A8 /* EnvironmentWindowKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentWindowKey.swift; sourceTree = "<group>"; };
 		828F24F323B7A1FA00B87743 /* LolWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LolWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		828F24F623B7A1FA00B87743 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		828F24F823B7A1FA00B87743 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,7 +114,7 @@
 		828F251A23B7A1FB00B87743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		828F252723B7A25C00B87743 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		828F252A23B7A2A300B87743 /* ProfileHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHost.swift; sourceTree = "<group>"; };
-		828F252D23B7B62400B87743 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		828F252D23B7B62400B87743 /* WaterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterData.swift; sourceTree = "<group>"; };
 		828F253123B7D76400B87743 /* lolWaterData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = lolWaterData.json; sourceTree = "<group>"; };
 		828F253323B7DCBB00B87743 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		828F253523B7DDA500B87743 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
@@ -93,6 +125,11 @@
 		828F254023BEB52B00B87743 /* ProfileEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditor.swift; sourceTree = "<group>"; };
 		828F254323BEBE7000B87743 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		828F254523BEBEA200B87743 /* HexagonParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonParameters.swift; sourceTree = "<group>"; };
+		ADBC9F071F5E50E2D76E2451 /* Pods-LolWater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LolWater.debug.xcconfig"; path = "Target Support Files/Pods-LolWater/Pods-LolWater.debug.xcconfig"; sourceTree = "<group>"; };
+		CC7176FA35E9A83D86407EFE /* Pods-LolWaterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LolWaterTests.debug.xcconfig"; path = "Target Support Files/Pods-LolWaterTests/Pods-LolWaterTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CCB7E1D7F9BD7298BCE76B36 /* Pods-LolWater-LolWaterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LolWater-LolWaterUITests.release.xcconfig"; path = "Target Support Files/Pods-LolWater-LolWaterUITests/Pods-LolWater-LolWaterUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E2D32AD82DAD5B947A9F975F /* Pods-LolWater-LolWaterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LolWater-LolWaterUITests.debug.xcconfig"; path = "Target Support Files/Pods-LolWater-LolWaterUITests/Pods-LolWater-LolWaterUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E3E442B1B7290FD34EE0AB38 /* Pods_LolWater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LolWater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				674AC7A732C265E97680C9BD /* Pods_LolWater.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7D486C2DB94D0F6F24C5466 /* Pods_LolWaterTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,12 +153,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F80D29C2141840CC5FBBE40F /* Pods_LolWater_LolWaterUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		388079241104BC182379CB77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E3E442B1B7290FD34EE0AB38 /* Pods_LolWater.framework */,
+				5B36840918258F48BA82DDF5 /* Pods_LolWater_LolWaterUITests.framework */,
+				4F5403202268A59703EEA670 /* Pods_LolWaterTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		824B15A423C1198B00666BFD /* Badge */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +198,36 @@
 			path = Person;
 			sourceTree = "<group>";
 		};
+		824B15B723C69F7800666BFD /* AddCup */ = {
+			isa = PBXGroup;
+			children = (
+				824B15B823C69FC700666BFD /* AddCup.swift */,
+				824B15BC23C6A66300666BFD /* RemoveCup.swift */,
+			);
+			path = AddCup;
+			sourceTree = "<group>";
+		};
+		8252593023DA6BB700E266A8 /* EntryPoint */ = {
+			isa = PBXGroup;
+			children = (
+				8252593123DA6BCE00E266A8 /* EntryPoint.swift */,
+				8252592E23DA67CC00E266A8 /* SignInWithApple.swift */,
+				8252593323DA759100E266A8 /* SignInWithAppleDelegates.swift */,
+			);
+			path = EntryPoint;
+			sourceTree = "<group>";
+		};
+		8252593723DA7BBF00E266A8 /* CredentialStorage */ = {
+			isa = PBXGroup;
+			children = (
+				8252593823DA7BE900E266A8 /* Keychain.swift */,
+				8252593A23DA7BF800E266A8 /* SharedWebCredential.swift */,
+				8252593C23DA7C0500E266A8 /* UserData.swift */,
+				8252593E23DA7C2400E266A8 /* UserDataKeychain.swift */,
+			);
+			path = CredentialStorage;
+			sourceTree = "<group>";
+		};
 		828F24EA23B7A1FA00B87743 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +235,8 @@
 				828F250C23B7A1FB00B87743 /* LolWaterTests */,
 				828F251723B7A1FB00B87743 /* LolWaterUITests */,
 				828F24F423B7A1FA00B87743 /* Products */,
+				E48866151C1E88455C19819A /* Pods */,
+				388079241104BC182379CB77 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,6 +253,10 @@
 		828F24F523B7A1FA00B87743 /* LolWater */ = {
 			isa = PBXGroup;
 			children = (
+				8252593723DA7BBF00E266A8 /* CredentialStorage */,
+				8252593023DA6BB700E266A8 /* EntryPoint */,
+				8252592D23DA4A7F00E266A8 /* LolWater.entitlements */,
+				824B15B723C69F7800666BFD /* AddCup */,
 				824B15AE23C3EBCA00666BFD /* Person */,
 				824B15A923C2847F00666BFD /* WaterCup */,
 				824B15A423C1198B00666BFD /* Badge */,
@@ -185,6 +271,9 @@
 				828F250123B7A1FB00B87743 /* LaunchScreen.storyboard */,
 				828F250423B7A1FB00B87743 /* Info.plist */,
 				828F24FE23B7A1FB00B87743 /* Preview Content */,
+				8252593523DA7B9200E266A8 /* UserAndPassword.swift */,
+				8252594023DA7C7200E266A8 /* WebApi.swift */,
+				8252594223DA7C8E00E266A8 /* EnvironmentWindowKey.swift */,
 			);
 			path = LolWater;
 			sourceTree = "<group>";
@@ -236,7 +325,7 @@
 		828F252C23B7ABF400B87743 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				828F252D23B7B62400B87743 /* UserData.swift */,
+				828F252D23B7B62400B87743 /* WaterData.swift */,
 				828F253323B7DCBB00B87743 /* Data.swift */,
 				828F253C23BEAD6A00B87743 /* Profile.swift */,
 			);
@@ -273,6 +362,19 @@
 			path = BadgeBase;
 			sourceTree = "<group>";
 		};
+		E48866151C1E88455C19819A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ADBC9F071F5E50E2D76E2451 /* Pods-LolWater.debug.xcconfig */,
+				7DFB9C668B02E3D48832D756 /* Pods-LolWater.release.xcconfig */,
+				E2D32AD82DAD5B947A9F975F /* Pods-LolWater-LolWaterUITests.debug.xcconfig */,
+				CCB7E1D7F9BD7298BCE76B36 /* Pods-LolWater-LolWaterUITests.release.xcconfig */,
+				CC7176FA35E9A83D86407EFE /* Pods-LolWaterTests.debug.xcconfig */,
+				5CECD06529B090680C572DC6 /* Pods-LolWaterTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -280,9 +382,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 828F251D23B7A1FB00B87743 /* Build configuration list for PBXNativeTarget "LolWater" */;
 			buildPhases = (
+				6E73566A1A2210F6E05FD8C0 /* [CP] Check Pods Manifest.lock */,
 				828F24EF23B7A1FA00B87743 /* Sources */,
 				828F24F023B7A1FA00B87743 /* Frameworks */,
 				828F24F123B7A1FA00B87743 /* Resources */,
+				8AED66542AA2D77D8ECB98EE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -297,6 +401,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 828F252023B7A1FB00B87743 /* Build configuration list for PBXNativeTarget "LolWaterTests" */;
 			buildPhases = (
+				D24CD64AF319F3689F7EE600 /* [CP] Check Pods Manifest.lock */,
 				828F250523B7A1FB00B87743 /* Sources */,
 				828F250623B7A1FB00B87743 /* Frameworks */,
 				828F250723B7A1FB00B87743 /* Resources */,
@@ -315,9 +420,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 828F252323B7A1FB00B87743 /* Build configuration list for PBXNativeTarget "LolWaterUITests" */;
 			buildPhases = (
+				AB126FFE4AC7C8790E64AFF9 /* [CP] Check Pods Manifest.lock */,
 				828F251023B7A1FB00B87743 /* Sources */,
 				828F251123B7A1FB00B87743 /* Frameworks */,
 				828F251223B7A1FB00B87743 /* Resources */,
+				D246FDDD05C0DEADEFF90C0B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -400,6 +507,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6E73566A1A2210F6E05FD8C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LolWater-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AED66542AA2D77D8ECB98EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LolWater/Pods-LolWater-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LolWater/Pods-LolWater-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LolWater/Pods-LolWater-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB126FFE4AC7C8790E64AFF9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LolWater-LolWaterUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D246FDDD05C0DEADEFF90C0B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LolWater-LolWaterUITests/Pods-LolWater-LolWaterUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LolWater-LolWaterUITests/Pods-LolWater-LolWaterUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LolWater-LolWaterUITests/Pods-LolWater-LolWaterUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D24CD64AF319F3689F7EE600 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LolWaterTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		828F24EF23B7A1FA00B87743 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -407,27 +617,39 @@
 			files = (
 				828F254623BEBEA200B87743 /* HexagonParameters.swift in Sources */,
 				828F253423B7DCBB00B87743 /* Data.swift in Sources */,
+				8252593D23DA7C0500E266A8 /* UserData.swift in Sources */,
 				824B15A823C2847900666BFD /* WaterCup.swift in Sources */,
-				828F252E23B7B62400B87743 /* UserData.swift in Sources */,
+				828F252E23B7B62400B87743 /* WaterData.swift in Sources */,
 				824B15B023C3EF6E00666BFD /* Person.swift in Sources */,
+				8252593623DA7B9200E266A8 /* UserAndPassword.swift in Sources */,
 				828F254123BEB52B00B87743 /* ProfileEditor.swift in Sources */,
 				828F253623B7DDA500B87743 /* Day.swift in Sources */,
 				824B15A323C1142900666BFD /* RotatedBadgeSymbol.swift in Sources */,
+				824B15B923C69FC700666BFD /* AddCup.swift in Sources */,
+				8252594323DA7C8E00E266A8 /* EnvironmentWindowKey.swift in Sources */,
 				824B15AB23C2B45400666BFD /* CupCap.swift in Sources */,
+				8252592F23DA67CC00E266A8 /* SignInWithApple.swift in Sources */,
 				824B15A123BF9EA600666BFD /* BadgeSymbol.swift in Sources */,
 				824B15A623C119DB00666BFD /* WaterBadge.swift in Sources */,
+				824B15BD23C6A66300666BFD /* RemoveCup.swift in Sources */,
 				824B15AD23C2B4A900666BFD /* Cup.swift in Sources */,
 				828F24F723B7A1FA00B87743 /* AppDelegate.swift in Sources */,
 				828F253D23BEAD6A00B87743 /* Profile.swift in Sources */,
+				8252593F23DA7C2400E266A8 /* UserDataKeychain.swift in Sources */,
 				828F24F923B7A1FA00B87743 /* SceneDelegate.swift in Sources */,
 				828F253B23BE8C1400B87743 /* Week.swift in Sources */,
 				828F253923B7FE1A00B87743 /* GraphCapsule.swift in Sources */,
+				8252594123DA7C7200E266A8 /* WebApi.swift in Sources */,
 				828F252823B7A25C00B87743 /* Home.swift in Sources */,
+				8252593423DA759100E266A8 /* SignInWithAppleDelegates.swift in Sources */,
 				828F252B23B7A2A300B87743 /* ProfileHost.swift in Sources */,
 				828F254423BEBE7000B87743 /* Badge.swift in Sources */,
 				824B15B423C56EAC00666BFD /* CupStack.swift in Sources */,
 				824B159F23BF9D4500666BFD /* BadgeBackground.swift in Sources */,
+				8252593223DA6BCE00E266A8 /* EntryPoint.swift in Sources */,
+				8252593B23DA7BF800E266A8 /* SharedWebCredential.swift in Sources */,
 				828F253F23BEB19F00B87743 /* ProfileSummary.swift in Sources */,
+				8252593923DA7BE900E266A8 /* Keychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,8 +814,11 @@
 		};
 		828F251E23B7A1FB00B87743 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADBC9F071F5E50E2D76E2451 /* Pods-LolWater.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LolWater/LolWater.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"LolWater/Preview Content\"";
 				DEVELOPMENT_TEAM = ZMA9KZ76AN;
@@ -603,8 +828,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dangaeta.LolWater;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dangaeta.LolWaterHaha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -612,8 +838,11 @@
 		};
 		828F251F23B7A1FB00B87743 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DFB9C668B02E3D48832D756 /* Pods-LolWater.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LolWater/LolWater.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"LolWater/Preview Content\"";
 				DEVELOPMENT_TEAM = ZMA9KZ76AN;
@@ -623,8 +852,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dangaeta.LolWater;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dangaeta.LolWaterHaha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -632,6 +862,7 @@
 		};
 		828F252123B7A1FB00B87743 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC7176FA35E9A83D86407EFE /* Pods-LolWaterTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -654,6 +885,7 @@
 		};
 		828F252223B7A1FB00B87743 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CECD06529B090680C572DC6 /* Pods-LolWaterTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -676,6 +908,7 @@
 		};
 		828F252423B7A1FB00B87743 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2D32AD82DAD5B947A9F975F /* Pods-LolWater-LolWaterUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -696,6 +929,7 @@
 		};
 		828F252523B7A1FB00B87743 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCB7E1D7F9BD7298BCE76B36 /* Pods-LolWater-LolWaterUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
