@@ -31,6 +31,8 @@
 		8252593F23DA7C2400E266A8 /* UserDataKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252593E23DA7C2400E266A8 /* UserDataKeychain.swift */; };
 		8252594123DA7C7200E266A8 /* WebApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252594023DA7C7200E266A8 /* WebApi.swift */; };
 		8252594323DA7C8E00E266A8 /* EnvironmentWindowKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252594223DA7C8E00E266A8 /* EnvironmentWindowKey.swift */; };
+		8252594823DB5A6B00E266A8 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252594723DB5A6B00E266A8 /* SplashScreen.swift */; };
+		8252594C23DB98D000E266A8 /* EmptyCup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252594B23DB98D000E266A8 /* EmptyCup.swift */; };
 		828F24F723B7A1FA00B87743 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F24F623B7A1FA00B87743 /* AppDelegate.swift */; };
 		828F24F923B7A1FA00B87743 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F24F823B7A1FA00B87743 /* SceneDelegate.swift */; };
 		828F24FD23B7A1FB00B87743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 828F24FC23B7A1FB00B87743 /* Assets.xcassets */; };
@@ -99,6 +101,8 @@
 		8252593E23DA7C2400E266A8 /* UserDataKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataKeychain.swift; sourceTree = "<group>"; };
 		8252594023DA7C7200E266A8 /* WebApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebApi.swift; sourceTree = "<group>"; };
 		8252594223DA7C8E00E266A8 /* EnvironmentWindowKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentWindowKey.swift; sourceTree = "<group>"; };
+		8252594723DB5A6B00E266A8 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		8252594B23DB98D000E266A8 /* EmptyCup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCup.swift; sourceTree = "<group>"; };
 		828F24F323B7A1FA00B87743 /* LolWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LolWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		828F24F623B7A1FA00B87743 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		828F24F823B7A1FA00B87743 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 				824B15AA23C2B45400666BFD /* CupCap.swift */,
 				824B15AC23C2B4A900666BFD /* Cup.swift */,
 				824B15B323C56EAB00666BFD /* CupStack.swift */,
+				8252594B23DB98D000E266A8 /* EmptyCup.swift */,
 			);
 			path = WaterCup;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 				8252593123DA6BCE00E266A8 /* EntryPoint.swift */,
 				8252592E23DA67CC00E266A8 /* SignInWithApple.swift */,
 				8252593323DA759100E266A8 /* SignInWithAppleDelegates.swift */,
+				8252594723DB5A6B00E266A8 /* SplashScreen.swift */,
 			);
 			path = EntryPoint;
 			sourceTree = "<group>";
@@ -615,6 +621,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8252594823DB5A6B00E266A8 /* SplashScreen.swift in Sources */,
 				828F254623BEBEA200B87743 /* HexagonParameters.swift in Sources */,
 				828F253423B7DCBB00B87743 /* Data.swift in Sources */,
 				8252593D23DA7C0500E266A8 /* UserData.swift in Sources */,
@@ -627,6 +634,7 @@
 				824B15A323C1142900666BFD /* RotatedBadgeSymbol.swift in Sources */,
 				824B15B923C69FC700666BFD /* AddCup.swift in Sources */,
 				8252594323DA7C8E00E266A8 /* EnvironmentWindowKey.swift in Sources */,
+				8252594C23DB98D000E266A8 /* EmptyCup.swift in Sources */,
 				824B15AB23C2B45400666BFD /* CupCap.swift in Sources */,
 				8252592F23DA67CC00E266A8 /* SignInWithApple.swift in Sources */,
 				824B15A123BF9EA600666BFD /* BadgeSymbol.swift in Sources */,

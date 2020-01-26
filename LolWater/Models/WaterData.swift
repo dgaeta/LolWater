@@ -17,4 +17,18 @@ final class WaterData: ObservableObject {
     @Published var activeHour = 4
     @Published var activeHourSuffix = "PM"
     @Published var profile = Profile.default
+    @Published var mActive = false
+    @Published var tuActive = false
+    @Published var wActive = false
+    @Published var thActive = false
+    @Published var fActive = true
+    @Published var suActive = false
+    @Published var saActive = false
+    @Published var mCups = 1
+    @Published var tuCups = 1
+    @Published var wCups = 1
+    @Published var thCups = 1
+    @Published var fCups = 1
+    @Published var suCups = 1
+    @Published var saCups = 1
 }
