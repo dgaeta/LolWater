@@ -81,6 +81,11 @@ struct Week: View {
                                     Spacer()
                                     Image(systemName: "exclamationmark.triangle")
                                 }
+                                if self.active == Weekday.Sunday {
+                                    Image(systemName: "chevron.up.circle.fill")
+                                } else {
+                                    Image(systemName: "chevron.up.circle")
+                                }
                             }
                         }
                     }
@@ -109,6 +114,11 @@ struct Week: View {
                                     Spacer()
                                     Image(systemName: "exclamationmark.triangle")
                                 }
+                                if self.active == Weekday.Monday {
+                                    Image(systemName: "chevron.up.circle.fill")
+                                } else {
+                                    Image(systemName: "chevron.up.circle")
+                                }
                             }
                         }
                     }
@@ -133,6 +143,11 @@ struct Week: View {
                             if self.waterData.tuCups == 0 {
                                  Spacer()
                                  Image(systemName: "exclamationmark.triangle")
+                            }
+                            if self.active == Weekday.Tuesday {
+                                Image(systemName: "chevron.up.circle.fill")
+                            } else {
+                                Image(systemName: "chevron.up.circle")
                             }
                         }
                         
@@ -161,6 +176,11 @@ struct Week: View {
                                  Spacer()
                                  Image(systemName: "exclamationmark.triangle")
                             }
+                            if self.active == Weekday.Wednesday {
+                                Image(systemName: "chevron.up.circle.fill")
+                            } else {
+                                Image(systemName: "chevron.up.circle")
+                            }
                         }
                     }
                     
@@ -185,6 +205,11 @@ struct Week: View {
                             if self.waterData.thCups == 0 {
                                  Spacer()
                                  Image(systemName: "exclamationmark.triangle")
+                            }
+                            if self.active == Weekday.Thursday {
+                                Image(systemName: "chevron.up.circle.fill")
+                            } else {
+                                Image(systemName: "chevron.up.circle")
                             }
                         }
                     }
@@ -211,6 +236,11 @@ struct Week: View {
                                  Spacer()
                                  Image(systemName: "exclamationmark.triangle")
                             }
+                            if self.active == Weekday.Friday {
+                                Image(systemName: "chevron.up.circle.fill")
+                            } else {
+                                Image(systemName: "chevron.up.circle")
+                            }
                         }
                     }
                     
@@ -235,6 +265,11 @@ struct Week: View {
                             if self.waterData.saCups == 0 {
                                  Spacer()
                                  Image(systemName: "exclamationmark.triangle")
+                            }
+                            if self.active == Weekday.Saturday {
+                                Image(systemName: "chevron.up.circle.fill")
+                            } else {
+                                Image(systemName: "chevron.up.circle")
                             }
                         }
                     }
