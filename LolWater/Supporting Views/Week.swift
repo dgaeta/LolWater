@@ -11,6 +11,7 @@ import SwiftUI
 struct Week: View {
     @EnvironmentObject var waterData: WaterData
     @State var active: Weekday = Weekday.Sunday
+    private var maxCups: Int = 8
     
     var labels: [String] = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     var labels1: [String] = ["S", "M", "Tu", "W", "Th", "F", "S"]
@@ -67,16 +68,21 @@ struct Week: View {
                             
                             Person(lineWidth: CGFloat(2))
                             
-                            VStack {
+                            if self.waterData.suCups > 8 {
+                                Text("\(self.waterData.suCups)")
+                            }
+                            
+                            VStack(alignment: .trailing, spacing: 5.0) {
                                 ForEach(
-                                    Array(repeating: 0, count: self.waterData.suCups), id: \.self) {cup in
+                                Array(repeating: 0, count: min(self.waterData.suCups, self.maxCups)), id: \.self) {cup in
                                         WaterCup(
                                             cupColor: Color.blue
                                         ).frame(
-                                            width: geometry.size.width/8,
-                                            height: geometry.size.height/8
+                                            width: geometry.size.width/20,
+                                            height: geometry.size.height/20
                                         )
                                 }
+                                
                                 if self.waterData.suCups == 0 {
                                     Spacer()
                                     Image(systemName: "exclamationmark.triangle")
@@ -99,14 +105,18 @@ struct Week: View {
                                 
                                 Person(lineWidth: CGFloat(2))
                                 
+                                if self.waterData.mCups > 8 {
+                                    Text("\(self.waterData.mCups)")
+                                }
+                                
                                 VStack {
                                     ForEach(
-                                        Array(repeating: 0, count: self.waterData.mCups), id: \.self) {cup in
+                                        Array(repeating: 0, count: min(self.waterData.mCups, self.maxCups)), id: \.self) {cup in
                                             WaterCup(
                                                 cupColor: Color.blue
                                             ).frame(
-                                                width: geometry.size.width/8,
-                                                height: geometry.size.height/8
+                                                width: geometry.size.width/20,
+                                                height: geometry.size.height/20
                                             )
                                     }
                                 }
@@ -129,14 +139,18 @@ struct Week: View {
                                 .font(.headline)
                             Person(lineWidth: CGFloat(2))
                             
+                            if self.waterData.tuCups > 8 {
+                                Text("\(self.waterData.tuCups)")
+                            }
+                            
                             VStack {
                                 ForEach(
-                                    Array(repeating: 0, count: self.waterData.tuCups), id: \.self) {cup in
+                                    Array(repeating: 0, count: min(self.waterData.tuCups, self.maxCups)), id: \.self) {cup in
                                         WaterCup(
                                             cupColor: Color.blue
                                         ).frame(
-                                            width: geometry.size.width/8,
-                                            height: geometry.size.height/8
+                                            width: geometry.size.width/20,
+                                            height: geometry.size.height/20
                                         )
                                 }
                             }
@@ -161,14 +175,18 @@ struct Week: View {
                             
                             Person(lineWidth: CGFloat(2))
                             
+                            if self.waterData.wCups > 8 {
+                                Text("\(self.waterData.wCups)")
+                            }
+                            
                             VStack {
                                 ForEach(
-                                    Array(repeating: 0, count: self.waterData.wCups), id: \.self) {cup in
+                                    Array(repeating: 0, count: min(self.waterData.wCups, self.maxCups)), id: \.self) {cup in
                                         WaterCup(
                                             cupColor: Color.blue
                                         ).frame(
-                                            width: geometry.size.width/8,
-                                            height: geometry.size.height/8
+                                            width: geometry.size.width/20,
+                                            height: geometry.size.height/20
                                         )
                                 }
                             }
@@ -191,14 +209,18 @@ struct Week: View {
                             
                             Person(lineWidth: CGFloat(2))
                             
+                            if self.waterData.thCups > 8 {
+                                Text("\(self.waterData.thCups)")
+                            }
+                            
                             VStack {
                                 ForEach(
-                                    Array(repeating: 0, count: self.waterData.thCups), id: \.self) {cup in
+                                    Array(repeating: 0, count: min(self.waterData.thCups, self.maxCups)), id: \.self) {cup in
                                         WaterCup(
                                             cupColor: Color.blue
                                         ).frame(
-                                            width: geometry.size.width/8,
-                                            height: geometry.size.height/8
+                                            width: geometry.size.width/20,
+                                            height: geometry.size.height/20
                                         )
                                 }
                             }
@@ -221,14 +243,18 @@ struct Week: View {
                             
                             Person(lineWidth: CGFloat(2))
                             
+                            if self.waterData.fCups > 8 {
+                                Text("\(self.waterData.fCups)")
+                            }
+                            
                             VStack {
                                 ForEach(
-                                    Array(repeating: 0, count: self.waterData.fCups), id: \.self) {cup in
+                                    Array(repeating: 0, count: min(self.waterData.fCups, self.maxCups)), id: \.self) {cup in
                                         WaterCup(
                                             cupColor: Color.blue
                                         ).frame(
-                                            width: geometry.size.width/8,
-                                            height: geometry.size.height/8
+                                            width: geometry.size.width/20,
+                                            height: geometry.size.height/20
                                         )
                                 }
                             }
@@ -251,14 +277,18 @@ struct Week: View {
                             
                             Person(lineWidth: CGFloat(2))
                             
+                            if self.waterData.saCups > 8 {
+                                Text("\(self.waterData.saCups)")
+                            }
+                            
                             VStack {
                                 ForEach(
-                                    Array(repeating: 0, count: self.waterData.saCups), id: \.self) {cup in
+                                    Array(repeating: 0, count: min(self.waterData.saCups, self.maxCups)), id: \.self) {cup in
                                         WaterCup(
                                             cupColor: Color.blue
                                         ).frame(
-                                            width: geometry.size.width/8,
-                                            height: geometry.size.height/8
+                                            width: geometry.size.width/20,
+                                            height: geometry.size.height/20
                                         )
                                 }
                             }
@@ -273,7 +303,7 @@ struct Week: View {
                             }
                         }
                     }
-                }
+                }.frame(minHeight: geometry.size.height*0.70)
                 
                 Text("Cups you drank")
                 

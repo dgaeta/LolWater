@@ -13,15 +13,20 @@ struct WaterCup: View {
     
     var body: some View {
         GeometryReader {geometry in
-            CupCap()
-            Cup(color: self.cupColor).overlay(
-                Text("Water")
-                    .foregroundColor(Color.white)
-                    .fontWeight(Font.Weight.bold)
-                    .font(.system(size: geometry.size.height/6))
-                    .rotationEffect(.degrees(90))
-
-            )
+            VStack {
+                 Rectangle()
+                    .fill(Color.blue)
+                    .frame(width: geometry.size.width/3, height: geometry.size.height/12)
+                RoundedRectangle(cornerRadius: geometry.size.width/10, style: .circular)
+                    .frame(width: geometry.size.width/3, height: geometry.size.height/12)
+                    .foregroundColor(.gray)
+                RoundedRectangle(cornerRadius: geometry.size.width/10, style: .circular)
+                    .frame(width: geometry.size.width/2, height: geometry.size.height * 0.8)
+                    .foregroundColor(.blue)
+                    .overlay(Text("Water").foregroundColor(Color.white))
+                Spacer()
+            }
+            
         }
     }
 }
