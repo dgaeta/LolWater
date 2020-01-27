@@ -53,6 +53,7 @@
 		828F254123BEB52B00B87743 /* ProfileEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F254023BEB52B00B87743 /* ProfileEditor.swift */; };
 		828F254423BEBE7000B87743 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F254323BEBE7000B87743 /* Badge.swift */; };
 		828F254623BEBEA200B87743 /* HexagonParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F254523BEBEA200B87743 /* HexagonParameters.swift */; };
+		82ACDC5B23DF0D90009CED6B /* WeekdayColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ACDC5A23DF0D90009CED6B /* WeekdayColumn.swift */; };
 		F7D486C2DB94D0F6F24C5466 /* Pods_LolWaterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F5403202268A59703EEA670 /* Pods_LolWaterTests.framework */; };
 		F80D29C2141840CC5FBBE40F /* Pods_LolWater_LolWaterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B36840918258F48BA82DDF5 /* Pods_LolWater_LolWaterUITests.framework */; };
 /* End PBXBuildFile section */
@@ -129,6 +130,7 @@
 		828F254023BEB52B00B87743 /* ProfileEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditor.swift; sourceTree = "<group>"; };
 		828F254323BEBE7000B87743 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		828F254523BEBEA200B87743 /* HexagonParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonParameters.swift; sourceTree = "<group>"; };
+		82ACDC5A23DF0D90009CED6B /* WeekdayColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayColumn.swift; sourceTree = "<group>"; };
 		ADBC9F071F5E50E2D76E2451 /* Pods-LolWater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LolWater.debug.xcconfig"; path = "Target Support Files/Pods-LolWater/Pods-LolWater.debug.xcconfig"; sourceTree = "<group>"; };
 		CC7176FA35E9A83D86407EFE /* Pods-LolWaterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LolWaterTests.debug.xcconfig"; path = "Target Support Files/Pods-LolWaterTests/Pods-LolWaterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CCB7E1D7F9BD7298BCE76B36 /* Pods-LolWater-LolWaterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LolWater-LolWaterUITests.release.xcconfig"; path = "Target Support Files/Pods-LolWater-LolWaterUITests/Pods-LolWater-LolWaterUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 				828F253523B7DDA500B87743 /* Day.swift */,
 				828F253823B7FE1A00B87743 /* GraphCapsule.swift */,
 				828F253A23BE8C1400B87743 /* Week.swift */,
+				82ACDC5A23DF0D90009CED6B /* WeekdayColumn.swift */,
 			);
 			path = "Supporting Views";
 			sourceTree = "<group>";
@@ -627,6 +630,7 @@
 				8252593D23DA7C0500E266A8 /* UserData.swift in Sources */,
 				824B15A823C2847900666BFD /* WaterCup.swift in Sources */,
 				828F252E23B7B62400B87743 /* WaterData.swift in Sources */,
+				82ACDC5B23DF0D90009CED6B /* WeekdayColumn.swift in Sources */,
 				824B15B023C3EF6E00666BFD /* Person.swift in Sources */,
 				8252593623DA7B9200E266A8 /* UserAndPassword.swift in Sources */,
 				828F254123BEB52B00B87743 /* ProfileEditor.swift in Sources */,
