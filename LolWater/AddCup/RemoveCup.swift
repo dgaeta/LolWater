@@ -19,7 +19,7 @@ struct RemoveCup: View {
                 .accessibility(label: Text("Remove cup of water for today"))
                 .padding()
                 
-                WaterCup(cupColor: Color.blue).frame(width: geometry.size.width/4, height: geometry.size.height/4)
+                WaterCup(cupColor: Color.blue)
             }
         }
     }

@@ -27,9 +27,9 @@ struct Home: View {
             GeometryReader { geometry in
                 VStack {
                         Week()
-                        .frame(width: geometry.size.width * 0.95, height: geometry.size.height * 0.55)
+                        
                 
-                        Spacer()
+                        
                     }
                     
                     .navigationBarTitle(Text("LolWater"))
