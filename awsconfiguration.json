@@ -1,0 +1,36 @@
+{
+    "UserAgent": "aws-amplify/cli",
+    "Version": "0.1.0",
+    "IdentityManager": {
+        "Default": {}
+    },
+    "CredentialsProvider": {
+        "CognitoIdentity": {
+            "Default": {
+                "PoolId": "us-east-2:394da020-66aa-43b5-9e6d-4d58ac1fe31b",
+                "Region": "us-east-2"
+            }
+        }
+    },
+    "CognitoUserPool": {
+        "Default": {
+            "PoolId": "us-east-2_Tj7bUx7OB",
+            "AppClientId": "cf93jalvo77j95duv0h33j18s",
+            "AppClientSecret": "i4eis44392f3khj167j1b3g8hbmak0q2s25e2p791rq1d1du1q6",
+            "Region": "us-east-2"
+        }
+    },
+    "Auth": {
+        "Default": {
+            "authenticationFlowType": "USER_SRP_AUTH"
+        }
+    },
+    "AppSync": {
+        "Default": {
+            "ApiUrl": "https://vi3ci5pyxzdy7arihyhk5ic4cq.appsync-api.us-east-2.amazonaws.com/graphql",
+            "Region": "us-east-2",
+            "AuthMode": "AMAZON_COGNITO_USER_POOLS",
+            "ClientDatabasePrefix": "LolWaterAppSyncAppAPI_AMAZON_COGNITO_USER_POOLS"
+        }
+    }
+}

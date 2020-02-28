@@ -1,0 +1,55 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateWaterDay(
+  $cupsDrank: Int
+  $date: AWSDate
+  $id: ID
+  $userId: String
+) {
+  onCreateWaterDay(
+    cupsDrank: $cupsDrank
+    date: $date
+    id: $id
+    userId: $userId
+  ) {
+    cupsDrank
+    date
+    id
+    userId
+  }
+}
+subscription OnDeleteWaterDay(
+  $cupsDrank: Int
+  $date: AWSDate
+  $id: ID
+  $userId: String
+) {
+  onDeleteWaterDay(
+    cupsDrank: $cupsDrank
+    date: $date
+    id: $id
+    userId: $userId
+  ) {
+    cupsDrank
+    date
+    id
+    userId
+  }
+}
+subscription OnUpdateWaterDay(
+  $cupsDrank: Int
+  $date: AWSDate
+  $id: ID
+  $userId: String
+) {
+  onUpdateWaterDay(
+    cupsDrank: $cupsDrank
+    date: $date
+    id: $id
+    userId: $userId
+  ) {
+    cupsDrank
+    date
+    id
+    userId
+  }
+}

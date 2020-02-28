@@ -35,7 +35,7 @@ struct EntryPoint: View {
                     }
                 }
             } else {
-                Home(showingProfile: false)
+                HomeView(showingProfile: false)
                 .environmentObject(WaterData())
             }
         }

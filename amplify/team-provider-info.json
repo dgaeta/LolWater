@@ -1,0 +1,20 @@
+{
+    "lolwater": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-lolwater-lolwater-184701-authRole",
+            "UnauthRoleArn": "arn:aws:iam::693165421151:role/amplify-lolwater-lolwater-184701-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::693165421151:role/amplify-lolwater-lolwater-184701-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-lolwater-lolwater-184701-deployment",
+            "UnauthRoleName": "amplify-lolwater-lolwater-184701-unauthRole",
+            "StackName": "amplify-lolwater-lolwater-184701",
+            "StackId": "arn:aws:cloudformation:us-east-2:693165421151:stack/amplify-lolwater-lolwater-184701/cae156b0-5696-11ea-bf89-021a782363a8",
+            "AmplifyAppId": "d33x3msmlcwihz"
+        },
+        "categories": {
+            "auth": {
+                "lolwateraa5978d1": {}
+            }
+        }
+    }
+}

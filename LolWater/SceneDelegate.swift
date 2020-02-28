@@ -22,12 +22,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Create the SwiftUI view that provides the window contents.
 //        let home = Home(showingProfile: false)
 //            .environmentObject(WaterData())
-        let entryPoint = EntryPoint()
+//        let entryPoint = EntryPoint()
+        let user = User()
         
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: entryPoint)
+            window.rootViewController = UIHostingController(
+                rootView: StarterView()
+                    .environmentObject(user)
+            )
             self.window = window
             window.makeKeyAndVisible()
         }

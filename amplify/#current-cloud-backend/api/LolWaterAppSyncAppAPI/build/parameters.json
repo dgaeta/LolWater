@@ -1,0 +1,14 @@
+{
+    "CreateAPIKey": 0,
+    "AppSyncApiName": "LolWaterAppSyncAppAPI",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": "false",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authlolwateraa5978d1",
+            "Outputs.UserPoolId"
+        ]
+    },
+    "S3DeploymentBucket": "amplify-lolwater-lolwater-184701-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/972a4ce89882fdce9b6e326e05220fadf154fcaf"
+}

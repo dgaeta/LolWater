@@ -1,0 +1,87 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-lolwater-lolwater-184701-authRole",
+            "UnauthRoleArn": "arn:aws:iam::693165421151:role/amplify-lolwater-lolwater-184701-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::693165421151:role/amplify-lolwater-lolwater-184701-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-lolwater-lolwater-184701-deployment",
+            "UnauthRoleName": "amplify-lolwater-lolwater-184701-unauthRole",
+            "StackName": "amplify-lolwater-lolwater-184701",
+            "StackId": "arn:aws:cloudformation:us-east-2:693165421151:stack/amplify-lolwater-lolwater-184701/cae156b0-5696-11ea-bf89-021a782363a8",
+            "AmplifyAppId": "d33x3msmlcwihz"
+        }
+    },
+    "auth": {
+        "lolwateraa5978d1": {
+            "service": "Cognito",
+            "providerPlugin": "awscloudformation",
+            "dependsOn": [],
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/amplify-lolwater-lolwater-184701-deployment/amplify-cfn-templates/auth/lolwateraa5978d1-cloudformation-template.yml",
+                "logicalId": "authlolwateraa5978d1"
+            },
+            "lastPushTimeStamp": "2020-02-24T14:46:42.841Z",
+            "output": {
+                "AppClientSecret": "i4eis44392f3khj167j1b3g8hbmak0q2s25e2p791rq1d1du1q6",
+                "UserPoolId": "us-east-2_Tj7bUx7OB",
+                "AppClientIDWeb": "16otjbc8sfadadmh5acqposurb",
+                "AppClientID": "cf93jalvo77j95duv0h33j18s",
+                "IdentityPoolId": "us-east-2:394da020-66aa-43b5-9e6d-4d58ac1fe31b",
+                "IdentityPoolName": "lolwateraa5978d1_identitypool_aa5978d1__lolwater",
+                "UserPoolName": "lolwateraa5978d1_userpool_aa5978d1"
+            },
+            "lastPushDirHash": "gWQFWR5uo4vC7wvQEyMi8QgSzHw="
+        },
+        "userPoolGroups": {
+            "service": "Cognito-UserPool-Groups",
+            "providerPlugin": "awscloudformation",
+            "dependsOn": [
+                {
+                    "category": "auth",
+                    "resourceName": "lolwateraa5978d1",
+                    "attributes": [
+                        "UserPoolId",
+                        "AppClientIDWeb",
+                        "AppClientID",
+                        "IdentityPoolId"
+                    ]
+                }
+            ],
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/amplify-lolwater-lolwater-184701-deployment/amplify-cfn-templates/auth/template.json",
+                "logicalId": "authuserPoolGroups"
+            },
+            "lastPushTimeStamp": "2020-02-24T14:46:42.842Z",
+            "output": {
+                "LolWaterUserPool1GroupRole": "arn:aws:iam::693165421151:role/us-east-2_Tj7bUx7OB-LolWaterUserPool1GroupRole"
+            },
+            "lastPushDirHash": "cWLN+FaU5L3CFWcUc6HCXCjHgMs="
+        }
+    },
+    "api": {
+        "LolWaterAppSyncAppAPI": {
+            "service": "AppSync",
+            "providerPlugin": "awscloudformation",
+            "output": {
+                "authConfig": {
+                    "additionalAuthenticationProviders": [],
+                    "defaultAuthentication": {
+                        "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+                        "userPoolConfig": {
+                            "userPoolId": "authlolwateraa5978d1"
+                        }
+                    }
+                },
+                "GraphQLAPIIdOutput": "2pjxnvtfizelrkcee6xxayit3y",
+                "GraphQLAPIEndpointOutput": "https://vi3ci5pyxzdy7arihyhk5ic4cq.appsync-api.us-east-2.amazonaws.com/graphql"
+            },
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/amplify-lolwater-lolwater-184701-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+                "logicalId": "apiLolWaterAppSyncAppAPI"
+            },
+            "lastPushTimeStamp": "2020-02-24T14:46:42.843Z",
+            "lastPushDirHash": "4oKpkJHTZ+RB+I4lzongGrTwyAs="
+        }
+    }
+}

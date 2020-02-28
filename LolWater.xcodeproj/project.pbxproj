@@ -31,8 +31,12 @@
 		8252593F23DA7C2400E266A8 /* UserDataKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252593E23DA7C2400E266A8 /* UserDataKeychain.swift */; };
 		8252594123DA7C7200E266A8 /* WebApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252594023DA7C7200E266A8 /* WebApi.swift */; };
 		8252594323DA7C8E00E266A8 /* EnvironmentWindowKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252594223DA7C8E00E266A8 /* EnvironmentWindowKey.swift */; };
-		8252594823DB5A6B00E266A8 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252594723DB5A6B00E266A8 /* SplashScreen.swift */; };
 		8252594C23DB98D000E266A8 /* EmptyCup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252594B23DB98D000E266A8 /* EmptyCup.swift */; };
+		8254063C240971F900A56AFE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8254063B240971F900A56AFE /* User.swift */; };
+		8254063E240972F700A56AFE /* StarterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8254063D240972F700A56AFE /* StarterView.swift */; };
+		825406412409732C00A56AFE /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825406402409732C00A56AFE /* RegisterView.swift */; };
+		825406432409734400A56AFE /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825406422409734400A56AFE /* WelcomeView.swift */; };
+		825406452409738000A56AFE /* User+ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825406442409738000A56AFE /* User+ObservableObject.swift */; };
 		828F24F723B7A1FA00B87743 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F24F623B7A1FA00B87743 /* AppDelegate.swift */; };
 		828F24F923B7A1FA00B87743 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F24F823B7A1FA00B87743 /* SceneDelegate.swift */; };
 		828F24FD23B7A1FB00B87743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 828F24FC23B7A1FB00B87743 /* Assets.xcassets */; };
@@ -40,7 +44,7 @@
 		828F250323B7A1FB00B87743 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 828F250123B7A1FB00B87743 /* LaunchScreen.storyboard */; };
 		828F250E23B7A1FB00B87743 /* LolWaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F250D23B7A1FB00B87743 /* LolWaterTests.swift */; };
 		828F251923B7A1FB00B87743 /* LolWaterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F251823B7A1FB00B87743 /* LolWaterUITests.swift */; };
-		828F252823B7A25C00B87743 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F252723B7A25C00B87743 /* Home.swift */; };
+		828F252823B7A25C00B87743 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F252723B7A25C00B87743 /* HomeView.swift */; };
 		828F252B23B7A2A300B87743 /* ProfileHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F252A23B7A2A300B87743 /* ProfileHost.swift */; };
 		828F252E23B7B62400B87743 /* WaterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F252D23B7B62400B87743 /* WaterData.swift */; };
 		828F253223B7D76400B87743 /* lolWaterData.json in Resources */ = {isa = PBXBuildFile; fileRef = 828F253123B7D76400B87743 /* lolWaterData.json */; };
@@ -102,8 +106,12 @@
 		8252593E23DA7C2400E266A8 /* UserDataKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataKeychain.swift; sourceTree = "<group>"; };
 		8252594023DA7C7200E266A8 /* WebApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebApi.swift; sourceTree = "<group>"; };
 		8252594223DA7C8E00E266A8 /* EnvironmentWindowKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentWindowKey.swift; sourceTree = "<group>"; };
-		8252594723DB5A6B00E266A8 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		8252594B23DB98D000E266A8 /* EmptyCup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCup.swift; sourceTree = "<group>"; };
+		8254063B240971F900A56AFE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8254063D240972F700A56AFE /* StarterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterView.swift; sourceTree = "<group>"; };
+		825406402409732C00A56AFE /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		825406422409734400A56AFE /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		825406442409738000A56AFE /* User+ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+ObservableObject.swift"; sourceTree = "<group>"; };
 		828F24F323B7A1FA00B87743 /* LolWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LolWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		828F24F623B7A1FA00B87743 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		828F24F823B7A1FA00B87743 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,7 +125,7 @@
 		828F251423B7A1FB00B87743 /* LolWaterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LolWaterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		828F251823B7A1FB00B87743 /* LolWaterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolWaterUITests.swift; sourceTree = "<group>"; };
 		828F251A23B7A1FB00B87743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		828F252723B7A25C00B87743 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		828F252723B7A25C00B87743 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		828F252A23B7A2A300B87743 /* ProfileHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHost.swift; sourceTree = "<group>"; };
 		828F252D23B7B62400B87743 /* WaterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterData.swift; sourceTree = "<group>"; };
 		828F253123B7D76400B87743 /* lolWaterData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = lolWaterData.json; sourceTree = "<group>"; };
@@ -220,7 +228,6 @@
 				8252593123DA6BCE00E266A8 /* EntryPoint.swift */,
 				8252592E23DA67CC00E266A8 /* SignInWithApple.swift */,
 				8252593323DA759100E266A8 /* SignInWithAppleDelegates.swift */,
-				8252594723DB5A6B00E266A8 /* SplashScreen.swift */,
 			);
 			path = EntryPoint;
 			sourceTree = "<group>";
@@ -234,6 +241,15 @@
 				8252593E23DA7C2400E266A8 /* UserDataKeychain.swift */,
 			);
 			path = CredentialStorage;
+			sourceTree = "<group>";
+		};
+		8254063F2409730C00A56AFE /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				825406402409732C00A56AFE /* RegisterView.swift */,
+				825406422409734400A56AFE /* WelcomeView.swift */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 		828F24EA23B7A1FA00B87743 = {
@@ -278,10 +294,12 @@
 				828F24FC23B7A1FB00B87743 /* Assets.xcassets */,
 				828F250123B7A1FB00B87743 /* LaunchScreen.storyboard */,
 				828F250423B7A1FB00B87743 /* Info.plist */,
+				8254063F2409730C00A56AFE /* Welcome */,
 				828F24FE23B7A1FB00B87743 /* Preview Content */,
 				8252593523DA7B9200E266A8 /* UserAndPassword.swift */,
 				8252594023DA7C7200E266A8 /* WebApi.swift */,
 				8252594223DA7C8E00E266A8 /* EnvironmentWindowKey.swift */,
+				8254063D240972F700A56AFE /* StarterView.swift */,
 			);
 			path = LolWater;
 			sourceTree = "<group>";
@@ -315,7 +333,7 @@
 		828F252623B7A24400B87743 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				828F252723B7A25C00B87743 /* Home.swift */,
+				828F252723B7A25C00B87743 /* HomeView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -323,9 +341,12 @@
 		828F252923B7A27600B87743 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				828F253C23BEAD6A00B87743 /* Profile.swift */,
 				828F252A23B7A2A300B87743 /* ProfileHost.swift */,
 				828F253E23BEB19F00B87743 /* ProfileSummary.swift */,
 				828F254023BEB52B00B87743 /* ProfileEditor.swift */,
+				8254063B240971F900A56AFE /* User.swift */,
+				825406442409738000A56AFE /* User+ObservableObject.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -335,7 +356,6 @@
 			children = (
 				828F252D23B7B62400B87743 /* WaterData.swift */,
 				828F253323B7DCBB00B87743 /* Data.swift */,
-				828F253C23BEAD6A00B87743 /* Profile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -624,9 +644,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8252594823DB5A6B00E266A8 /* SplashScreen.swift in Sources */,
 				828F254623BEBEA200B87743 /* HexagonParameters.swift in Sources */,
 				828F253423B7DCBB00B87743 /* Data.swift in Sources */,
+				8254063E240972F700A56AFE /* StarterView.swift in Sources */,
 				8252593D23DA7C0500E266A8 /* UserData.swift in Sources */,
 				824B15A823C2847900666BFD /* WaterCup.swift in Sources */,
 				828F252E23B7B62400B87743 /* WaterData.swift in Sources */,
@@ -643,7 +663,9 @@
 				8252592F23DA67CC00E266A8 /* SignInWithApple.swift in Sources */,
 				824B15A123BF9EA600666BFD /* BadgeSymbol.swift in Sources */,
 				824B15A623C119DB00666BFD /* WaterBadge.swift in Sources */,
+				8254063C240971F900A56AFE /* User.swift in Sources */,
 				824B15BD23C6A66300666BFD /* RemoveCup.swift in Sources */,
+				825406412409732C00A56AFE /* RegisterView.swift in Sources */,
 				824B15AD23C2B4A900666BFD /* Cup.swift in Sources */,
 				828F24F723B7A1FA00B87743 /* AppDelegate.swift in Sources */,
 				828F253D23BEAD6A00B87743 /* Profile.swift in Sources */,
@@ -652,9 +674,11 @@
 				828F253B23BE8C1400B87743 /* Week.swift in Sources */,
 				828F253923B7FE1A00B87743 /* GraphCapsule.swift in Sources */,
 				8252594123DA7C7200E266A8 /* WebApi.swift in Sources */,
-				828F252823B7A25C00B87743 /* Home.swift in Sources */,
+				828F252823B7A25C00B87743 /* HomeView.swift in Sources */,
+				825406432409734400A56AFE /* WelcomeView.swift in Sources */,
 				8252593423DA759100E266A8 /* SignInWithAppleDelegates.swift in Sources */,
 				828F252B23B7A2A300B87743 /* ProfileHost.swift in Sources */,
+				825406452409738000A56AFE /* User+ObservableObject.swift in Sources */,
 				828F254423BEBE7000B87743 /* Badge.swift in Sources */,
 				824B15B423C56EAC00666BFD /* CupStack.swift in Sources */,
 				824B159F23BF9D4500666BFD /* BadgeBackground.swift in Sources */,
