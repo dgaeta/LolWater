@@ -20,7 +20,7 @@ extension StarterView: View {
       if self.user.isRegistered {
         WelcomeView()
       } else {
-        RegisterView()
+        RegisterView(keyboardHandler: KeyboardFollower())
       }
     }
   }

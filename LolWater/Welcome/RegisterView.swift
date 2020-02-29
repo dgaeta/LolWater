@@ -11,10 +11,15 @@ import SwiftUI
 struct RegisterView {
   
   @EnvironmentObject var user: User
-  
+  @ObservedObject var keyboardHandler: KeyboardFollower
+    
   @State private var name: String = ""
   
   private let title = "Welcome to Kuchi"
+    
+  init(keyboardHandler: KeyboardFollower) {
+    self.keyboardHandler = keyboardHandler
+  }
   
   func registerUser() {
     if name.isEmpty == false {
@@ -48,7 +53,9 @@ extension RegisterView: View {
                   .bold()
               }
             }
-        }.padding()
+        }
+        .padding(.bottom, keyboardHandler.keyboardHeight)
+        .padding()
         
         
       }
@@ -60,7 +67,7 @@ extension RegisterView: View {
 #if DEBUG
 struct RegisterView_Previews: PreviewProvider {
   static var previews: some View {
-    RegisterView()
+    RegisterView(keyboardHandler: KeyboardFollower())
       .environmentObject(User(name: "Ray"))
   }
 }

@@ -40,6 +40,7 @@
 		82540647240ADC5400A56AFE /* WelcomeMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82540646240ADC5400A56AFE /* WelcomeMessageView.swift */; };
 		82540649240ADC7500A56AFE /* LogoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82540648240ADC7500A56AFE /* LogoImage.swift */; };
 		8254064C240AE2B700A56AFE /* BorderedViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8254064B240AE2B700A56AFE /* BorderedViewModifier.swift */; };
+		8254064F240B118200A56AFE /* KeyboardFollower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8254064E240B118200A56AFE /* KeyboardFollower.swift */; };
 		828F24F723B7A1FA00B87743 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F24F623B7A1FA00B87743 /* AppDelegate.swift */; };
 		828F24F923B7A1FA00B87743 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F24F823B7A1FA00B87743 /* SceneDelegate.swift */; };
 		828F24FD23B7A1FB00B87743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 828F24FC23B7A1FB00B87743 /* Assets.xcassets */; };
@@ -118,6 +119,7 @@
 		82540646240ADC5400A56AFE /* WelcomeMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeMessageView.swift; sourceTree = "<group>"; };
 		82540648240ADC7500A56AFE /* LogoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImage.swift; sourceTree = "<group>"; };
 		8254064B240AE2B700A56AFE /* BorderedViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedViewModifier.swift; sourceTree = "<group>"; };
+		8254064E240B118200A56AFE /* KeyboardFollower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFollower.swift; sourceTree = "<group>"; };
 		828F24F323B7A1FA00B87743 /* LolWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LolWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		828F24F623B7A1FA00B87743 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		828F24F823B7A1FA00B87743 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -269,6 +271,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		8254064D240B116B00A56AFE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8254064E240B118200A56AFE /* KeyboardFollower.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		828F24EA23B7A1FA00B87743 = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +304,7 @@
 		828F24F523B7A1FA00B87743 /* LolWater */ = {
 			isa = PBXGroup;
 			children = (
+				8254064D240B116B00A56AFE /* Utils */,
 				8252593723DA7BBF00E266A8 /* CredentialStorage */,
 				8252593023DA6BB700E266A8 /* EntryPoint */,
 				8252592D23DA4A7F00E266A8 /* LolWater.entitlements */,
@@ -669,6 +680,7 @@
 				82540647240ADC5400A56AFE /* WelcomeMessageView.swift in Sources */,
 				8252593B23DA7BF800E266A8 /* SharedWebCredential.swift in Sources */,
 				828F253F23BEB19F00B87743 /* ProfileSummary.swift in Sources */,
+				8254064F240B118200A56AFE /* KeyboardFollower.swift in Sources */,
 				8252593923DA7BE900E266A8 /* Keychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
