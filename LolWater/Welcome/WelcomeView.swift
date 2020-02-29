@@ -25,7 +25,7 @@ extension WelcomeView: View {
         VStack {
           Text("Hi, \(user.profile.name)")
             .font(.largeTitle)
-          Text("Welcome to Kuchi")
+          Text("Welcome to LolWater")
             .font(.title)
           Button(action: {
             self.showHome = true

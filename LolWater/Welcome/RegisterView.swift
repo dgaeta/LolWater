@@ -32,19 +32,25 @@ extension RegisterView: View {
       if user.isRegistered {
         WelcomeView()
       } else {
-        Text(title)
-          .font(.title)
-          .animation(.spring())
-        TextField("Enter your name", text: $name)
-          .multilineTextAlignment(.center)
-        Button(action: {
-          self.registerUser()
-        }) {
-          HStack {
-            Image(systemName: "checkmark.circle")
-            Text("OK")
-          }
-        }
+        VStack {
+            WelcomeMessageView()
+            
+            TextField("Type your name...", text: $name)
+                .bordered()
+                
+            Button(action: self.registerUser) {
+              HStack {
+                Image(systemName: "checkmark")
+                  .resizable()
+                  .frame(width: 16, height: 16, alignment: .center)
+                Text("OK")
+                  .font(.body)
+                  .bold()
+              }
+            }
+        }.padding()
+        
+        
       }
     }
   }

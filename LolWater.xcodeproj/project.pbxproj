@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -37,6 +37,9 @@
 		825406412409732C00A56AFE /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825406402409732C00A56AFE /* RegisterView.swift */; };
 		825406432409734400A56AFE /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825406422409734400A56AFE /* WelcomeView.swift */; };
 		825406452409738000A56AFE /* User+ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825406442409738000A56AFE /* User+ObservableObject.swift */; };
+		82540647240ADC5400A56AFE /* WelcomeMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82540646240ADC5400A56AFE /* WelcomeMessageView.swift */; };
+		82540649240ADC7500A56AFE /* LogoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82540648240ADC7500A56AFE /* LogoImage.swift */; };
+		8254064C240AE2B700A56AFE /* BorderedViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8254064B240AE2B700A56AFE /* BorderedViewModifier.swift */; };
 		828F24F723B7A1FA00B87743 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F24F623B7A1FA00B87743 /* AppDelegate.swift */; };
 		828F24F923B7A1FA00B87743 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F24F823B7A1FA00B87743 /* SceneDelegate.swift */; };
 		828F24FD23B7A1FB00B87743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 828F24FC23B7A1FB00B87743 /* Assets.xcassets */; };
@@ -112,6 +115,9 @@
 		825406402409732C00A56AFE /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		825406422409734400A56AFE /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		825406442409738000A56AFE /* User+ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+ObservableObject.swift"; sourceTree = "<group>"; };
+		82540646240ADC5400A56AFE /* WelcomeMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeMessageView.swift; sourceTree = "<group>"; };
+		82540648240ADC7500A56AFE /* LogoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImage.swift; sourceTree = "<group>"; };
+		8254064B240AE2B700A56AFE /* BorderedViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedViewModifier.swift; sourceTree = "<group>"; };
 		828F24F323B7A1FA00B87743 /* LolWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LolWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		828F24F623B7A1FA00B87743 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		828F24F823B7A1FA00B87743 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -246,10 +252,21 @@
 		8254063F2409730C00A56AFE /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
+				8254064A240AE29D00A56AFE /* Components */,
 				825406402409732C00A56AFE /* RegisterView.swift */,
 				825406422409734400A56AFE /* WelcomeView.swift */,
+				82540646240ADC5400A56AFE /* WelcomeMessageView.swift */,
+				82540648240ADC7500A56AFE /* LogoImage.swift */,
 			);
 			path = Welcome;
+			sourceTree = "<group>";
+		};
+		8254064A240AE29D00A56AFE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8254064B240AE2B700A56AFE /* BorderedViewModifier.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		828F24EA23B7A1FA00B87743 = {
@@ -415,7 +432,6 @@
 				828F24EF23B7A1FA00B87743 /* Sources */,
 				828F24F023B7A1FA00B87743 /* Frameworks */,
 				828F24F123B7A1FA00B87743 /* Resources */,
-				8AED66542AA2D77D8ECB98EE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -453,7 +469,6 @@
 				828F251023B7A1FB00B87743 /* Sources */,
 				828F251123B7A1FB00B87743 /* Frameworks */,
 				828F251223B7A1FB00B87743 /* Resources */,
-				D246FDDD05C0DEADEFF90C0B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -559,23 +574,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8AED66542AA2D77D8ECB98EE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LolWater/Pods-LolWater-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LolWater/Pods-LolWater-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LolWater/Pods-LolWater-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		AB126FFE4AC7C8790E64AFF9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -596,23 +594,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D246FDDD05C0DEADEFF90C0B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LolWater-LolWaterUITests/Pods-LolWater-LolWaterUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LolWater-LolWaterUITests/Pods-LolWater-LolWaterUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LolWater-LolWaterUITests/Pods-LolWater-LolWaterUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D24CD64AF319F3689F7EE600 /* [CP] Check Pods Manifest.lock */ = {
@@ -666,6 +647,8 @@
 				8254063C240971F900A56AFE /* User.swift in Sources */,
 				824B15BD23C6A66300666BFD /* RemoveCup.swift in Sources */,
 				825406412409732C00A56AFE /* RegisterView.swift in Sources */,
+				82540649240ADC7500A56AFE /* LogoImage.swift in Sources */,
+				8254064C240AE2B700A56AFE /* BorderedViewModifier.swift in Sources */,
 				824B15AD23C2B4A900666BFD /* Cup.swift in Sources */,
 				828F24F723B7A1FA00B87743 /* AppDelegate.swift in Sources */,
 				828F253D23BEAD6A00B87743 /* Profile.swift in Sources */,
@@ -683,6 +666,7 @@
 				824B15B423C56EAC00666BFD /* CupStack.swift in Sources */,
 				824B159F23BF9D4500666BFD /* BadgeBackground.swift in Sources */,
 				8252593223DA6BCE00E266A8 /* EntryPoint.swift in Sources */,
+				82540647240ADC5400A56AFE /* WelcomeMessageView.swift in Sources */,
 				8252593B23DA7BF800E266A8 /* SharedWebCredential.swift in Sources */,
 				828F253F23BEB19F00B87743 /* ProfileSummary.swift in Sources */,
 				8252593923DA7BE900E266A8 /* Keychain.swift in Sources */,
