@@ -8,30 +8,23 @@
 
 import SwiftUI
 
-struct StarterView {
-  
-  @EnvironmentObject var user: User
-}
-
-extension StarterView: View {
+struct StarterView: View {
+  @EnvironmentObject var userViewModel: UserManager
   
   var body: some View {
     Group {
-      if self.user.isRegistered {
+      if self.userViewModel.isRegistered {
         WelcomeView()
       } else {
         RegisterView(keyboardHandler: KeyboardFollower())
       }
     }
   }
-  
 }
 
-#if DEBUG
 struct StarterView_Previews: PreviewProvider {
   static var previews: some View {
     StarterView()
-      .environmentObject(User())
+      .environmentObject(UserManager())
   }
 }
-#endif

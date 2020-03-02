@@ -308,6 +308,8 @@
 		828F24F523B7A1FA00B87743 /* LolWater */ = {
 			isa = PBXGroup;
 			children = (
+				8254063D240972F700A56AFE /* StarterView.swift */,
+				828F24FE23B7A1FB00B87743 /* Preview Content */,
 				8254064D240B116B00A56AFE /* Utils */,
 				8252593723DA7BBF00E266A8 /* CredentialStorage */,
 				8252593023DA6BB700E266A8 /* EntryPoint */,
@@ -319,19 +321,17 @@
 				828F253723B7F4CC00B87743 /* Supporting Views */,
 				828F252F23B7D6BB00B87743 /* Resources */,
 				828F252C23B7ABF400B87743 /* Models */,
-				828F252923B7A27600B87743 /* Profile */,
 				828F252623B7A24400B87743 /* Home */,
-				828F24F623B7A1FA00B87743 /* AppDelegate.swift */,
-				828F24F823B7A1FA00B87743 /* SceneDelegate.swift */,
-				828F24FC23B7A1FB00B87743 /* Assets.xcassets */,
-				828F250123B7A1FB00B87743 /* LaunchScreen.storyboard */,
-				828F250423B7A1FB00B87743 /* Info.plist */,
+				828F252923B7A27600B87743 /* Profile */,
 				8254063F2409730C00A56AFE /* Welcome */,
-				828F24FE23B7A1FB00B87743 /* Preview Content */,
 				8252593523DA7B9200E266A8 /* UserAndPassword.swift */,
 				8252594023DA7C7200E266A8 /* WebApi.swift */,
 				8252594223DA7C8E00E266A8 /* EnvironmentWindowKey.swift */,
-				8254063D240972F700A56AFE /* StarterView.swift */,
+				828F250123B7A1FB00B87743 /* LaunchScreen.storyboard */,
+				828F24FC23B7A1FB00B87743 /* Assets.xcassets */,
+				828F250423B7A1FB00B87743 /* Info.plist */,
+				828F24F623B7A1FA00B87743 /* AppDelegate.swift */,
+				828F24F823B7A1FA00B87743 /* SceneDelegate.swift */,
 			);
 			path = LolWater;
 			sourceTree = "<group>";
