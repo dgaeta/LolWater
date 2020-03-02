@@ -14,27 +14,25 @@ An object that models a user profile.
 */
 import Foundation
 
-struct Profile {
+struct Profile : Codable {
     var username: String
     var prefersNotifications: Bool
-    var seasonalPhoto: Season
     var goalDate: Date
     var name: String
     
-    static let `default` = Self(username: "username", prefersNotifications: true, seasonalPhoto: .winter, name: "")
+    static let `default` = Self(username: "username", prefersNotifications: true, name: "")
     
-    init(username: String, prefersNotifications: Bool = true, seasonalPhoto: Season = .winter, name: String) {
-        self.username = username
-        self.prefersNotifications = prefersNotifications
-        self.seasonalPhoto = seasonalPhoto
-        self.goalDate = Date()
-        self.name = ""
+    init() {
+      self.username = ""
+      self.name = ""
+      self.prefersNotifications = false
+      self.goalDate = Date()
     }
     
-    enum Season: String, CaseIterable {
-        case spring = "🌷"
-        case summer = "🌞"
-        case autumn = "🍂"
-        case winter = "☃️"
+    init(username: String, prefersNotifications: Bool = true, name: String) {
+        self.username = username
+        self.prefersNotifications = prefersNotifications
+        self.goalDate = Date()
+        self.name = ""
     }
 }

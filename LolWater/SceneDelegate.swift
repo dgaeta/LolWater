@@ -23,14 +23,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        let home = Home(showingProfile: false)
 //            .environmentObject(WaterData())
 //        let entryPoint = EntryPoint()
-        let user = User()
+        let userManager = UserManager()
+        userManager.load()
         
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             window.rootViewController = UIHostingController(
-                rootView: StarterView()
-                    .environmentObject(user)
+                rootView: RegisterView(keyboardHandler: KeyboardFollower())
+                    .environmentObject(userManager)
             )
             self.window = window
             window.makeKeyAndVisible()

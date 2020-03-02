@@ -41,6 +41,8 @@
 		82540649240ADC7500A56AFE /* LogoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82540648240ADC7500A56AFE /* LogoImage.swift */; };
 		8254064C240AE2B700A56AFE /* BorderedViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8254064B240AE2B700A56AFE /* BorderedViewModifier.swift */; };
 		8254064F240B118200A56AFE /* KeyboardFollower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8254064E240B118200A56AFE /* KeyboardFollower.swift */; };
+		825BB1ED240D6B2300F67F1E /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825BB1EC240D6B2300F67F1E /* UserManager.swift */; };
+		825BB1EF240D6B4200F67F1E /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825BB1EE240D6B4200F67F1E /* Settings.swift */; };
 		828F24F723B7A1FA00B87743 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F24F623B7A1FA00B87743 /* AppDelegate.swift */; };
 		828F24F923B7A1FA00B87743 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F24F823B7A1FA00B87743 /* SceneDelegate.swift */; };
 		828F24FD23B7A1FB00B87743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 828F24FC23B7A1FB00B87743 /* Assets.xcassets */; };
@@ -120,6 +122,8 @@
 		82540648240ADC7500A56AFE /* LogoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImage.swift; sourceTree = "<group>"; };
 		8254064B240AE2B700A56AFE /* BorderedViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedViewModifier.swift; sourceTree = "<group>"; };
 		8254064E240B118200A56AFE /* KeyboardFollower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFollower.swift; sourceTree = "<group>"; };
+		825BB1EC240D6B2300F67F1E /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		825BB1EE240D6B4200F67F1E /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		828F24F323B7A1FA00B87743 /* LolWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LolWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		828F24F623B7A1FA00B87743 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		828F24F823B7A1FA00B87743 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -375,6 +379,8 @@
 				828F254023BEB52B00B87743 /* ProfileEditor.swift */,
 				8254063B240971F900A56AFE /* User.swift */,
 				825406442409738000A56AFE /* User+ObservableObject.swift */,
+				825BB1EC240D6B2300F67F1E /* UserManager.swift */,
+				825BB1EE240D6B4200F67F1E /* Settings.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -678,10 +684,12 @@
 				824B159F23BF9D4500666BFD /* BadgeBackground.swift in Sources */,
 				8252593223DA6BCE00E266A8 /* EntryPoint.swift in Sources */,
 				82540647240ADC5400A56AFE /* WelcomeMessageView.swift in Sources */,
+				825BB1EF240D6B4200F67F1E /* Settings.swift in Sources */,
 				8252593B23DA7BF800E266A8 /* SharedWebCredential.swift in Sources */,
 				828F253F23BEB19F00B87743 /* ProfileSummary.swift in Sources */,
 				8254064F240B118200A56AFE /* KeyboardFollower.swift in Sources */,
 				8252593923DA7BE900E266A8 /* Keychain.swift in Sources */,
+				825BB1ED240D6B2300F67F1E /* UserManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
