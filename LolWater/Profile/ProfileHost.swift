@@ -10,7 +10,6 @@ import SwiftUI
 
 struct ProfileHost: View {
     @Environment(\.editMode) var mode
-    @EnvironmentObject var waterData: WaterData
     @State var draftProfile = Profile.default
 
     var body: some View {
@@ -18,7 +17,6 @@ struct ProfileHost: View {
             HStack {
                 if self.mode?.wrappedValue == .active {
                     Button("Cancel") {
-                        self.draftProfile = self.waterData.profile
                         self.mode?.animation().wrappedValue = .inactive
                     }
                 }
@@ -28,14 +26,14 @@ struct ProfileHost: View {
             }
             
             if self.mode?.wrappedValue == .inactive {
-                ProfileSummary(profile: waterData.profile)
+                Text("Profile Summary View")
             } else {
                 ProfileEditor(profile: $draftProfile)
                 .onAppear {
-                    self.draftProfile = self.waterData.profile
+                    //
                 }
                 .onDisappear {
-                    self.waterData.profile = self.draftProfile
+                    //
                 }
             }
             

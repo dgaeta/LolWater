@@ -1,54 +1,36 @@
 //
-//  Home.swift
+//  HomeView.swift
 //  LolWater
 //
-//  Created by Daniel Gaeta on 12/28/19.
-//  Copyright © 2019 Daniel Gaeta. All rights reserved.
+//  Created by Daniel Gaeta on 3/3/20.
+//  Copyright © 2020 Daniel Gaeta. All rights reserved.
 //
 
 import SwiftUI
 
 struct HomeView: View {
-    @EnvironmentObject var waterData: WaterData
-    @State var showingProfile = false
-    @State var activeDayIndex = 0
+    private let waterStore: WaterStore
     
-    var profileButton: some View {
-        Button(action: { self.showingProfile.toggle() }) {
-            Image(systemName: "person.crop.circle")
-                .imageScale(.large)
-                .accessibility(label: Text("User Profile"))
-                .padding()
-        }
+    init() {
+        waterStore = WaterStore()
     }
     
     var body: some View {
-        NavigationView {
-            GeometryReader { geometry in
-                VStack {
-                        Week()
-                        
-                
-                        
-                    }
-                    
-                    .navigationBarTitle(Text("LolWater"))
-                .navigationBarItems(trailing: self.profileButton)
-                .sheet(isPresented: self.$showingProfile) {
-                        ProfileHost()
-                        .environmentObject(self.waterData)
-                    }
-            }
-            
+        VStack {
+            Text("\(waterStore.week.Sunday.trackedCups)")
+            Text("\(waterStore.week.Monday.trackedCups)")
+            Text("\(waterStore.week.Tuesday.trackedCups)")
+            Text("\(waterStore.week.Wednesday.trackedCups)")
+            Text("\(waterStore.week.Thursday.trackedCups)")
+            Text("\(waterStore.week.Friday.trackedCups)")
+            Text("\(waterStore.week.Saturday.trackedCups)")
             
         }
     }
-    
 }
 
 struct HomeView_Previews: PreviewProvider {
-    
     static var previews: some View {
-        HomeView().environmentObject(WaterData())
+        HomeView()
     }
 }
