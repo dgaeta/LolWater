@@ -16,7 +16,10 @@ struct CupDayView: View {
     
     var body: some View {
         VStack {
-            Text("\(self.cups)")
+            ForEach((0...self.cups), id: \.self) { cup in
+                WaterCup(cupColor: Color.blue).frame(width: 40,  height: 40)
+            }
+            Text("\(self.cups)").font(.caption)
             Button(action: {
                 self.increment(self.day)
 
