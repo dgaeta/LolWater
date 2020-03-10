@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		674AC7A732C265E97680C9BD /* Pods_LolWater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E442B1B7290FD34EE0AB38 /* Pods_LolWater.framework */; };
+		821896EB241712A600551F3B /* CupDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821896EA241712A600551F3B /* CupDayView.swift */; };
+		821896ED24171A1100551F3B /* WaterStore+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821896EC24171A1100551F3B /* WaterStore+Identifiable.swift */; };
 		824B159F23BF9D4500666BFD /* BadgeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B159E23BF9D4500666BFD /* BadgeBackground.swift */; };
 		824B15A123BF9EA600666BFD /* BadgeSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15A023BF9EA600666BFD /* BadgeSymbol.swift */; };
 		824B15A323C1142900666BFD /* RotatedBadgeSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15A223C1142900666BFD /* RotatedBadgeSymbol.swift */; };
@@ -89,6 +91,8 @@
 		5B36840918258F48BA82DDF5 /* Pods_LolWater_LolWaterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LolWater_LolWaterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CECD06529B090680C572DC6 /* Pods-LolWaterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LolWaterTests.release.xcconfig"; path = "Target Support Files/Pods-LolWaterTests/Pods-LolWaterTests.release.xcconfig"; sourceTree = "<group>"; };
 		7DFB9C668B02E3D48832D756 /* Pods-LolWater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LolWater.release.xcconfig"; path = "Target Support Files/Pods-LolWater/Pods-LolWater.release.xcconfig"; sourceTree = "<group>"; };
+		821896EA241712A600551F3B /* CupDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupDayView.swift; sourceTree = "<group>"; };
+		821896EC24171A1100551F3B /* WaterStore+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterStore+Identifiable.swift"; sourceTree = "<group>"; };
 		824B159E23BF9D4500666BFD /* BadgeBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeBackground.swift; sourceTree = "<group>"; };
 		824B15A023BF9EA600666BFD /* BadgeSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeSymbol.swift; sourceTree = "<group>"; };
 		824B15A223C1142900666BFD /* RotatedBadgeSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatedBadgeSymbol.swift; sourceTree = "<group>"; };
@@ -274,9 +278,10 @@
 			isa = PBXGroup;
 			children = (
 				825BB1F1240EEC8200F67F1E /* Day.swift */,
-				825BB1F3240EEDBF00F67F1E /* WaterStore.swift */,
 				825BB1F5240EEF2D00F67F1E /* Week.swift */,
+				825BB1F3240EEDBF00F67F1E /* WaterStore.swift */,
 				825BB1F7240EFD5C00F67F1E /* WaterStore+ObservableObject.swift */,
+				821896EC24171A1100551F3B /* WaterStore+Identifiable.swift */,
 			);
 			path = Water;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				825BB1FA240F078500F67F1E /* HomeView.swift */,
+				821896EA241712A600551F3B /* CupDayView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -682,7 +688,9 @@
 				825BB1EF240D6B4200F67F1E /* Settings.swift in Sources */,
 				8252593B23DA7BF800E266A8 /* SharedWebCredential.swift in Sources */,
 				828F253F23BEB19F00B87743 /* ProfileSummary.swift in Sources */,
+				821896ED24171A1100551F3B /* WaterStore+Identifiable.swift in Sources */,
 				825BB1F6240EEF2D00F67F1E /* Week.swift in Sources */,
+				821896EB241712A600551F3B /* CupDayView.swift in Sources */,
 				8254064F240B118200A56AFE /* KeyboardFollower.swift in Sources */,
 				8252593923DA7BE900E266A8 /* Keychain.swift in Sources */,
 				825BB1ED240D6B2300F67F1E /* UserManager.swift in Sources */,

@@ -9,24 +9,24 @@
 import Foundation
 
 struct Week : Codable {
-    var Sunday: Day
-    var Monday: Day
-    var Tuesday: Day
-    var Wednesday: Day
-    var Thursday: Day
-    var Friday: Day
-    var Saturday: Day
+    var Sunday: Int
+    var Monday: Int
+    var Tuesday: Int
+    var Wednesday: Int
+    var Thursday: Int
+    var Friday: Int
+    var Saturday: Int
     
     static let `default` = Self()
     
     init() {
-        self.Sunday = Day()
-        self.Monday = Day()
-        self.Tuesday = Day()
-        self.Wednesday = Day()
-        self.Thursday = Day()
-        self.Friday = Day()
-        self.Saturday = Day()
+        self.Sunday = 0
+        self.Monday = 0
+        self.Tuesday = 0
+        self.Wednesday = 0
+        self.Thursday = 0
+        self.Friday = 0
+        self.Saturday = 0
         
     }
 }

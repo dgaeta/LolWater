@@ -11,12 +11,18 @@ import SwiftUI
 struct WelcomeView: View {
     @EnvironmentObject var userManager: UserManager
     @State var showHome = false
+    
+    private var waterStore: WaterStore
+    
+    init() {
+      waterStore = WaterStore()
+    }
 
     @ViewBuilder
     var body: some View {
       NavigationView {
           if showHome {
-            HomeView()
+            HomeView(onComplete: {}, waterStore: waterStore)
           } else {
               VStack {
                 Text(verbatim: "Hi, \(userManager.profile.name)")
