@@ -30,6 +30,7 @@ final internal class WaterStore {
         switch day {
             case WeekDay.sunday:
                 self.week.Sunday += 1
+                print("\(self.week.Sunday)")
             case WeekDay.monday:
                 self.week.Monday += 1
             case WeekDay.tuesday:

@@ -26,117 +26,13 @@ struct HomeView: View {
     
     var body: some View {
         HStack {
-            VStack {
-                Text("\(self.waterStore.week.Sunday)")
-                Button(action: {
-                    self.waterStore.incrementWeekDay(day: WeekDay.sunday)
-                    
-                }) {
-                    Image(systemName: "arrow.up.circle")
-                }
-                Button(action: {
-                    self.waterStore.decrementWeekDay(day: WeekDay.sunday)
-                    
-                }) {
-                    Image(systemName: "arrow.down.circle")
-                }
-            }
-            
-            VStack {
-                Text("\(self.waterStore.week.Monday)")
-                Button(action: {
-                    self.waterStore.incrementWeekDay(day: WeekDay.monday)
-                    
-                }) {
-                    Image(systemName: "arrow.up.circle")
-                }
-                Button(action: {
-                    self.waterStore.decrementWeekDay(day: WeekDay.monday)
-                    
-                }) {
-                    Image(systemName: "arrow.down.circle")
-                }
-            }
-            
-            VStack {
-                Text("\(self.waterStore.week.Tuesday)")
-                Button(action: {
-                    self.waterStore.incrementWeekDay(day: WeekDay.tuesday)
-                    
-                }) {
-                    Image(systemName: "arrow.up.circle")
-                }
-                Button(action: {
-                    self.waterStore.decrementWeekDay(day: WeekDay.tuesday)
-                    
-                }) {
-                    Image(systemName: "arrow.down.circle")
-                }
-            }
-            
-            VStack {
-                Text("\(self.waterStore.week.Wednesday)")
-                Button(action: {
-                    self.waterStore.incrementWeekDay(day: WeekDay.wednesday)
-                    
-                }) {
-                    Image(systemName: "arrow.up.circle")
-                }
-                Button(action: {
-                    self.waterStore.decrementWeekDay(day: WeekDay.wednesday)
-                    
-                }) {
-                    Image(systemName: "arrow.down.circle")
-                }
-            }
-            
-            VStack {
-                Text("\(self.waterStore.week.Thursday)")
-                Button(action: {
-                    self.waterStore.incrementWeekDay(day: WeekDay.thursday)
-                    
-                }) {
-                    Image(systemName: "arrow.up.circle")
-                }
-                Button(action: {
-                    self.waterStore.decrementWeekDay(day: WeekDay.thursday)
-                    
-                }) {
-                    Image(systemName: "arrow.down.circle")
-                }
-            }
-            
-            VStack {
-                Text("\(self.waterStore.week.Friday)")
-                Button(action: {
-                    self.waterStore.incrementWeekDay(day: WeekDay.friday)
-                    
-                }) {
-                    Image(systemName: "arrow.up.circle")
-                }
-                Button(action: {
-                    self.waterStore.decrementWeekDay(day: WeekDay.friday)
-                    
-                }) {
-                    Image(systemName: "arrow.down.circle")
-                }
-            }
-            
-            VStack {
-                Text("\(self.waterStore.week.Saturday)")
-                Button(action: {
-                    self.waterStore.incrementWeekDay(day: WeekDay.saturday)
-                    
-                }) {
-                    Image(systemName: "arrow.up.circle")
-                }
-                Button(action: {
-                    self.waterStore.decrementWeekDay(day: WeekDay.saturday)
-                    
-                }) {
-                    Image(systemName: "arrow.down.circle")
-                }
-            }
+            CupDayView(
+                day: WeekDay.sunday,
+                cups: self.$waterStore.week.Sunday,
+                increment: { _ in self.waterStore.incrementWeekDay(day: WeekDay.sunday) },
+                decrement: { _ in  self.waterStore.decrementWeekDay(day: WeekDay.sunday)
+            })
+
         }
     }
 }
