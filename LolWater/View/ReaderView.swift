@@ -16,19 +16,22 @@ struct ReaderView: View {
   @ObservedObject var model: ReaderViewModel
   
   @State var currentDate = Date()
+  
+  let calendar = Calendar.current
 
   init(model: ReaderViewModel) {
     self.model = model
   }
   
-  func getDayDate(day: Day) -> String {
-    let calendar = Calendar.current
-    let year = calendar.component(.year, from: day.date)
-    let month = calendar.component(.month, from: day.date)
-    let dayNumber = calendar.component(.day, from: day.date)
+  func getWeekdayName(day: Day) -> String {
     let index = Calendar.current.component(.weekday, from: day.date) // this returns an Int
-    let weekdayName = Calendar.current.weekdaySymbols[index - 1] // subtract 1 since the index starts at 1
-    return "\(weekdayName) \(month)/\(dayNumber)"
+    return Calendar.current.weekdaySymbols[index - 1] // subtract 1 since the index starts at 1
+  }
+  
+  func getDateNumber(day: Day) -> String {
+    let month = self.calendar.component(.month, from: day.date)
+    let dayNumber = self.calendar.component(.day, from: day.date)
+    return "\(month)/\(dayNumber)"
   }
 
   
@@ -36,16 +39,28 @@ struct ReaderView: View {
         
       return NavigationView {
         List {
+          
+          // days
           Section(header: Text("LolWater haha").padding(.leading, -10)) {
-            ForEach(self.model.days) { day in
-              HStack(alignment: .center, spacing: 10) {
-                Text(self.getDayDate(day: day))
-                WaterRowView(day: day)
-                PersonSymbolView(day: day)
-              }
-              .padding()
-            }
+            ScrollView(.horizontal, content: {
+                HStack(spacing: 10) {
+                    ForEach(self.model.days) { day in
+                      VStack {
+                        Text(self.getWeekdayName(day: day))
+                          .font(.caption)
+                        Text(self.getDateNumber(day: day))
+                        WaterRowView(day: day)
+                        PersonSymbolView(day: day)
+                      }
+                    }
+                }
+                .padding(.leading, 10)
+            })
+            .frame(height: 300)
+            
           }.padding()
+          
+          
         }
         .sheet(isPresented: self.$presentingSettingsSheet, content: {
           SettingsView() 

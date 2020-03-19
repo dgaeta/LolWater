@@ -17,8 +17,8 @@ struct WaterRowView: View {
     HStack(spacing: 10) {
       RoundedRectangle(cornerRadius: 8)
         .fill(Color.blue)
-        .frame(width: CGFloat(day.oncesOfWaterRecorded) * pixelMultiplier, height: 30)
-        .frame(width: 200, height: 30)
+        .frame(width: 30, height: CGFloat(day.oncesOfWaterRecorded) * pixelMultiplier)
+        .frame(width: 30, height: 200)
     }
   }
 }
