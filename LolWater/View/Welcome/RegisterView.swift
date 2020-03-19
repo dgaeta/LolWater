@@ -69,8 +69,6 @@ extension RegisterView {
     } else {
       userManager.clear()
     }
-    
-    userManager.persistSettings()
   }
 }
 
