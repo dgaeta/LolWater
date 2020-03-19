@@ -50,7 +50,6 @@
 		828F24F923B7A1FA00B87743 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F24F823B7A1FA00B87743 /* SceneDelegate.swift */; };
 		828F24FD23B7A1FB00B87743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 828F24FC23B7A1FB00B87743 /* Assets.xcassets */; };
 		828F250023B7A1FB00B87743 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 828F24FF23B7A1FB00B87743 /* Preview Assets.xcassets */; };
-		828F250323B7A1FB00B87743 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 828F250123B7A1FB00B87743 /* LaunchScreen.storyboard */; };
 		828F250E23B7A1FB00B87743 /* LolWaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F250D23B7A1FB00B87743 /* LolWaterTests.swift */; };
 		828F251923B7A1FB00B87743 /* LolWaterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F251823B7A1FB00B87743 /* LolWaterUITests.swift */; };
 		828F252B23B7A2A300B87743 /* ProfileHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F252A23B7A2A300B87743 /* ProfileHost.swift */; };
@@ -133,7 +132,6 @@
 		828F24F823B7A1FA00B87743 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		828F24FC23B7A1FB00B87743 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		828F24FF23B7A1FB00B87743 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		828F250223B7A1FB00B87743 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		828F250423B7A1FB00B87743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		828F250923B7A1FB00B87743 /* LolWaterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LolWaterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		828F250D23B7A1FB00B87743 /* LolWaterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolWaterTests.swift; sourceTree = "<group>"; };
@@ -196,6 +194,59 @@
 				4F5403202268A59703EEA670 /* Pods_LolWaterTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		821896EE2423185300551F3B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				828F24F623B7A1FA00B87743 /* AppDelegate.swift */,
+				828F24F823B7A1FA00B87743 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		821896EF2423193F00551F3B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		821896F02423195700551F3B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8252594023DA7C7200E266A8 /* WebApi.swift */,
+				828F252C23B7ABF400B87743 /* Models */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		821896F12423195E00551F3B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8254063D240972F700A56AFE /* StarterView.swift */,
+				8252593523DA7B9200E266A8 /* UserAndPassword.swift */,
+				828F253723B7F4CC00B87743 /* Supporting Views */,
+				824B15A423C1198B00666BFD /* Badge */,
+				828F252923B7A27600B87743 /* Profile */,
+				8254063F2409730C00A56AFE /* Welcome */,
+				824B15A923C2847F00666BFD /* WaterCup */,
+				824B15AE23C3EBCA00666BFD /* Person */,
+				824B15B723C69F7800666BFD /* AddCup */,
+				825BB1F0240EEC1B00F67F1E /* Water */,
+				825BB1F9240F074200F67F1E /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		821896F22423196600551F3B /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				8252593723DA7BBF00E266A8 /* CredentialStorage */,
+				8254064E240B118200A56AFE /* KeyboardFollower.swift */,
+				8252594223DA7C8E00E266A8 /* EnvironmentWindowKey.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		824B15A423C1198B00666BFD /* Badge */ = {
@@ -266,14 +317,6 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		8254064D240B116B00A56AFE /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				8254064E240B118200A56AFE /* KeyboardFollower.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		825BB1F0240EEC1B00F67F1E /* Water */ = {
 			isa = PBXGroup;
 			children = (
@@ -320,30 +363,16 @@
 		828F24F523B7A1FA00B87743 /* LolWater */ = {
 			isa = PBXGroup;
 			children = (
-				825BB1F9240F074200F67F1E /* Home */,
-				825BB1F0240EEC1B00F67F1E /* Water */,
-				8254063D240972F700A56AFE /* StarterView.swift */,
+				821896EE2423185300551F3B /* App */,
+				821896EF2423193F00551F3B /* Network */,
+				821896F02423195700551F3B /* Model */,
+				821896F12423195E00551F3B /* View */,
+				821896F22423196600551F3B /* Util */,
 				828F24FE23B7A1FB00B87743 /* Preview Content */,
-				8254064D240B116B00A56AFE /* Utils */,
-				8252593723DA7BBF00E266A8 /* CredentialStorage */,
-				8252592D23DA4A7F00E266A8 /* LolWater.entitlements */,
-				824B15B723C69F7800666BFD /* AddCup */,
-				824B15AE23C3EBCA00666BFD /* Person */,
-				824B15A923C2847F00666BFD /* WaterCup */,
-				824B15A423C1198B00666BFD /* Badge */,
-				828F253723B7F4CC00B87743 /* Supporting Views */,
 				828F252F23B7D6BB00B87743 /* Resources */,
-				828F252C23B7ABF400B87743 /* Models */,
-				828F252923B7A27600B87743 /* Profile */,
-				8254063F2409730C00A56AFE /* Welcome */,
-				8252593523DA7B9200E266A8 /* UserAndPassword.swift */,
-				8252594023DA7C7200E266A8 /* WebApi.swift */,
-				8252594223DA7C8E00E266A8 /* EnvironmentWindowKey.swift */,
-				828F250123B7A1FB00B87743 /* LaunchScreen.storyboard */,
 				828F24FC23B7A1FB00B87743 /* Assets.xcassets */,
+				8252592D23DA4A7F00E266A8 /* LolWater.entitlements */,
 				828F250423B7A1FB00B87743 /* Info.plist */,
-				828F24F623B7A1FA00B87743 /* AppDelegate.swift */,
-				828F24F823B7A1FA00B87743 /* SceneDelegate.swift */,
 			);
 			path = LolWater;
 			sourceTree = "<group>";
@@ -548,7 +577,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				828F250323B7A1FB00B87743 /* LaunchScreen.storyboard in Resources */,
 				828F253223B7D76400B87743 /* lolWaterData.json in Resources */,
 				828F250023B7A1FB00B87743 /* Preview Assets.xcassets in Resources */,
 				828F24FD23B7A1FB00B87743 /* Assets.xcassets in Resources */,
@@ -729,17 +757,6 @@
 			targetProxy = 828F251523B7A1FB00B87743 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		828F250123B7A1FB00B87743 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				828F250223B7A1FB00B87743 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		828F251B23B7A1FB00B87743 /* Debug */ = {

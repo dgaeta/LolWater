@@ -16,9 +16,6 @@ struct HomeView: View {
     @ObservedObject private var waterStore: WaterStore
     private let onComplete: () -> Void
     
-//    // MARK: - Private Constants
-//    private let onComplete: () -> Void
-    
     init(onComplete: @escaping () -> Void, waterStore: WaterStore) {
         self.onComplete = onComplete
         self.waterStore = waterStore
