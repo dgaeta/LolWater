@@ -38,11 +38,11 @@ struct ReaderView: View {
     var body: some View {
         
       return NavigationView {
-        List {
+        VStack {
           
           // days
           Section(header: Text("LolWater haha").padding(.leading, -10)) {
-            ScrollView(.horizontal, content: {
+            ScrollView(.horizontal, showsIndicators: true, content: {
                 HStack(spacing: 10) {
                     ForEach(self.model.days) { day in
                       VStack {
@@ -58,7 +58,15 @@ struct ReaderView: View {
             })
             .frame(height: 300)
             
+            
+            
           }.padding()
+          
+          HStack {
+            DecreaseButtonView()
+            IncreaseButtonView()
+          }
+
           
           
         }
