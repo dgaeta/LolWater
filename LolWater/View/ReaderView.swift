@@ -16,49 +16,22 @@ struct ReaderView: View {
   @ObservedObject var model: ReaderViewModel
   
   @State var currentDate = Date()
-  
-  let calendar = Calendar.current
 
   init(model: ReaderViewModel) {
     self.model = model
   }
-  
-  func getWeekdayName(day: Day) -> String {
-    let index = Calendar.current.component(.weekday, from: day.date) // this returns an Int
-    return Calendar.current.weekdaySymbols[index - 1] // subtract 1 since the index starts at 1
-  }
-  
-  func getDateNumber(day: Day) -> String {
-    let month = self.calendar.component(.month, from: day.date)
-    let dayNumber = self.calendar.component(.day, from: day.date)
-    return "\(month)/\(dayNumber)"
-  }
-
-  
     var body: some View {
         
       return NavigationView {
         VStack {
           
-          // days
+          // Switch between Day, Week, Month, Year view
           Section(header: Text("LolWater haha").padding(.leading, -10)) {
-            ScrollView(.horizontal, showsIndicators: true, content: {
-                HStack(spacing: 10) {
-                    ForEach(self.model.days) { day in
-                      VStack {
-                        Text(self.getWeekdayName(day: day))
-                          .font(.caption)
-                        Text(self.getDateNumber(day: day))
-                        WaterRowView(day: day)
-                        PersonSymbolView(day: day)
-                      }
-                    }
-                }
-                .padding(.leading, 10)
-            })
-            .frame(height: 300)
             
-            
+            HStack {
+              DayView(day: self.model.days[0])
+              TimeButtonDrawerView()
+            }
             
           }.padding()
           

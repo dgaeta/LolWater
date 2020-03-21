@@ -11,6 +11,8 @@ import SwiftUI
 struct PersonSymbolView: View {
   var day: Day
   var colors: [Color] = [.red, .yellow, .blue]
+  var height: Int
+  var width: Int
   
   func getColor() -> Color {
     if day.oncesOfWaterRecorded < 30 {
@@ -24,12 +26,15 @@ struct PersonSymbolView: View {
   
   var body: some View {
       Image(systemName: "person")
-      .foregroundColor(getColor())
+        .resizable()
+        .foregroundColor(getColor())
+        .frame(width: CGFloat(width), height: CGFloat(height))
   }
 }
 
 struct PersonSymbolView_Previews: PreviewProvider {
     static var previews: some View {
-      PersonSymbolView(day: Day(id: 1, date: Date(), weekday: "Sunday", oncesOfWaterRecorded: 50))
+      PersonSymbolView(day: Day(id: 1, date: Date(), weekday: "Sunday", oncesOfWaterRecorded: 50),
+      height: 200, width: 200)
     }
 }

@@ -20,6 +20,9 @@
 		821897042423F42400551F3B /* PersonSymbolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821897032423F42400551F3B /* PersonSymbolView.swift */; };
 		821897062424149E00551F3B /* IncreaseButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821897052424149E00551F3B /* IncreaseButtonView.swift */; };
 		821897082424151F00551F3B /* DecreaseButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821897072424151F00551F3B /* DecreaseButtonView.swift */; };
+		8218970A242543BA00551F3B /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82189709242543BA00551F3B /* DayView.swift */; };
+		8218970C24254A3D00551F3B /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8218970B24254A3D00551F3B /* WeekView.swift */; };
+		8218970E2425528A00551F3B /* TimeButtonDrawerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8218970D2425528A00551F3B /* TimeButtonDrawerView.swift */; };
 		824B159F23BF9D4500666BFD /* BadgeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B159E23BF9D4500666BFD /* BadgeBackground.swift */; };
 		824B15A123BF9EA600666BFD /* BadgeSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15A023BF9EA600666BFD /* BadgeSymbol.swift */; };
 		824B15A323C1142900666BFD /* RotatedBadgeSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15A223C1142900666BFD /* RotatedBadgeSymbol.swift */; };
@@ -64,9 +67,7 @@
 		828F252B23B7A2A300B87743 /* ProfileHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F252A23B7A2A300B87743 /* ProfileHost.swift */; };
 		828F253223B7D76400B87743 /* lolWaterData.json in Resources */ = {isa = PBXBuildFile; fileRef = 828F253123B7D76400B87743 /* lolWaterData.json */; };
 		828F253423B7DCBB00B87743 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F253323B7DCBB00B87743 /* Data.swift */; };
-		828F253623B7DDA500B87743 /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F253523B7DDA500B87743 /* DayView.swift */; };
 		828F253923B7FE1A00B87743 /* GraphCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F253823B7FE1A00B87743 /* GraphCapsule.swift */; };
-		828F253B23BE8C1400B87743 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F253A23BE8C1400B87743 /* WeekView.swift */; };
 		828F253D23BEAD6A00B87743 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F253C23BEAD6A00B87743 /* ProfileViewModel.swift */; };
 		828F253F23BEB19F00B87743 /* ProfileSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F253E23BEB19F00B87743 /* ProfileSummary.swift */; };
 		828F254123BEB52B00B87743 /* ProfileEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F254023BEB52B00B87743 /* ProfileEditor.swift */; };
@@ -111,6 +112,9 @@
 		821897032423F42400551F3B /* PersonSymbolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSymbolView.swift; sourceTree = "<group>"; };
 		821897052424149E00551F3B /* IncreaseButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncreaseButtonView.swift; sourceTree = "<group>"; };
 		821897072424151F00551F3B /* DecreaseButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecreaseButtonView.swift; sourceTree = "<group>"; };
+		82189709242543BA00551F3B /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
+		8218970B24254A3D00551F3B /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
+		8218970D2425528A00551F3B /* TimeButtonDrawerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeButtonDrawerView.swift; sourceTree = "<group>"; };
 		824B159E23BF9D4500666BFD /* BadgeBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeBackground.swift; sourceTree = "<group>"; };
 		824B15A023BF9EA600666BFD /* BadgeSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeSymbol.swift; sourceTree = "<group>"; };
 		824B15A223C1142900666BFD /* RotatedBadgeSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatedBadgeSymbol.swift; sourceTree = "<group>"; };
@@ -160,9 +164,7 @@
 		828F252A23B7A2A300B87743 /* ProfileHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHost.swift; sourceTree = "<group>"; };
 		828F253123B7D76400B87743 /* lolWaterData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = lolWaterData.json; sourceTree = "<group>"; };
 		828F253323B7DCBB00B87743 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		828F253523B7DDA500B87743 /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
 		828F253823B7FE1A00B87743 /* GraphCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphCapsule.swift; sourceTree = "<group>"; };
-		828F253A23BE8C1400B87743 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 		828F253C23BEAD6A00B87743 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		828F253E23BEB19F00B87743 /* ProfileSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSummary.swift; sourceTree = "<group>"; };
 		828F254023BEB52B00B87743 /* ProfileEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditor.swift; sourceTree = "<group>"; };
@@ -251,6 +253,9 @@
 			isa = PBXGroup;
 			children = (
 				821896F524231FC900551F3B /* ReaderView.swift */,
+				82189709242543BA00551F3B /* DayView.swift */,
+				8218970B24254A3D00551F3B /* WeekView.swift */,
+				8218970D2425528A00551F3B /* TimeButtonDrawerView.swift */,
 				821897052424149E00551F3B /* IncreaseButtonView.swift */,
 				821897072424151F00551F3B /* DecreaseButtonView.swift */,
 				821897032423F42400551F3B /* PersonSymbolView.swift */,
@@ -464,9 +469,7 @@
 		828F253723B7F4CC00B87743 /* Supporting Views */ = {
 			isa = PBXGroup;
 			children = (
-				828F253523B7DDA500B87743 /* DayView.swift */,
 				828F253823B7FE1A00B87743 /* GraphCapsule.swift */,
-				828F253A23BE8C1400B87743 /* WeekView.swift */,
 				82ACDC5A23DF0D90009CED6B /* WeekdayColumn.swift */,
 			);
 			path = "Supporting Views";
@@ -713,13 +716,13 @@
 				824B15B023C3EF6E00666BFD /* Person.swift in Sources */,
 				8252593623DA7B9200E266A8 /* UserAndPassword.swift in Sources */,
 				828F254123BEB52B00B87743 /* ProfileEditor.swift in Sources */,
-				828F253623B7DDA500B87743 /* DayView.swift in Sources */,
 				824B15A323C1142900666BFD /* RotatedBadgeSymbol.swift in Sources */,
 				824B15B923C69FC700666BFD /* AddCup.swift in Sources */,
 				8252594323DA7C8E00E266A8 /* EnvironmentWindowKey.swift in Sources */,
 				8252594C23DB98D000E266A8 /* EmptyCup.swift in Sources */,
 				824B15AB23C2B45400666BFD /* CupCap.swift in Sources */,
 				824B15A123BF9EA600666BFD /* BadgeSymbol.swift in Sources */,
+				8218970A242543BA00551F3B /* DayView.swift in Sources */,
 				821896FE2423293F00551F3B /* JSONUtil.swift in Sources */,
 				824B15A623C119DB00666BFD /* WaterBadge.swift in Sources */,
 				8254063C240971F900A56AFE /* User.swift in Sources */,
@@ -736,15 +739,16 @@
 				825BB1FB240F078500F67F1E /* HomeView.swift in Sources */,
 				8252593F23DA7C2400E266A8 /* UserDataKeychain.swift in Sources */,
 				828F24F923B7A1FA00B87743 /* SceneDelegate.swift in Sources */,
-				828F253B23BE8C1400B87743 /* WeekView.swift in Sources */,
 				828F253923B7FE1A00B87743 /* GraphCapsule.swift in Sources */,
 				8252594123DA7C7200E266A8 /* WebApi.swift in Sources */,
 				825BB1F8240EFD5C00F67F1E /* WaterStore+ObservableObject.swift in Sources */,
 				821896FC2423284800551F3B /* API.swift in Sources */,
 				825406432409734400A56AFE /* WelcomeView.swift in Sources */,
+				8218970E2425528A00551F3B /* TimeButtonDrawerView.swift in Sources */,
 				828F252B23B7A2A300B87743 /* ProfileHost.swift in Sources */,
 				825406452409738000A56AFE /* User+ObservableObject.swift in Sources */,
 				828F254423BEBE7000B87743 /* Badge.swift in Sources */,
+				8218970C24254A3D00551F3B /* WeekView.swift in Sources */,
 				824B159F23BF9D4500666BFD /* BadgeBackground.swift in Sources */,
 				821896F82423206500551F3B /* SettingsView.swift in Sources */,
 				82540647240ADC5400A56AFE /* WelcomeMessageView.swift in Sources */,
