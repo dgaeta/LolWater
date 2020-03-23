@@ -6,11 +6,12 @@
 //  Copyright © 2020 Daniel Gaeta. All rights reserved.
 //
 
+import AWSAppSync
 import Foundation
 import Combine
 import SwiftUI
 
-struct API {
+struct NetworkAPI {
   
   /// API Errors.
   enum Error: LocalizedError, Identifiable {

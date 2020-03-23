@@ -11,7 +11,7 @@ import Combine
 import Foundation
 
 class ReaderViewModel: ObservableObject {
-  private let api = API()
+  private let api = NetworkAPI()
   @Published private var allDays = [
     Day(id: 1, date: Date.init(), weekday: "Sunday", oncesOfWaterRecorded: 8),
     Day(id: 2, date: Date.init(), weekday: "Monday", oncesOfWaterRecorded: 64),
@@ -23,7 +23,7 @@ class ReaderViewModel: ObservableObject {
   ]
   private var subscriptions = Set<AnyCancellable>()
   
-  @Published var error: API.Error? = nil
+  @Published var error: NetworkAPI.Error? = nil
   
   var days: [Day] {
     return allDays

@@ -6,6 +6,7 @@ target 'LolWater' do
   use_frameworks!
 
   # Pods for LolWater
+  pod 'AWSAppSync', '~> 3.1.0'
   
   target 'LolWaterTests' do
     inherit! :search_paths

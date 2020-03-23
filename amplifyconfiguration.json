@@ -6,9 +6,10 @@
             "awsAPIPlugin": {
                 "LolWaterAppSyncAppAPI": {
                     "endpointType": "GraphQL",
-                    "endpoint": "https://vi3ci5pyxzdy7arihyhk5ic4cq.appsync-api.us-east-2.amazonaws.com/graphql",
+                    "endpoint": "https://xeffjuo5pzckbhlnt7iekbmqbe.appsync-api.us-east-2.amazonaws.com/graphql",
                     "region": "us-east-2",
-                    "authorizationType": "AMAZON_COGNITO_USER_POOLS"
+                    "authorizationType": "API_KEY",
+                    "apiKey": "da2-qdrkqaixtbdzvf4jpthiun5prq"
                 }
             }
         }

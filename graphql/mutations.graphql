@@ -1,25 +1,25 @@
 # this is an auto generated file. This will be overwritten
-mutation CreateWaterDay($input: CreateWaterDayInput!) {
-  createWaterDay(input: $input) {
-    cupsDrank
-    date
+mutation CreateLolWaterDayData($input: CreateLolWaterDayDataInput!) {
+  createLolWaterDayData(input: $input) {
     id
     userId
+    date
+    ozDrank
   }
 }
-mutation DeleteWaterDay($input: DeleteWaterDayInput!) {
-  deleteWaterDay(input: $input) {
-    cupsDrank
-    date
+mutation UpdateLolWaterDayData($input: UpdateLolWaterDayDataInput!) {
+  updateLolWaterDayData(input: $input) {
     id
     userId
+    date
+    ozDrank
   }
 }
-mutation UpdateWaterDay($input: UpdateWaterDayInput!) {
-  updateWaterDay(input: $input) {
-    cupsDrank
-    date
+mutation DeleteLolWaterDayData($input: DeleteLolWaterDayDataInput!) {
+  deleteLolWaterDayData(input: $input) {
     id
     userId
+    date
+    ozDrank
   }
 }

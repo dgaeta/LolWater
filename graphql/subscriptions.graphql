@@ -1,55 +1,55 @@
 # this is an auto generated file. This will be overwritten
-subscription OnCreateWaterDay(
-  $cupsDrank: Int
-  $date: AWSDate
+subscription OnCreateLolWaterDayData(
   $id: ID
   $userId: String
+  $date: String
+  $ozDrank: Int
 ) {
-  onCreateWaterDay(
-    cupsDrank: $cupsDrank
-    date: $date
+  onCreateLolWaterDayData(
     id: $id
     userId: $userId
+    date: $date
+    ozDrank: $ozDrank
   ) {
-    cupsDrank
-    date
     id
     userId
+    date
+    ozDrank
   }
 }
-subscription OnDeleteWaterDay(
-  $cupsDrank: Int
-  $date: AWSDate
+subscription OnUpdateLolWaterDayData(
   $id: ID
   $userId: String
+  $date: String
+  $ozDrank: Int
 ) {
-  onDeleteWaterDay(
-    cupsDrank: $cupsDrank
-    date: $date
+  onUpdateLolWaterDayData(
     id: $id
     userId: $userId
+    date: $date
+    ozDrank: $ozDrank
   ) {
-    cupsDrank
-    date
     id
     userId
+    date
+    ozDrank
   }
 }
-subscription OnUpdateWaterDay(
-  $cupsDrank: Int
-  $date: AWSDate
+subscription OnDeleteLolWaterDayData(
   $id: ID
   $userId: String
+  $date: String
+  $ozDrank: Int
 ) {
-  onUpdateWaterDay(
-    cupsDrank: $cupsDrank
-    date: $date
+  onDeleteLolWaterDayData(
     id: $id
     userId: $userId
+    date: $date
+    ozDrank: $ozDrank
   ) {
-    cupsDrank
-    date
     id
     userId
+    date
+    ozDrank
   }
 }

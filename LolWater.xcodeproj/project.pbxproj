@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,7 @@
 		821896F624231FC900551F3B /* ReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821896F524231FC900551F3B /* ReaderView.swift */; };
 		821896F82423206500551F3B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821896F72423206500551F3B /* SettingsView.swift */; };
 		821896FA2423257A00551F3B /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821896F92423257A00551F3B /* Day.swift */; };
-		821896FC2423284800551F3B /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821896FB2423284800551F3B /* API.swift */; };
+		821896FC2423284800551F3B /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821896FB2423284800551F3B /* NetworkAPI.swift */; };
 		821896FE2423293F00551F3B /* JSONUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821896FD2423293F00551F3B /* JSONUtil.swift */; };
 		82189700242329B000551F3B /* ReaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821896FF242329B000551F3B /* ReaderViewModel.swift */; };
 		821897022423DF5C00551F3B /* WaterRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821897012423DF5C00551F3B /* WaterRowView.swift */; };
@@ -58,6 +58,9 @@
 		825BB1F6240EEF2D00F67F1E /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825BB1F5240EEF2D00F67F1E /* Week.swift */; };
 		825BB1F8240EFD5C00F67F1E /* WaterStore+ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825BB1F7240EFD5C00F67F1E /* WaterStore+ObservableObject.swift */; };
 		825BB1FB240F078500F67F1E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825BB1FA240F078500F67F1E /* HomeView.swift */; };
+		8276793824295EC60023D61A /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 8276793724295EC60023D61A /* awsconfiguration.json */; };
+		8276793A24295ECD0023D61A /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 8276793924295ECD0023D61A /* amplifyconfiguration.json */; };
+		8276793C24296FBE0023D61A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8276793B24296FBE0023D61A /* API.swift */; };
 		828F24F723B7A1FA00B87743 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F24F623B7A1FA00B87743 /* AppDelegate.swift */; };
 		828F24F923B7A1FA00B87743 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F24F823B7A1FA00B87743 /* SceneDelegate.swift */; };
 		828F24FD23B7A1FB00B87743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 828F24FC23B7A1FB00B87743 /* Assets.xcassets */; };
@@ -105,7 +108,7 @@
 		821896F524231FC900551F3B /* ReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderView.swift; sourceTree = "<group>"; };
 		821896F72423206500551F3B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		821896F92423257A00551F3B /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
-		821896FB2423284800551F3B /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		821896FB2423284800551F3B /* NetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
 		821896FD2423293F00551F3B /* JSONUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONUtil.swift; sourceTree = "<group>"; };
 		821896FF242329B000551F3B /* ReaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderViewModel.swift; sourceTree = "<group>"; };
 		821897012423DF5C00551F3B /* WaterRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterRowView.swift; sourceTree = "<group>"; };
@@ -149,6 +152,9 @@
 		825BB1F5240EEF2D00F67F1E /* Week.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
 		825BB1F7240EFD5C00F67F1E /* WaterStore+ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterStore+ObservableObject.swift"; sourceTree = "<group>"; };
 		825BB1FA240F078500F67F1E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8276793724295EC60023D61A /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		8276793924295ECD0023D61A /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
+		8276793B24296FBE0023D61A /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		828F24F323B7A1FA00B87743 /* LolWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LolWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		828F24F623B7A1FA00B87743 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		828F24F823B7A1FA00B87743 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -228,7 +234,7 @@
 		821896EF2423193F00551F3B /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				821896FB2423284800551F3B /* API.swift */,
+				821896FB2423284800551F3B /* NetworkAPI.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -378,6 +384,9 @@
 		828F24EA23B7A1FA00B87743 = {
 			isa = PBXGroup;
 			children = (
+				8276793B24296FBE0023D61A /* API.swift */,
+				8276793724295EC60023D61A /* awsconfiguration.json */,
+				8276793924295ECD0023D61A /* amplifyconfiguration.json */,
 				828F24F523B7A1FA00B87743 /* LolWater */,
 				828F250C23B7A1FB00B87743 /* LolWaterTests */,
 				828F251723B7A1FB00B87743 /* LolWaterUITests */,
@@ -511,6 +520,7 @@
 				828F24EF23B7A1FA00B87743 /* Sources */,
 				828F24F023B7A1FA00B87743 /* Frameworks */,
 				828F24F123B7A1FA00B87743 /* Resources */,
+				00FD7EC697BB65FD6E5ADEBA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -548,6 +558,7 @@
 				828F251023B7A1FB00B87743 /* Sources */,
 				828F251123B7A1FB00B87743 /* Frameworks */,
 				828F251223B7A1FB00B87743 /* Resources */,
+				22D00A2F1FE460C7A8325E7F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -607,7 +618,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8276793824295EC60023D61A /* awsconfiguration.json in Resources */,
 				828F253223B7D76400B87743 /* lolWaterData.json in Resources */,
+				8276793A24295ECD0023D61A /* amplifyconfiguration.json in Resources */,
 				828F250023B7A1FB00B87743 /* Preview Assets.xcassets in Resources */,
 				828F24FD23B7A1FB00B87743 /* Assets.xcassets in Resources */,
 			);
@@ -630,6 +643,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		00FD7EC697BB65FD6E5ADEBA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LolWater/Pods-LolWater-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LolWater/Pods-LolWater-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LolWater/Pods-LolWater-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		22D00A2F1FE460C7A8325E7F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LolWater-LolWaterUITests/Pods-LolWater-LolWaterUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LolWater-LolWaterUITests/Pods-LolWater-LolWaterUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LolWater-LolWaterUITests/Pods-LolWater-LolWaterUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6E73566A1A2210F6E05FD8C0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -737,12 +784,13 @@
 				825BB1F4240EEDBF00F67F1E /* WaterStore.swift in Sources */,
 				828F253D23BEAD6A00B87743 /* ProfileViewModel.swift in Sources */,
 				825BB1FB240F078500F67F1E /* HomeView.swift in Sources */,
+				8276793C24296FBE0023D61A /* API.swift in Sources */,
 				8252593F23DA7C2400E266A8 /* UserDataKeychain.swift in Sources */,
 				828F24F923B7A1FA00B87743 /* SceneDelegate.swift in Sources */,
 				828F253923B7FE1A00B87743 /* GraphCapsule.swift in Sources */,
 				8252594123DA7C7200E266A8 /* WebApi.swift in Sources */,
 				825BB1F8240EFD5C00F67F1E /* WaterStore+ObservableObject.swift in Sources */,
-				821896FC2423284800551F3B /* API.swift in Sources */,
+				821896FC2423284800551F3B /* NetworkAPI.swift in Sources */,
 				825406432409734400A56AFE /* WelcomeView.swift in Sources */,
 				8218970E2425528A00551F3B /* TimeButtonDrawerView.swift in Sources */,
 				828F252B23B7A2A300B87743 /* ProfileHost.swift in Sources */,

@@ -1,23 +1,23 @@
 # this is an auto generated file. This will be overwritten
-query GetWaterDay($date: AWSDate!, $userId: String!) {
-  getWaterDay(date: $date, userId: $userId) {
-    cupsDrank
-    date
+query GetLolWaterDayData($id: ID!, $userId: String!, $date: String!) {
+  getLolWaterDayData(id: $id, userId: $userId, date: $date) {
     id
     userId
+    date
+    ozDrank
   }
 }
-query ListWaterDays(
-  $filter: TableWaterDayFilterInput
+query ListLolWaterDayData(
+  $filter: TableLolWaterDayDataFilterInput
   $limit: Int
   $nextToken: String
 ) {
-  listWaterDays(filter: $filter, limit: $limit, nextToken: $nextToken) {
+  listLolWaterDayData(filter: $filter, limit: $limit, nextToken: $nextToken) {
     items {
-      cupsDrank
-      date
       id
       userId
+      date
+      ozDrank
     }
     nextToken
   }

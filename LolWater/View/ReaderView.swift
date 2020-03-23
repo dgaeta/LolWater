@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import AWSAppSync
 
 struct ReaderView: View {
   @Environment(\.colorScheme) var colorScheme: ColorScheme
@@ -16,10 +17,30 @@ struct ReaderView: View {
   @ObservedObject var model: ReaderViewModel
   
   @State var currentDate = Date()
+  
+  // Reference AppSync client
+  var appSyncClient: AWSAppSyncClient?
 
   init(model: ReaderViewModel) {
     self.model = model
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    appSyncClient = appDelegate.appSyncClient
+    runQuery()
   }
+  
+  func runQuery(){
+      appSyncClient?.fetch(query: ListLolWaterDayDataQuery(), cachePolicy: .returnCacheDataAndFetch) {(result, error) in
+          if error != nil {
+              print(error?.localizedDescription ?? "")
+              return
+          }
+          print("Query complete.")
+        result?.data?.listLolWaterDayData?.items!.forEach { print(($0?.date)! + " " + ($0?.userId)!) }
+      }
+  }
+
+  
     var body: some View {
         
       return NavigationView {
