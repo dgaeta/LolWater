@@ -27,6 +27,7 @@ struct ReaderView: View {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     appSyncClient = appDelegate.appSyncClient
     runQuery()
+    //runMutation()
   }
   
   func runQuery(){
@@ -39,6 +40,24 @@ struct ReaderView: View {
         result?.data?.listLolWaterDayData?.items!.forEach { print(($0?.date)! + " " + ($0?.userId)!) }
       }
   }
+  
+  func runMutation(){
+      let mutationInput = CreateLolWaterDayDataInput(userId: "gaeta.d@gmail.com", date: "2020-03-23", ozDrank: 66)
+    
+      appSyncClient?.perform(mutation: CreateLolWaterDayDataMutation(input: mutationInput)) { (result, error) in
+          if let error = error as? AWSAppSyncClientError {
+              print("Error occurred: \(error.localizedDescription )")
+          }
+          if let resultError = result?.errors {
+              print("Error saving the item on server: \(resultError)")
+              return
+          }
+        
+          print("Mutation complete.")
+        self.runQuery()
+      }
+  }
+
 
   
     var body: some View {
