@@ -9,6 +9,7 @@
 import Combine
 import SwiftUI
 import Foundation
+import AWSMobileClient
 
 final class UserManager: ObservableObject {
   @Published var profile: Profile = Profile(username: "")
@@ -31,10 +32,39 @@ final class UserManager: ObservableObject {
 //    }
   }
   
+  func signUp(password: String) {
+    AWSMobileClient.default().signUp(username: self.profile.username, password: password
+    ) { (signUpResult, error) in
+        if let signUpResult = signUpResult {
+            switch(signUpResult.signUpConfirmationState) {
+            case .confirmed:
+                print("User is signed up and confirmed.")
+            case .unconfirmed:
+                self.persistProfile()
+                print("User is not confirmed and no verification is set up at the moment:  \(signUpResult).")
+            case .unknown:
+                print("Unexpected case")
+            }
+        } else if let error = error {
+            if let error = error as? AWSMobileClientError {
+                switch(error) {
+                case .usernameExists(let message):
+                    print(message)
+                default:
+                    break
+                }
+            }
+            print("\(error.localizedDescription)")
+        }
+    }
+
+  }
+  
   func load() {
     if let data = UserDefaults.standard.value(forKey: "user-profile") as? Data {
       if let profile = try? PropertyListDecoder().decode(Profile.self, from: data) {
         self.profile = profile
+        print(profile)
       }
     }
   }

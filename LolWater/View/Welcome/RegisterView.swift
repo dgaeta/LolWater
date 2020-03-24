@@ -13,44 +13,8 @@ struct RegisterView : View {
   @EnvironmentObject var userManager: UserManager
   @ObservedObject var keyboardHandler: KeyboardFollower
   
-  @State var username: String = ""
   @State var password: String = ""
-  
-  func isUsernameAndPasswordValid() -> Bool {
-    return username.count >= 3 && password.count >= 8
-  }
 
-  func signUp() {
-    AWSMobileClient.default().signUp(username: self.username, password: self.password
-    ) { (signUpResult, error) in
-        if let signUpResult = signUpResult {
-            switch(signUpResult.signUpConfirmationState) {
-            case .confirmed:
-                print("User is signed up and confirmed.")
-            case .unconfirmed:
-                self.userManager.profile.username = self.username
-                self.userManager.persistProfile()
-                self.userManager.load()
-                self.registerUser()
-                print("User is not confirmed and no verification is set up at the moment:  \(signUpResult).")
-            case .unknown:
-                print("Unexpected case")
-            }
-        } else if let error = error {
-            if let error = error as? AWSMobileClientError {
-                switch(error) {
-                case .usernameExists(let message):
-                    print(message)
-                default:
-                    break
-                }
-            }
-            print("\(error.localizedDescription)")
-        }
-    }
-
-  }
-  
   init(keyboardHandler: KeyboardFollower) {
     self.keyboardHandler = keyboardHandler
   }
@@ -59,7 +23,7 @@ struct RegisterView : View {
     VStack(content: {
       WelcomeMessageView()
       
-      TextField("Type your username...", text: self.$username)
+      TextField("Type your username...", text: $userManager.profile.username)
         .bordered()
       
       TextField("Type your new password...", text: self.$password)
@@ -67,9 +31,9 @@ struct RegisterView : View {
 
       HStack {
         Spacer()
-        Text("\(username.count)")
+        Text("\(userManager.profile.username.count)")
           .font(.caption)
-          .foregroundColor(isUsernameAndPasswordValid() ? .green : .red)
+          .foregroundColor (userManager.isUserNameValid() ? .green : .red)
           .padding(.trailing)
       }
       .padding(.bottom)
@@ -85,7 +49,7 @@ struct RegisterView : View {
         }
       }
 
-      Button(action: self.signUp) {
+      Button(action: self.registerUser) {
         HStack {
           Image(systemName: "checkmark")
             .resizable()
@@ -96,7 +60,7 @@ struct RegisterView : View {
         }
       }
       .bordered()
-      .disabled(!isUsernameAndPasswordValid())
+      .disabled(!userManager.isUserNameValid())
     })
       .padding(.bottom, keyboardHandler.keyboardHeight)
       .padding()
@@ -106,13 +70,7 @@ struct RegisterView : View {
 // MARK: - Event Handlers
 extension RegisterView {
   func registerUser() {
-    if userManager.settings.rememberUser {
-      userManager.profile.username = self.username
-      userManager.persistProfile()
-      userManager.load()
-    } else {
-      userManager.clear()
-    }
+    userManager.signUp(password: password)
   }
 }
 
