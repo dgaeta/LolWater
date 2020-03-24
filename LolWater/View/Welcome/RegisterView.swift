@@ -28,6 +28,9 @@ struct RegisterView : View {
             case .confirmed:
                 print("User is signed up and confirmed.")
             case .unconfirmed:
+                self.userManager.profile.username = self.username
+                self.userManager.persistProfile()
+                self.userManager.load()
                 self.registerUser()
                 print("User is not confirmed and no verification is set up at the moment:  \(signUpResult).")
             case .unknown:
@@ -106,6 +109,7 @@ extension RegisterView {
     if userManager.settings.rememberUser {
       userManager.profile.username = self.username
       userManager.persistProfile()
+      userManager.load()
     } else {
       userManager.clear()
     }

@@ -26,9 +26,9 @@ final class UserManager: ObservableObject {
   }
   
   func persistProfile() {
-    if settings.rememberUser {
+//    if settings.rememberUser {
       UserDefaults.standard.set(try? PropertyListEncoder().encode(profile), forKey: "user-profile")
-    }
+//    }
   }
   
   func load() {

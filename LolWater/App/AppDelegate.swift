@@ -65,6 +65,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                   //...
               });
               //Alternatively call .showSignIn()
+          case .signedIn:
+            print("signed in")
           default:
               print("unsupported")
           }
