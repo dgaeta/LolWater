@@ -774,27 +774,25 @@ public final class DeleteLolWaterDayDataMutation: GraphQLMutation {
 
 public final class GetLolWaterDayDataQuery: GraphQLQuery {
   public static let operationString =
-    "query GetLolWaterDayData($id: ID!, $userId: String!, $date: String!) {\n  getLolWaterDayData(id: $id, userId: $userId, date: $date) {\n    __typename\n    id\n    userId\n    date\n    ozDrank\n  }\n}"
+    "query GetLolWaterDayData($userId: String!, $date: String!) {\n  getLolWaterDayData(userId: $userId, date: $date) {\n    __typename\n    id\n    userId\n    date\n    ozDrank\n  }\n}"
 
-  public var id: GraphQLID
   public var userId: String
   public var date: String
 
-  public init(id: GraphQLID, userId: String, date: String) {
-    self.id = id
+  public init(userId: String, date: String) {
     self.userId = userId
     self.date = date
   }
 
   public var variables: GraphQLMap? {
-    return ["id": id, "userId": userId, "date": date]
+    return ["userId": userId, "date": date]
   }
 
   public struct Data: GraphQLSelectionSet {
     public static let possibleTypes = ["Query"]
 
     public static let selections: [GraphQLSelection] = [
-      GraphQLField("getLolWaterDayData", arguments: ["id": GraphQLVariable("id"), "userId": GraphQLVariable("userId"), "date": GraphQLVariable("date")], type: .object(GetLolWaterDayDatum.selections)),
+      GraphQLField("getLolWaterDayData", arguments: ["userId": GraphQLVariable("userId"), "date": GraphQLVariable("date")], type: .object(GetLolWaterDayDatum.selections)),
     ]
 
     public var snapshot: Snapshot

@@ -42,7 +42,7 @@ struct StarterView: View {
   var body: some View {
     Group {
       if self.userViewModel.isRegistered || self.isSignedIn {
-          ReaderView(model: ReaderViewModel())
+          ReaderView(model: ReaderViewModel(), userViewModel: userViewModel)
       } else {
         RegisterView(keyboardHandler: KeyboardFollower())
       }

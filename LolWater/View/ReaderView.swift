@@ -13,17 +13,20 @@ import AWSMobileClient
 struct ReaderView: View {
   @Environment(\.colorScheme) var colorScheme: ColorScheme
   @EnvironmentObject var settings: Settings
+  var userViewModel: UserManager
   @State var presentingSettingsSheet = false
   
   @ObservedObject var model: ReaderViewModel
   
   @State var currentDate = Date()
+  var today = "2020-03-24"
   
   // Reference AppSync client
   var appSyncClient: AWSAppSyncClient?
 
-  init(model: ReaderViewModel) {
+  init(model: ReaderViewModel, userViewModel: UserManager) {
     self.model = model
+    self.userViewModel = userViewModel
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     appSyncClient = appDelegate.appSyncClient
@@ -32,18 +35,20 @@ struct ReaderView: View {
   }
   
   func runQuery(){
-      appSyncClient?.fetch(query: ListLolWaterDayDataQuery(), cachePolicy: .returnCacheDataAndFetch) {(result, error) in
+    appSyncClient?.fetch(query: GetLolWaterDayDataQuery(userId: userViewModel.profile.username, date: self.today), cachePolicy: .returnCacheDataAndFetch) {(result, error) in
           if error != nil {
               print(error?.localizedDescription ?? "")
               return
           }
           print("Query complete.")
-        result?.data?.listLolWaterDayData?.items!.forEach { print(($0?.date)! + " " + ($0?.userId)!) }
+          print("\(String(describing: result?.data))")
+        
+//        result?.data?.listLolWaterDayData?.items!.forEach { print(($0?.date)! + " " + ($0?.userId)!) }
       }
   }
   
   func runMutation(){
-      let mutationInput = CreateLolWaterDayDataInput(userId: "gaeta.d@gmail.com", date: "2020-03-23", ozDrank: 66)
+    let mutationInput = CreateLolWaterDayDataInput(userId: userViewModel.profile.username, date: self.today, ozDrank: 66)
     
       appSyncClient?.perform(mutation: CreateLolWaterDayDataMutation(input: mutationInput)) { (result, error) in
           if let error = error as? AWSAppSyncClientError {
@@ -94,6 +99,6 @@ struct ReaderView: View {
 
 struct ReaderView_Previews: PreviewProvider {
   static var previews: some View {
-    ReaderView(model: ReaderViewModel())
+    ReaderView(model: ReaderViewModel(), userViewModel: UserManager())
   }
 }
