@@ -8,6 +8,7 @@
 
 import UIKit
 import AWSAppSync
+import AWSMobileClient
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,8 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        loadData()
-      
+    
       do {
           // You can choose the directory in which AppSync stores its persistent cache databases
           let cacheConfiguration = try AWSAppSyncCacheConfiguration()
@@ -36,6 +36,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       } catch {
           print("Error initializing appsync client. \(error)")
       }
+      
+      AWSMobileClient.default().initialize { (userState, error) in
+          if let userState = userState {
+              switch(userState){
+              case .signedIn:
+                print("Signed In")
+              case .signedOut:
+                print("Signed Out")
+              default:
+                  AWSMobileClient.default().signOut()
+              }
+              
+          } else if let error = error {
+              print(error.localizedDescription)
+          }
+      }
+      
+      AWSMobileClient.default().addUserStateListener(self) { (userState, info) in
+                  
+        switch (userState) {
+          case .signedOut:
+              // user clicked signout button and signedout
+              print("user signed out")
+          case .signedOutUserPoolsTokenInvalid:
+              print("need to login again.")
+              AWSMobileClient.default().signIn(username: "username", password: "password", completionHandler: { (res, err) in
+                  //...
+              });
+              //Alternatively call .showSignIn()
+          default:
+              print("unsupported")
+          }
+      }
+
       
         return true
     }

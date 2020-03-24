@@ -11,18 +11,18 @@ import SwiftUI
 import Foundation
 
 final class UserManager: ObservableObject {
-  @Published var profile: Profile = Profile(username: "", name: "")
+  @Published var profile: Profile = Profile(username: "")
   @Published var settings: Settings = Settings()
   
   var isRegistered: Bool {
-    return profile.name.isEmpty == false
+    return profile.username.isEmpty == false
   }
   
   init() {
   }
   
-  init(name: String) {
-    self.profile.name = name
+  init(username: String) {
+    self.profile.username = username
   }
   
   func persistProfile() {
@@ -44,6 +44,6 @@ final class UserManager: ObservableObject {
   }
   
   func isUserNameValid() -> Bool {
-    return profile.name.count >= 3
+    return profile.username.count >= 3
   }
 }

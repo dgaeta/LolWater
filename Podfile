@@ -7,6 +7,9 @@ target 'LolWater' do
 
   # Pods for LolWater
   pod 'AWSAppSync', '~> 3.1.0'
+  pod 'AWSMobileClient', '~> 2.13.0'      # Required dependency
+  pod 'AWSAuthUI', '~> 2.13.0'            # Optional dependency required to use drop-in UI
+  pod 'AWSUserPoolsSignIn', '~> 2.13.0'   # Optional dependency required to use drop-in UI
   
   target 'LolWaterTests' do
     inherit! :search_paths

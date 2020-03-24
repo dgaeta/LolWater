@@ -12,7 +12,7 @@ final internal class User {
   
   @Published var isRegistered: Bool = false
   
-    var profile: Profile = Profile(username: "", name: "") {
+    var profile: Profile = Profile(username: "") {
     willSet {
       willChange.send(self)
     }

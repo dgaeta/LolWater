@@ -20,7 +20,7 @@ struct Profile : Codable {
     var goalDate: Date
     var name: String
     
-    static let `default` = Self(username: "username", prefersNotifications: true, name: "")
+    static let `default` = Self(username: "username", prefersNotifications: true)
     
     init() {
       self.username = ""
@@ -29,7 +29,7 @@ struct Profile : Codable {
       self.goalDate = Date()
     }
     
-    init(username: String, prefersNotifications: Bool = true, name: String) {
+    init(username: String, prefersNotifications: Bool = true) {
         self.username = username
         self.prefersNotifications = prefersNotifications
         self.goalDate = Date()

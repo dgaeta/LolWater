@@ -4,6 +4,22 @@
     "IdentityManager": {
         "Default": {}
     },
+    "CredentialsProvider": {
+        "CognitoIdentity": {
+            "Default": {
+                "PoolId": "us-east-2_VM2MU4mwP",
+                "Region": "us-east-2"
+            }
+        }
+    },
+    "CognitoUserPool": {
+        "Default": {
+            "PoolId": "us-east-2_VM2MU4mwP",
+            "AppClientId": "2gr3eu94gf5cfb45ouq51293ml",
+            "AppClientSecret": "vl5v593uqfbg8eehqdggerqbpeft4cec3iqnjhp9rq1e3mlribo",
+            "Region": "us-east-2"
+        }
+    },
     "AppSync": {
         "Default": {
             "ApiUrl": "https://xeffjuo5pzckbhlnt7iekbmqbe.appsync-api.us-east-2.amazonaws.com/graphql",

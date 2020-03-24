@@ -8,6 +8,7 @@
 
 import SwiftUI
 import AWSAppSync
+import AWSMobileClient
 
 struct ReaderView: View {
   @Environment(\.colorScheme) var colorScheme: ColorScheme
