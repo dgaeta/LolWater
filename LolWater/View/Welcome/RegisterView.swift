@@ -13,6 +13,7 @@ struct RegisterView : View {
   @EnvironmentObject var userManager: UserManager
   @ObservedObject var keyboardHandler: KeyboardFollower
   
+  @State var username: String = ""
   @State var password: String = ""
 
   init(keyboardHandler: KeyboardFollower) {
@@ -23,7 +24,7 @@ struct RegisterView : View {
     VStack(content: {
       WelcomeMessageView()
       
-      TextField("Type your username...", text: $userManager.profile.username)
+      TextField("Type your username...", text: self.$username)
         .bordered()
       
       TextField("Type your new password...", text: self.$password)
@@ -31,9 +32,9 @@ struct RegisterView : View {
 
       HStack {
         Spacer()
-        Text("\(userManager.profile.username.count)")
+        Text("\(username.count)")
           .font(.caption)
-          .foregroundColor (userManager.isUserNameValid() ? .green : .red)
+          .foregroundColor (userManager.isUserNameValid(username: self.username) ? .green : .red)
           .padding(.trailing)
       }
       .padding(.bottom)
@@ -60,7 +61,7 @@ struct RegisterView : View {
         }
       }
       .bordered()
-      .disabled(!userManager.isUserNameValid())
+      .disabled(!userManager.isUserNameValid(username: self.username))
     })
       .padding(.bottom, keyboardHandler.keyboardHeight)
       .padding()
@@ -70,7 +71,8 @@ struct RegisterView : View {
 // MARK: - Event Handlers
 extension RegisterView {
   func registerUser() {
-    userManager.signUp(password: password)
+    userManager.signUp(username: username,
+                       password: password)
   }
 }
 

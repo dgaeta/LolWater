@@ -36,10 +36,10 @@ struct ReaderView: View {
     //runMutation()
   }
   
-  func runQuery(){
-    let idCombo = userViewModel.profile.username + "-" + self.today
-    print("Query for id: \(idCombo)")
-    appSyncClient?.fetch(query: GetLolWaterDayDataQuery(id: idCombo), cachePolicy: .returnCacheDataAndFetch) {(result, error) in
+  func runQuery() {
+    let userId = userViewModel.profile.username
+    print("Query for id: \(userId)")
+    appSyncClient?.fetch(query: GetWaterDataQuery(userId: userId), cachePolicy: .returnCacheDataAndFetch) {(result, error) in
           if error != nil {
               print(error?.localizedDescription ?? "")
               return
@@ -48,13 +48,14 @@ struct ReaderView: View {
           print("\(String(describing: result?.data))")
      
       
-      if ((result?.data?.getLolWaterDayData) != nil)  {
+      if ((result?.data?.getWaterData) != nil)  {
         print("not nil")
       } else {
         print("nil")
         // CREATES EMPTY RECORD FOR TODAY
         self.runMutation()
       }
+    }
   }
   
   func runMutation(){

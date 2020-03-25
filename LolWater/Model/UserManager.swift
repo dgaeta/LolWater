@@ -32,16 +32,18 @@ final class UserManager: ObservableObject {
 //    }
   }
   
-  func signUp(password: String) {
-    AWSMobileClient.default().signUp(username: self.profile.username, password: password
+  func signUp(username: String, password: String) {
+    AWSMobileClient.default().signUp(username: username, password: password
     ) { (signUpResult, error) in
         if let signUpResult = signUpResult {
             switch(signUpResult.signUpConfirmationState) {
             case .confirmed:
                 print("User is signed up and confirmed.")
             case .unconfirmed:
-                self.persistProfile()
+                
                 print("User is not confirmed and no verification is set up at the moment:  \(signUpResult).")
+                self.profile.username = username
+                self.persistProfile()
             case .unknown:
                 print("Unexpected case")
             }
@@ -73,7 +75,7 @@ final class UserManager: ObservableObject {
     UserDefaults.standard.removeObject(forKey: "user-profile")
   }
   
-  func isUserNameValid() -> Bool {
-    return profile.username.count >= 3
+  func isUserNameValid(username: String) -> Bool {
+    return username.count >= 3
   }
 }

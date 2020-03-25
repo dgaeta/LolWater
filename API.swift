@@ -890,6 +890,162 @@ public final class GetLolWaterDayDataQuery: GraphQLQuery {
   }
 }
 
+public final class GetWaterDataQuery: GraphQLQuery {
+  public static let operationString =
+    "query GetWaterData($userId: String!) {\n  getWaterData(userId: $userId) {\n    __typename\n    items {\n      __typename\n      id\n      userId\n      date\n      ozDrank\n    }\n    nextToken\n  }\n}"
+
+  public var userId: String
+
+  public init(userId: String) {
+    self.userId = userId
+  }
+
+  public var variables: GraphQLMap? {
+    return ["userId": userId]
+  }
+
+  public struct Data: GraphQLSelectionSet {
+    public static let possibleTypes = ["Query"]
+
+    public static let selections: [GraphQLSelection] = [
+      GraphQLField("getWaterData", arguments: ["userId": GraphQLVariable("userId")], type: .object(GetWaterDatum.selections)),
+    ]
+
+    public var snapshot: Snapshot
+
+    public init(snapshot: Snapshot) {
+      self.snapshot = snapshot
+    }
+
+    public init(getWaterData: GetWaterDatum? = nil) {
+      self.init(snapshot: ["__typename": "Query", "getWaterData": getWaterData.flatMap { $0.snapshot }])
+    }
+
+    public var getWaterData: GetWaterDatum? {
+      get {
+        return (snapshot["getWaterData"] as? Snapshot).flatMap { GetWaterDatum(snapshot: $0) }
+      }
+      set {
+        snapshot.updateValue(newValue?.snapshot, forKey: "getWaterData")
+      }
+    }
+
+    public struct GetWaterDatum: GraphQLSelectionSet {
+      public static let possibleTypes = ["LolWaterDayDataConnection"]
+
+      public static let selections: [GraphQLSelection] = [
+        GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+        GraphQLField("items", type: .list(.object(Item.selections))),
+        GraphQLField("nextToken", type: .scalar(String.self)),
+      ]
+
+      public var snapshot: Snapshot
+
+      public init(snapshot: Snapshot) {
+        self.snapshot = snapshot
+      }
+
+      public init(items: [Item?]? = nil, nextToken: String? = nil) {
+        self.init(snapshot: ["__typename": "LolWaterDayDataConnection", "items": items.flatMap { $0.map { $0.flatMap { $0.snapshot } } }, "nextToken": nextToken])
+      }
+
+      public var __typename: String {
+        get {
+          return snapshot["__typename"]! as! String
+        }
+        set {
+          snapshot.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      public var items: [Item?]? {
+        get {
+          return (snapshot["items"] as? [Snapshot?]).flatMap { $0.map { $0.flatMap { Item(snapshot: $0) } } }
+        }
+        set {
+          snapshot.updateValue(newValue.flatMap { $0.map { $0.flatMap { $0.snapshot } } }, forKey: "items")
+        }
+      }
+
+      public var nextToken: String? {
+        get {
+          return snapshot["nextToken"] as? String
+        }
+        set {
+          snapshot.updateValue(newValue, forKey: "nextToken")
+        }
+      }
+
+      public struct Item: GraphQLSelectionSet {
+        public static let possibleTypes = ["LolWaterDayData"]
+
+        public static let selections: [GraphQLSelection] = [
+          GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+          GraphQLField("id", type: .nonNull(.scalar(String.self))),
+          GraphQLField("userId", type: .nonNull(.scalar(String.self))),
+          GraphQLField("date", type: .nonNull(.scalar(String.self))),
+          GraphQLField("ozDrank", type: .scalar(Int.self)),
+        ]
+
+        public var snapshot: Snapshot
+
+        public init(snapshot: Snapshot) {
+          self.snapshot = snapshot
+        }
+
+        public init(id: String, userId: String, date: String, ozDrank: Int? = nil) {
+          self.init(snapshot: ["__typename": "LolWaterDayData", "id": id, "userId": userId, "date": date, "ozDrank": ozDrank])
+        }
+
+        public var __typename: String {
+          get {
+            return snapshot["__typename"]! as! String
+          }
+          set {
+            snapshot.updateValue(newValue, forKey: "__typename")
+          }
+        }
+
+        public var id: String {
+          get {
+            return snapshot["id"]! as! String
+          }
+          set {
+            snapshot.updateValue(newValue, forKey: "id")
+          }
+        }
+
+        public var userId: String {
+          get {
+            return snapshot["userId"]! as! String
+          }
+          set {
+            snapshot.updateValue(newValue, forKey: "userId")
+          }
+        }
+
+        public var date: String {
+          get {
+            return snapshot["date"]! as! String
+          }
+          set {
+            snapshot.updateValue(newValue, forKey: "date")
+          }
+        }
+
+        public var ozDrank: Int? {
+          get {
+            return snapshot["ozDrank"] as? Int
+          }
+          set {
+            snapshot.updateValue(newValue, forKey: "ozDrank")
+          }
+        }
+      }
+    }
+  }
+}
+
 public final class ListLolWaterDayDataQuery: GraphQLQuery {
   public static let operationString =
     "query ListLolWaterDayData($filter: TableLolWaterDayDataFilterInput, $limit: Int, $nextToken: String) {\n  listLolWaterDayData(filter: $filter, limit: $limit, nextToken: $nextToken) {\n    __typename\n    items {\n      __typename\n      id\n      userId\n      date\n      ozDrank\n    }\n    nextToken\n  }\n}"

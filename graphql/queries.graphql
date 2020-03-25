@@ -7,6 +7,17 @@ query GetLolWaterDayData($id: String!) {
     ozDrank
   }
 }
+query GetWaterData($userId: String!) {
+  getWaterData(userId: $userId) {
+    items {
+      id
+      userId
+      date
+      ozDrank
+    }
+    nextToken
+  }
+}
 query ListLolWaterDayData(
   $filter: TableLolWaterDayDataFilterInput
   $limit: Int
