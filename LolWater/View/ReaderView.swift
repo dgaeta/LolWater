@@ -15,11 +15,13 @@ struct ReaderView: View {
   @EnvironmentObject var settings: Settings
   var userViewModel: UserManager
   @State var presentingSettingsSheet = false
+  private let decoder = JSONDecoder()
   
-  @ObservedObject var model: ReaderViewModel
-  
-  @State var currentDate = Date()
   var today = "2020-03-24"
+  @ObservedObject var model: ReaderViewModel
+  @State var dayData: Day = Day(id: "", date: "", weekday: "", ozDrank: 0)
+  @State var currentDate = Date()
+  
   
   // Reference AppSync client
   var appSyncClient: AWSAppSyncClient?
@@ -35,20 +37,30 @@ struct ReaderView: View {
   }
   
   func runQuery(){
-    appSyncClient?.fetch(query: GetLolWaterDayDataQuery(userId: userViewModel.profile.username, date: self.today), cachePolicy: .returnCacheDataAndFetch) {(result, error) in
+    let idCombo = userViewModel.profile.username + "-" + self.today
+    print("Query for id: \(idCombo)")
+    appSyncClient?.fetch(query: GetLolWaterDayDataQuery(id: idCombo), cachePolicy: .returnCacheDataAndFetch) {(result, error) in
           if error != nil {
               print(error?.localizedDescription ?? "")
               return
           }
           print("Query complete.")
           print("\(String(describing: result?.data))")
-        
-//        result?.data?.listLolWaterDayData?.items!.forEach { print(($0?.date)! + " " + ($0?.userId)!) }
+     
+      
+      if ((result?.data?.getLolWaterDayData) != nil)  {
+        print("not nil")
+      } else {
+        print("nil")
+        // CREATES EMPTY RECORD FOR TODAY
+        self.runMutation()
       }
   }
   
   func runMutation(){
-    let mutationInput = CreateLolWaterDayDataInput(userId: userViewModel.profile.username, date: self.today, ozDrank: 66)
+    let idCombo = userViewModel.profile.username + "-" + self.today
+    self.dayData = Day(id: idCombo, date: self.today, weekday: "Today", ozDrank: 0)
+    let mutationInput = CreateLolWaterDayDataInput(id: idCombo, userId: userViewModel.profile.username, date: self.today, ozDrank: 0)
     
       appSyncClient?.perform(mutation: CreateLolWaterDayDataMutation(input: mutationInput)) { (result, error) in
           if let error = error as? AWSAppSyncClientError {

@@ -21,6 +21,6 @@ struct DayView: View {
 
 struct DayView_Previews: PreviewProvider {
   static var previews: some View {
-    DayView(day: Day(id: 1, date: Date(), weekday: "Monday", oncesOfWaterRecorded: 64))
+    DayView(day: Day(id: "DanTest5_2020-03-23", date: "2020-03-23", weekday: "Monday", ozDrank: 64))
   }
 }

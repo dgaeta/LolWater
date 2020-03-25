@@ -15,9 +15,9 @@ struct PersonSymbolView: View {
   var width: Int
   
   func getColor() -> Color {
-    if day.oncesOfWaterRecorded < 30 {
+    if day.ozDrank < 30 {
       return Color.red
-    } else if day.oncesOfWaterRecorded < 50 {
+    } else if day.ozDrank < 50 {
       return Color.yellow
     } else {
       return Color.green
@@ -34,7 +34,7 @@ struct PersonSymbolView: View {
 
 struct PersonSymbolView_Previews: PreviewProvider {
     static var previews: some View {
-      PersonSymbolView(day: Day(id: 1, date: Date(), weekday: "Sunday", oncesOfWaterRecorded: 50),
+      PersonSymbolView(day: Day(id: "DanTest5_2020-03-24", date: "2020-03-24", weekday: "Sunday", ozDrank: 50),
       height: 200, width: 200)
     }
 }

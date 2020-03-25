@@ -5,8 +5,17 @@ import AWSAppSync
 public struct CreateLolWaterDayDataInput: GraphQLMapConvertible {
   public var graphQLMap: GraphQLMap
 
-  public init(userId: String, date: String, ozDrank: Int? = nil) {
-    graphQLMap = ["userId": userId, "date": date, "ozDrank": ozDrank]
+  public init(id: String, userId: String, date: String, ozDrank: Int? = nil) {
+    graphQLMap = ["id": id, "userId": userId, "date": date, "ozDrank": ozDrank]
+  }
+
+  public var id: String {
+    get {
+      return graphQLMap["id"] as! String
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "id")
+    }
   }
 
   public var userId: String {
@@ -40,13 +49,13 @@ public struct CreateLolWaterDayDataInput: GraphQLMapConvertible {
 public struct UpdateLolWaterDayDataInput: GraphQLMapConvertible {
   public var graphQLMap: GraphQLMap
 
-  public init(id: GraphQLID, userId: String, date: String? = nil, ozDrank: Int? = nil) {
+  public init(id: String, userId: String, date: String? = nil, ozDrank: Int? = nil) {
     graphQLMap = ["id": id, "userId": userId, "date": date, "ozDrank": ozDrank]
   }
 
-  public var id: GraphQLID {
+  public var id: String {
     get {
-      return graphQLMap["id"] as! GraphQLID
+      return graphQLMap["id"] as! String
     }
     set {
       graphQLMap.updateValue(newValue, forKey: "id")
@@ -84,13 +93,13 @@ public struct UpdateLolWaterDayDataInput: GraphQLMapConvertible {
 public struct DeleteLolWaterDayDataInput: GraphQLMapConvertible {
   public var graphQLMap: GraphQLMap
 
-  public init(id: GraphQLID, userId: String, date: String) {
+  public init(id: String, userId: String, date: String) {
     graphQLMap = ["id": id, "userId": userId, "date": date]
   }
 
-  public var id: GraphQLID {
+  public var id: String {
     get {
-      return graphQLMap["id"] as! GraphQLID
+      return graphQLMap["id"] as! String
     }
     set {
       graphQLMap.updateValue(newValue, forKey: "id")
@@ -490,7 +499,7 @@ public final class CreateLolWaterDayDataMutation: GraphQLMutation {
 
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-        GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
+        GraphQLField("id", type: .nonNull(.scalar(String.self))),
         GraphQLField("userId", type: .nonNull(.scalar(String.self))),
         GraphQLField("date", type: .nonNull(.scalar(String.self))),
         GraphQLField("ozDrank", type: .scalar(Int.self)),
@@ -502,7 +511,7 @@ public final class CreateLolWaterDayDataMutation: GraphQLMutation {
         self.snapshot = snapshot
       }
 
-      public init(id: GraphQLID, userId: String, date: String, ozDrank: Int? = nil) {
+      public init(id: String, userId: String, date: String, ozDrank: Int? = nil) {
         self.init(snapshot: ["__typename": "LolWaterDayData", "id": id, "userId": userId, "date": date, "ozDrank": ozDrank])
       }
 
@@ -515,9 +524,9 @@ public final class CreateLolWaterDayDataMutation: GraphQLMutation {
         }
       }
 
-      public var id: GraphQLID {
+      public var id: String {
         get {
-          return snapshot["id"]! as! GraphQLID
+          return snapshot["id"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "id")
@@ -599,7 +608,7 @@ public final class UpdateLolWaterDayDataMutation: GraphQLMutation {
 
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-        GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
+        GraphQLField("id", type: .nonNull(.scalar(String.self))),
         GraphQLField("userId", type: .nonNull(.scalar(String.self))),
         GraphQLField("date", type: .nonNull(.scalar(String.self))),
         GraphQLField("ozDrank", type: .scalar(Int.self)),
@@ -611,7 +620,7 @@ public final class UpdateLolWaterDayDataMutation: GraphQLMutation {
         self.snapshot = snapshot
       }
 
-      public init(id: GraphQLID, userId: String, date: String, ozDrank: Int? = nil) {
+      public init(id: String, userId: String, date: String, ozDrank: Int? = nil) {
         self.init(snapshot: ["__typename": "LolWaterDayData", "id": id, "userId": userId, "date": date, "ozDrank": ozDrank])
       }
 
@@ -624,9 +633,9 @@ public final class UpdateLolWaterDayDataMutation: GraphQLMutation {
         }
       }
 
-      public var id: GraphQLID {
+      public var id: String {
         get {
-          return snapshot["id"]! as! GraphQLID
+          return snapshot["id"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "id")
@@ -708,7 +717,7 @@ public final class DeleteLolWaterDayDataMutation: GraphQLMutation {
 
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-        GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
+        GraphQLField("id", type: .nonNull(.scalar(String.self))),
         GraphQLField("userId", type: .nonNull(.scalar(String.self))),
         GraphQLField("date", type: .nonNull(.scalar(String.self))),
         GraphQLField("ozDrank", type: .scalar(Int.self)),
@@ -720,7 +729,7 @@ public final class DeleteLolWaterDayDataMutation: GraphQLMutation {
         self.snapshot = snapshot
       }
 
-      public init(id: GraphQLID, userId: String, date: String, ozDrank: Int? = nil) {
+      public init(id: String, userId: String, date: String, ozDrank: Int? = nil) {
         self.init(snapshot: ["__typename": "LolWaterDayData", "id": id, "userId": userId, "date": date, "ozDrank": ozDrank])
       }
 
@@ -733,9 +742,9 @@ public final class DeleteLolWaterDayDataMutation: GraphQLMutation {
         }
       }
 
-      public var id: GraphQLID {
+      public var id: String {
         get {
-          return snapshot["id"]! as! GraphQLID
+          return snapshot["id"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "id")
@@ -774,25 +783,23 @@ public final class DeleteLolWaterDayDataMutation: GraphQLMutation {
 
 public final class GetLolWaterDayDataQuery: GraphQLQuery {
   public static let operationString =
-    "query GetLolWaterDayData($userId: String!, $date: String!) {\n  getLolWaterDayData(userId: $userId, date: $date) {\n    __typename\n    id\n    userId\n    date\n    ozDrank\n  }\n}"
+    "query GetLolWaterDayData($id: String!) {\n  getLolWaterDayData(id: $id) {\n    __typename\n    id\n    userId\n    date\n    ozDrank\n  }\n}"
 
-  public var userId: String
-  public var date: String
+  public var id: String
 
-  public init(userId: String, date: String) {
-    self.userId = userId
-    self.date = date
+  public init(id: String) {
+    self.id = id
   }
 
   public var variables: GraphQLMap? {
-    return ["userId": userId, "date": date]
+    return ["id": id]
   }
 
   public struct Data: GraphQLSelectionSet {
     public static let possibleTypes = ["Query"]
 
     public static let selections: [GraphQLSelection] = [
-      GraphQLField("getLolWaterDayData", arguments: ["userId": GraphQLVariable("userId"), "date": GraphQLVariable("date")], type: .object(GetLolWaterDayDatum.selections)),
+      GraphQLField("getLolWaterDayData", arguments: ["id": GraphQLVariable("id")], type: .object(GetLolWaterDayDatum.selections)),
     ]
 
     public var snapshot: Snapshot
@@ -819,7 +826,7 @@ public final class GetLolWaterDayDataQuery: GraphQLQuery {
 
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-        GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
+        GraphQLField("id", type: .nonNull(.scalar(String.self))),
         GraphQLField("userId", type: .nonNull(.scalar(String.self))),
         GraphQLField("date", type: .nonNull(.scalar(String.self))),
         GraphQLField("ozDrank", type: .scalar(Int.self)),
@@ -831,7 +838,7 @@ public final class GetLolWaterDayDataQuery: GraphQLQuery {
         self.snapshot = snapshot
       }
 
-      public init(id: GraphQLID, userId: String, date: String, ozDrank: Int? = nil) {
+      public init(id: String, userId: String, date: String, ozDrank: Int? = nil) {
         self.init(snapshot: ["__typename": "LolWaterDayData", "id": id, "userId": userId, "date": date, "ozDrank": ozDrank])
       }
 
@@ -844,9 +851,9 @@ public final class GetLolWaterDayDataQuery: GraphQLQuery {
         }
       }
 
-      public var id: GraphQLID {
+      public var id: String {
         get {
-          return snapshot["id"]! as! GraphQLID
+          return snapshot["id"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "id")
@@ -978,7 +985,7 @@ public final class ListLolWaterDayDataQuery: GraphQLQuery {
 
         public static let selections: [GraphQLSelection] = [
           GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-          GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
+          GraphQLField("id", type: .nonNull(.scalar(String.self))),
           GraphQLField("userId", type: .nonNull(.scalar(String.self))),
           GraphQLField("date", type: .nonNull(.scalar(String.self))),
           GraphQLField("ozDrank", type: .scalar(Int.self)),
@@ -990,7 +997,7 @@ public final class ListLolWaterDayDataQuery: GraphQLQuery {
           self.snapshot = snapshot
         }
 
-        public init(id: GraphQLID, userId: String, date: String, ozDrank: Int? = nil) {
+        public init(id: String, userId: String, date: String, ozDrank: Int? = nil) {
           self.init(snapshot: ["__typename": "LolWaterDayData", "id": id, "userId": userId, "date": date, "ozDrank": ozDrank])
         }
 
@@ -1003,9 +1010,9 @@ public final class ListLolWaterDayDataQuery: GraphQLQuery {
           }
         }
 
-        public var id: GraphQLID {
+        public var id: String {
           get {
-            return snapshot["id"]! as! GraphQLID
+            return snapshot["id"]! as! String
           }
           set {
             snapshot.updateValue(newValue, forKey: "id")
@@ -1045,14 +1052,14 @@ public final class ListLolWaterDayDataQuery: GraphQLQuery {
 
 public final class OnCreateLolWaterDayDataSubscription: GraphQLSubscription {
   public static let operationString =
-    "subscription OnCreateLolWaterDayData($id: ID, $userId: String, $date: String, $ozDrank: Int) {\n  onCreateLolWaterDayData(id: $id, userId: $userId, date: $date, ozDrank: $ozDrank) {\n    __typename\n    id\n    userId\n    date\n    ozDrank\n  }\n}"
+    "subscription OnCreateLolWaterDayData($id: String, $userId: String, $date: String, $ozDrank: Int) {\n  onCreateLolWaterDayData(id: $id, userId: $userId, date: $date, ozDrank: $ozDrank) {\n    __typename\n    id\n    userId\n    date\n    ozDrank\n  }\n}"
 
-  public var id: GraphQLID?
+  public var id: String?
   public var userId: String?
   public var date: String?
   public var ozDrank: Int?
 
-  public init(id: GraphQLID? = nil, userId: String? = nil, date: String? = nil, ozDrank: Int? = nil) {
+  public init(id: String? = nil, userId: String? = nil, date: String? = nil, ozDrank: Int? = nil) {
     self.id = id
     self.userId = userId
     self.date = date
@@ -1094,7 +1101,7 @@ public final class OnCreateLolWaterDayDataSubscription: GraphQLSubscription {
 
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-        GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
+        GraphQLField("id", type: .nonNull(.scalar(String.self))),
         GraphQLField("userId", type: .nonNull(.scalar(String.self))),
         GraphQLField("date", type: .nonNull(.scalar(String.self))),
         GraphQLField("ozDrank", type: .scalar(Int.self)),
@@ -1106,7 +1113,7 @@ public final class OnCreateLolWaterDayDataSubscription: GraphQLSubscription {
         self.snapshot = snapshot
       }
 
-      public init(id: GraphQLID, userId: String, date: String, ozDrank: Int? = nil) {
+      public init(id: String, userId: String, date: String, ozDrank: Int? = nil) {
         self.init(snapshot: ["__typename": "LolWaterDayData", "id": id, "userId": userId, "date": date, "ozDrank": ozDrank])
       }
 
@@ -1119,9 +1126,9 @@ public final class OnCreateLolWaterDayDataSubscription: GraphQLSubscription {
         }
       }
 
-      public var id: GraphQLID {
+      public var id: String {
         get {
-          return snapshot["id"]! as! GraphQLID
+          return snapshot["id"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "id")
@@ -1160,14 +1167,14 @@ public final class OnCreateLolWaterDayDataSubscription: GraphQLSubscription {
 
 public final class OnUpdateLolWaterDayDataSubscription: GraphQLSubscription {
   public static let operationString =
-    "subscription OnUpdateLolWaterDayData($id: ID, $userId: String, $date: String, $ozDrank: Int) {\n  onUpdateLolWaterDayData(id: $id, userId: $userId, date: $date, ozDrank: $ozDrank) {\n    __typename\n    id\n    userId\n    date\n    ozDrank\n  }\n}"
+    "subscription OnUpdateLolWaterDayData($id: String, $userId: String, $date: String, $ozDrank: Int) {\n  onUpdateLolWaterDayData(id: $id, userId: $userId, date: $date, ozDrank: $ozDrank) {\n    __typename\n    id\n    userId\n    date\n    ozDrank\n  }\n}"
 
-  public var id: GraphQLID?
+  public var id: String?
   public var userId: String?
   public var date: String?
   public var ozDrank: Int?
 
-  public init(id: GraphQLID? = nil, userId: String? = nil, date: String? = nil, ozDrank: Int? = nil) {
+  public init(id: String? = nil, userId: String? = nil, date: String? = nil, ozDrank: Int? = nil) {
     self.id = id
     self.userId = userId
     self.date = date
@@ -1209,7 +1216,7 @@ public final class OnUpdateLolWaterDayDataSubscription: GraphQLSubscription {
 
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-        GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
+        GraphQLField("id", type: .nonNull(.scalar(String.self))),
         GraphQLField("userId", type: .nonNull(.scalar(String.self))),
         GraphQLField("date", type: .nonNull(.scalar(String.self))),
         GraphQLField("ozDrank", type: .scalar(Int.self)),
@@ -1221,7 +1228,7 @@ public final class OnUpdateLolWaterDayDataSubscription: GraphQLSubscription {
         self.snapshot = snapshot
       }
 
-      public init(id: GraphQLID, userId: String, date: String, ozDrank: Int? = nil) {
+      public init(id: String, userId: String, date: String, ozDrank: Int? = nil) {
         self.init(snapshot: ["__typename": "LolWaterDayData", "id": id, "userId": userId, "date": date, "ozDrank": ozDrank])
       }
 
@@ -1234,9 +1241,9 @@ public final class OnUpdateLolWaterDayDataSubscription: GraphQLSubscription {
         }
       }
 
-      public var id: GraphQLID {
+      public var id: String {
         get {
-          return snapshot["id"]! as! GraphQLID
+          return snapshot["id"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "id")
@@ -1275,14 +1282,14 @@ public final class OnUpdateLolWaterDayDataSubscription: GraphQLSubscription {
 
 public final class OnDeleteLolWaterDayDataSubscription: GraphQLSubscription {
   public static let operationString =
-    "subscription OnDeleteLolWaterDayData($id: ID, $userId: String, $date: String, $ozDrank: Int) {\n  onDeleteLolWaterDayData(id: $id, userId: $userId, date: $date, ozDrank: $ozDrank) {\n    __typename\n    id\n    userId\n    date\n    ozDrank\n  }\n}"
+    "subscription OnDeleteLolWaterDayData($id: String, $userId: String, $date: String, $ozDrank: Int) {\n  onDeleteLolWaterDayData(id: $id, userId: $userId, date: $date, ozDrank: $ozDrank) {\n    __typename\n    id\n    userId\n    date\n    ozDrank\n  }\n}"
 
-  public var id: GraphQLID?
+  public var id: String?
   public var userId: String?
   public var date: String?
   public var ozDrank: Int?
 
-  public init(id: GraphQLID? = nil, userId: String? = nil, date: String? = nil, ozDrank: Int? = nil) {
+  public init(id: String? = nil, userId: String? = nil, date: String? = nil, ozDrank: Int? = nil) {
     self.id = id
     self.userId = userId
     self.date = date
@@ -1324,7 +1331,7 @@ public final class OnDeleteLolWaterDayDataSubscription: GraphQLSubscription {
 
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-        GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
+        GraphQLField("id", type: .nonNull(.scalar(String.self))),
         GraphQLField("userId", type: .nonNull(.scalar(String.self))),
         GraphQLField("date", type: .nonNull(.scalar(String.self))),
         GraphQLField("ozDrank", type: .scalar(Int.self)),
@@ -1336,7 +1343,7 @@ public final class OnDeleteLolWaterDayDataSubscription: GraphQLSubscription {
         self.snapshot = snapshot
       }
 
-      public init(id: GraphQLID, userId: String, date: String, ozDrank: Int? = nil) {
+      public init(id: String, userId: String, date: String, ozDrank: Int? = nil) {
         self.init(snapshot: ["__typename": "LolWaterDayData", "id": id, "userId": userId, "date": date, "ozDrank": ozDrank])
       }
 
@@ -1349,9 +1356,9 @@ public final class OnDeleteLolWaterDayDataSubscription: GraphQLSubscription {
         }
       }
 
-      public var id: GraphQLID {
+      public var id: String {
         get {
-          return snapshot["id"]! as! GraphQLID
+          return snapshot["id"]! as! String
         }
         set {
           snapshot.updateValue(newValue, forKey: "id")

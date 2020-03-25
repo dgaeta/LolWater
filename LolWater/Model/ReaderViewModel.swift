@@ -12,14 +12,15 @@ import Foundation
 
 class ReaderViewModel: ObservableObject {
   private let api = NetworkAPI()
+  let userName = "DanTest5"
   @Published private var allDays = [
-    Day(id: 1, date: Date.init(), weekday: "Sunday", oncesOfWaterRecorded: 8),
-    Day(id: 2, date: Date.init(), weekday: "Monday", oncesOfWaterRecorded: 64),
-    Day(id: 3, date: Date.init(), weekday: "Tuesday", oncesOfWaterRecorded: 16),
-    Day(id: 4, date: Date.init(), weekday: "Wednesdday", oncesOfWaterRecorded: 48),
-    Day(id: 5, date: Date.init(), weekday: "Thursday", oncesOfWaterRecorded: 80),
-    Day(id: 6, date: Date.init(), weekday: "Friday", oncesOfWaterRecorded: 55),
-    Day(id: 7, date: Date.init(), weekday: "Saturday", oncesOfWaterRecorded: 60)
+    Day(id: "DanTest5_2020-03-18", date: "2020-03-18", weekday: "Sunday", ozDrank: 8),
+    Day(id: "DanTest5_2020-03-19", date: "2020-03-19", weekday: "Monday", ozDrank: 64),
+    Day(id: "DanTest5_2020-03-20", date: "2020-03-20", weekday: "Tuesday", ozDrank: 16),
+    Day(id: "DanTest5_2020-03-21", date: "2020-03-21", weekday: "Wednesdday", ozDrank: 48),
+    Day(id: "DanTest5_2020-03-22", date: "2020-03-22", weekday: "Thursday", ozDrank: 80),
+    Day(id: "DanTest5_2020-03-23", date: "2020-03-23", weekday: "Friday", ozDrank: 55),
+    Day(id: "DanTest5_2020-03-24", date: "2020-03-24", weekday: "Saturday", ozDrank: 60)
   ]
   private var subscriptions = Set<AnyCancellable>()
   

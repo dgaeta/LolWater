@@ -9,10 +9,10 @@
 import SwiftUI
 
 struct Day: Codable, Identifiable {
-  let id: Int
-  let date: Date
+  let id: String
+  let date: String
   let weekday: String
-  let oncesOfWaterRecorded: Int
+  let ozDrank: Int
 }
 
 extension Day: Comparable {
@@ -23,6 +23,6 @@ extension Day: Comparable {
 
 extension Day: CustomDebugStringConvertible {
   var debugDescription: String {
-    return "\(self.id) - \(self.date.description) - \(self.oncesOfWaterRecorded)"
+    return "\(self.id) - \(self.date.description) - \(self.ozDrank)"
   }
 }

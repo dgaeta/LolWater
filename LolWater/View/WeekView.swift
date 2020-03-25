@@ -12,29 +12,18 @@ struct WeekView: View {
   var week: [Day]
   let calendar = Calendar.current
   
-  func getWeekdayName(day: Day) -> String {
-    let index = Calendar.current.component(.weekday, from: day.date) // this returns an Int
-    return Calendar.current.weekdaySymbols[index - 1] // subtract 1 since the index starts at 1
-  }
-  
-  func getDateNumber(day: Day) -> String {
-    let month = self.calendar.component(.month, from: day.date)
-    let dayNumber = self.calendar.component(.day, from: day.date)
-    return "\(month)/\(dayNumber)"
-  }
-  
   var body: some View {
     VStack(alignment: .leading) {
       HStack(spacing: 10) {
-        ForEach(self.week) { day in
+        ForEach(self.week) { dayData in
           VStack(alignment: .center) {
-            Text(self.getWeekdayName(day: day))
+            Text(dayData.date)
               .font(.caption)
-            Text(self.getDateNumber(day: day))
+            Text(dayData.date)
               .padding(.bottom, 100)
-            WaterRowView(day: day)
+            WaterRowView(day: dayData)
               .padding(.bottom, 100)
-            PersonSymbolView(day: day, height: 100, width: 35)
+            PersonSymbolView(day: dayData, height: 100, width: 35)
           }
           .frame(width: 40, height: 500)
         }

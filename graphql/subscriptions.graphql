@@ -1,6 +1,6 @@
 # this is an auto generated file. This will be overwritten
 subscription OnCreateLolWaterDayData(
-  $id: ID
+  $id: String
   $userId: String
   $date: String
   $ozDrank: Int
@@ -18,7 +18,7 @@ subscription OnCreateLolWaterDayData(
   }
 }
 subscription OnUpdateLolWaterDayData(
-  $id: ID
+  $id: String
   $userId: String
   $date: String
   $ozDrank: Int
@@ -36,7 +36,7 @@ subscription OnUpdateLolWaterDayData(
   }
 }
 subscription OnDeleteLolWaterDayData(
-  $id: ID
+  $id: String
   $userId: String
   $date: String
   $ozDrank: Int

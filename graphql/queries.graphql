@@ -1,6 +1,6 @@
 # this is an auto generated file. This will be overwritten
-query GetLolWaterDayData($userId: String!, $date: String!) {
-  getLolWaterDayData(userId: $userId, date: $date) {
+query GetLolWaterDayData($id: String!) {
+  getLolWaterDayData(id: $id) {
     id
     userId
     date
