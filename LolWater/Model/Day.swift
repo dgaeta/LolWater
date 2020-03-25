@@ -12,7 +12,7 @@ struct Day: Codable, Identifiable {
   let id: String
   let date: String
   let weekday: String
-  let ozDrank: Int
+  var ozDrank: Int
 }
 
 extension Day: Comparable {

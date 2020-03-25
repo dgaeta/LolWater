@@ -9,9 +9,12 @@
 import SwiftUI
 
 struct IncreaseButtonView: View {
+  var action: () -> Void
+  
     var body: some View {
         Button(action: {
             print("Increase!")
+          self.action()
         }) {
             ZStack {
                 Circle()
@@ -42,6 +45,6 @@ struct IncreaseButtonView: View {
 
 struct IncreaseButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        IncreaseButtonView()
+      IncreaseButtonView(action: {print("done")})
     }
 }
