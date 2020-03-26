@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct WaterRowView: View {
-  var day: Day
+  var ozDrank: Int
   var pixelMultiplier: CGFloat = 5
 
   
@@ -17,7 +17,7 @@ struct WaterRowView: View {
     VStack(spacing: 10) {
       RoundedRectangle(cornerRadius: 8)
         .fill(Color.blue)
-        .frame(width: 30, height: CGFloat(day.ozDrank) * pixelMultiplier)
+        .frame(width: 30, height: CGFloat(ozDrank) * pixelMultiplier)
         .frame(width: 30, height: 200)
     }
   }
@@ -25,6 +25,6 @@ struct WaterRowView: View {
 
 struct WaterRowView_Previews: PreviewProvider {
   static var previews: some View {
-    WaterRowView(day: Day(id: "DanTest5_2020-03-24", date: "2020-03-24", weekday: "Monday", ozDrank: 80))
+    WaterRowView(ozDrank: 20)
   }
 }

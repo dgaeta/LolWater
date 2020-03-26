@@ -21,9 +21,9 @@ struct WeekView: View {
               .font(.caption)
             Text(dayData.date)
               .padding(.bottom, 100)
-            WaterRowView(day: dayData)
+            WaterRowView(ozDrank: dayData.ozDrank)
               .padding(.bottom, 100)
-            PersonSymbolView(day: dayData, height: 100, width: 35)
+            PersonSymbolView(ozDrank: dayData.ozDrank, height: 100, width: 35)
           }
           .frame(width: 40, height: 500)
         }

@@ -9,18 +9,18 @@
 import SwiftUI
 
 struct DayView: View {
-  var day: Day
+  var ozDrank: Int
   
   var body: some View {
     HStack {
-      PersonSymbolView(day: day, height: 200, width: 200)
-      WaterRowView(day: day)
+      PersonSymbolView(ozDrank: ozDrank, height: 200, width: 200)
+      WaterRowView(ozDrank: ozDrank)
     }
   }
 }
 
 struct DayView_Previews: PreviewProvider {
   static var previews: some View {
-    DayView(day: Day(id: "DanTest5_2020-03-23", date: "2020-03-23", weekday: "Monday", ozDrank: 64))
+    DayView(ozDrank: 44)
   }
 }
