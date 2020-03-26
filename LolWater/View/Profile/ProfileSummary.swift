@@ -39,7 +39,6 @@ struct ProfileSummary: View {
                         WaterBadge(name: "8 cups Badge")
                             .hueRotation(Angle(degrees: 90))
                         
-                        
                         WaterBadge(name: "1 week Badge")
                             .grayscale(0.5)
                             .hueRotation(Angle(degrees: 45))

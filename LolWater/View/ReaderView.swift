@@ -14,13 +14,22 @@ struct ReaderView: View {
   @Environment(\.colorScheme) var colorScheme: ColorScheme
   @EnvironmentObject var settings: Settings
   var userViewModel: UserManager
-  @State var presentingSettingsSheet = false
+  @State var showingProfileSheet = false
   
   var today = "2020-03-24"
   @ObservedObject var model: ReaderViewModel
   
   // Reference AppSync client
   var appSyncClient: AWSAppSyncClient?
+  
+  var profileButton: some View {
+      Button(action: { self.showingProfileSheet.toggle() }) {
+          Image(systemName: "person.crop.circle")
+              .imageScale(.large)
+              .accessibility(label: Text("User Profile"))
+              .padding()
+      }
+  }
 
   init(model: ReaderViewModel, userViewModel: UserManager) {
     self.model = model
@@ -42,7 +51,8 @@ struct ReaderView: View {
   
     var body: some View {
         
-      return NavigationView {
+      return
+        NavigationView {
         VStack {
           
           // Switch between Day, Week, Month, Year view
@@ -76,9 +86,10 @@ struct ReaderView: View {
           
           
         }
-        .sheet(isPresented: self.$presentingSettingsSheet, content: {
-          SettingsView() 
-            .environmentObject(self.settings)
+        .navigationBarTitle(Text("Featured"))
+        .navigationBarItems(trailing: profileButton)
+        .sheet(isPresented: self.$showingProfileSheet, content: {
+          ProfileSummary(profile: Profile())
         })
       }
     }
