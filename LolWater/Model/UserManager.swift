@@ -12,7 +12,7 @@ import Foundation
 import AWSMobileClient
 
 final class UserManager: ObservableObject {
-  @Published var profile: Profile = Profile(username: "")
+  @Published var profile: Profile = Profile(username: "TestDefault")
   @Published var settings: Settings = Settings()
   
   var isRegistered: Bool {

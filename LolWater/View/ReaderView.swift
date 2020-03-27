@@ -89,7 +89,7 @@ struct ReaderView: View {
         .navigationBarTitle(Text("Featured"))
         .navigationBarItems(trailing: profileButton)
         .sheet(isPresented: self.$showingProfileSheet, content: {
-          ProfileSummary(profile: Profile())
+          ProfileSummary(profile: Profile(), userViewModel: self.userViewModel)
         })
       }
     }

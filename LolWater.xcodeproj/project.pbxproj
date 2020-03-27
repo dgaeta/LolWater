@@ -77,6 +77,13 @@
 		828F254423BEBE7000B87743 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F254323BEBE7000B87743 /* Badge.swift */; };
 		828F254623BEBEA200B87743 /* HexagonParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F254523BEBEA200B87743 /* HexagonParameters.swift */; };
 		82ACDC5B23DF0D90009CED6B /* WeekdayColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ACDC5A23DF0D90009CED6B /* WeekdayColumn.swift */; };
+		82C5954A242E47AE00014454 /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C59549242E47AE00014454 /* MonthView.swift */; };
+		82C5954C242E487900014454 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C5954B242E487900014454 /* DateManager.swift */; };
+		82C5954E242E49EE00014454 /* ColorSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C5954D242E49EE00014454 /* ColorSettings.swift */; };
+		82C59550242E4DE700014454 /* MonthCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C5954F242E4DE700014454 /* MonthCellView.swift */; };
+		82C59552242E4E4A00014454 /* LolWaterDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C59551242E4E4A00014454 /* LolWaterDate.swift */; };
+		82C59556242E583B00014454 /* CalendarHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C59555242E583B00014454 /* CalendarHistoryView.swift */; };
+		82C59558242E585800014454 /* WeekdayHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C59557242E585800014454 /* WeekdayHeaderView.swift */; };
 		F7D486C2DB94D0F6F24C5466 /* Pods_LolWaterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F5403202268A59703EEA670 /* Pods_LolWaterTests.framework */; };
 		F80D29C2141840CC5FBBE40F /* Pods_LolWater_LolWaterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B36840918258F48BA82DDF5 /* Pods_LolWater_LolWaterUITests.framework */; };
 /* End PBXBuildFile section */
@@ -177,6 +184,13 @@
 		828F254323BEBE7000B87743 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		828F254523BEBEA200B87743 /* HexagonParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonParameters.swift; sourceTree = "<group>"; };
 		82ACDC5A23DF0D90009CED6B /* WeekdayColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayColumn.swift; sourceTree = "<group>"; };
+		82C59549242E47AE00014454 /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
+		82C5954B242E487900014454 /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
+		82C5954D242E49EE00014454 /* ColorSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSettings.swift; sourceTree = "<group>"; };
+		82C5954F242E4DE700014454 /* MonthCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCellView.swift; sourceTree = "<group>"; };
+		82C59551242E4E4A00014454 /* LolWaterDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolWaterDate.swift; sourceTree = "<group>"; };
+		82C59555242E583B00014454 /* CalendarHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHistoryView.swift; sourceTree = "<group>"; };
+		82C59557242E585800014454 /* WeekdayHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayHeaderView.swift; sourceTree = "<group>"; };
 		ADBC9F071F5E50E2D76E2451 /* Pods-LolWater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LolWater.debug.xcconfig"; path = "Target Support Files/Pods-LolWater/Pods-LolWater.debug.xcconfig"; sourceTree = "<group>"; };
 		CC7176FA35E9A83D86407EFE /* Pods-LolWaterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LolWaterTests.debug.xcconfig"; path = "Target Support Files/Pods-LolWaterTests/Pods-LolWaterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CCB7E1D7F9BD7298BCE76B36 /* Pods-LolWater-LolWaterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LolWater-LolWaterUITests.release.xcconfig"; path = "Target Support Files/Pods-LolWater-LolWaterUITests/Pods-LolWater-LolWaterUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -251,6 +265,8 @@
 				828F253C23BEAD6A00B87743 /* ProfileViewModel.swift */,
 				828F252C23B7ABF400B87743 /* Models */,
 				821896FF242329B000551F3B /* ReaderViewModel.swift */,
+				82C5954B242E487900014454 /* DateManager.swift */,
+				82C5954D242E49EE00014454 /* ColorSettings.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -259,7 +275,13 @@
 			isa = PBXGroup;
 			children = (
 				821896F524231FC900551F3B /* ReaderView.swift */,
+				828F253E23BEB19F00B87743 /* ProfileSummary.swift */,
 				82189709242543BA00551F3B /* DayView.swift */,
+				82C59551242E4E4A00014454 /* LolWaterDate.swift */,
+				82C5954F242E4DE700014454 /* MonthCellView.swift */,
+				82C59549242E47AE00014454 /* MonthView.swift */,
+				82C59555242E583B00014454 /* CalendarHistoryView.swift */,
+				82C59557242E585800014454 /* WeekdayHeaderView.swift */,
 				821897012423DF5C00551F3B /* WaterRowView.swift */,
 				821897032423F42400551F3B /* PersonSymbolView.swift */,
 				8218970B24254A3D00551F3B /* WeekView.swift */,
@@ -453,7 +475,6 @@
 			isa = PBXGroup;
 			children = (
 				828F252A23B7A2A300B87743 /* ProfileHost.swift */,
-				828F253E23BEB19F00B87743 /* ProfileSummary.swift */,
 				828F254023BEB52B00B87743 /* ProfileEditor.swift */,
 			);
 			path = Profile;
@@ -753,6 +774,7 @@
 				828F254623BEBEA200B87743 /* HexagonParameters.swift in Sources */,
 				821897062424149E00551F3B /* IncreaseButtonView.swift in Sources */,
 				821897042423F42400551F3B /* PersonSymbolView.swift in Sources */,
+				82C59556242E583B00014454 /* CalendarHistoryView.swift in Sources */,
 				828F253423B7DCBB00B87743 /* Data.swift in Sources */,
 				8254063E240972F700A56AFE /* StarterView.swift in Sources */,
 				8252593D23DA7C0500E266A8 /* UserData.swift in Sources */,
@@ -770,13 +792,17 @@
 				824B15AB23C2B45400666BFD /* CupCap.swift in Sources */,
 				824B15A123BF9EA600666BFD /* BadgeSymbol.swift in Sources */,
 				8218970A242543BA00551F3B /* DayView.swift in Sources */,
+				82C5954E242E49EE00014454 /* ColorSettings.swift in Sources */,
 				821896FE2423293F00551F3B /* JSONUtil.swift in Sources */,
+				82C5954C242E487900014454 /* DateManager.swift in Sources */,
 				824B15A623C119DB00666BFD /* WaterBadge.swift in Sources */,
 				8254063C240971F900A56AFE /* User.swift in Sources */,
 				821897022423DF5C00551F3B /* WaterRowView.swift in Sources */,
 				821897082424151F00551F3B /* DecreaseButtonView.swift in Sources */,
+				82C59558242E585800014454 /* WeekdayHeaderView.swift in Sources */,
 				824B15BD23C6A66300666BFD /* RemoveCup.swift in Sources */,
 				825406412409732C00A56AFE /* RegisterView.swift in Sources */,
+				82C59552242E4E4A00014454 /* LolWaterDate.swift in Sources */,
 				82540649240ADC7500A56AFE /* LogoImage.swift in Sources */,
 				8254064C240AE2B700A56AFE /* BorderedViewModifier.swift in Sources */,
 				824B15AD23C2B4A900666BFD /* CupView.swift in Sources */,
@@ -796,6 +822,7 @@
 				828F252B23B7A2A300B87743 /* ProfileHost.swift in Sources */,
 				825406452409738000A56AFE /* User+ObservableObject.swift in Sources */,
 				828F254423BEBE7000B87743 /* Badge.swift in Sources */,
+				82C59550242E4DE700014454 /* MonthCellView.swift in Sources */,
 				8218970C24254A3D00551F3B /* WeekView.swift in Sources */,
 				824B159F23BF9D4500666BFD /* BadgeBackground.swift in Sources */,
 				821896F82423206500551F3B /* SettingsView.swift in Sources */,
@@ -803,6 +830,7 @@
 				825BB1EF240D6B4200F67F1E /* Settings.swift in Sources */,
 				821896F624231FC900551F3B /* ReaderView.swift in Sources */,
 				8252593B23DA7BF800E266A8 /* SharedWebCredential.swift in Sources */,
+				82C5954A242E47AE00014454 /* MonthView.swift in Sources */,
 				828F253F23BEB19F00B87743 /* ProfileSummary.swift in Sources */,
 				821896ED24171A1100551F3B /* WaterStore+Identifiable.swift in Sources */,
 				825BB1F6240EEF2D00F67F1E /* Week.swift in Sources */,
