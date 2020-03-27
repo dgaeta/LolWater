@@ -60,6 +60,7 @@ struct ProfileSummary: View {
                 CalendarHistoryView(isPresented: .constant(true), dateManager: self.dateManager)
               }.frame(height: 400)
             }
+            .padding(.all, 10.00)
           
           
         }
