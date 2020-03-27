@@ -56,14 +56,16 @@ struct ReaderView: View {
         VStack {
           
           // Switch between Day, Week, Month, Year view
-          Section(header: Text("LolWater haha").padding(.leading, -10)) {
+          Section() {
             
             HStack {
               DayView(ozDrank: self.model.todayDay.ozDrank)
-              TimeButtonDrawerView()
+              
+              // TimeButtonDrawerView()
+              Text("Oz drank: \(self.model.todayDay.ozDrank)")
             }
             
-          }.padding()
+          }.padding([.top], 90)
           
           Button(action: { self.model.runUpdate(userId: self.userViewModel.profile.username)} ) {
             HStack {
@@ -86,7 +88,7 @@ struct ReaderView: View {
           
           
         }
-        .navigationBarTitle(Text("Featured"))
+        .navigationBarTitle(Text("LolWater"))
         .navigationBarItems(trailing: profileButton)
         .sheet(isPresented: self.$showingProfileSheet, content: {
           ProfileSummary(profile: Profile(), userViewModel: self.userViewModel)

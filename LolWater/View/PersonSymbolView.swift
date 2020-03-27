@@ -17,7 +17,7 @@ struct PersonSymbolView: View {
   func getColor() -> Color {
     if ozDrank < 30 {
       return Color.red
-    } else if ozDrank < 50 {
+    } else if ozDrank < 64 {
       return Color.yellow
     } else {
       return Color.green
@@ -25,7 +25,7 @@ struct PersonSymbolView: View {
   }
   
   var body: some View {
-      Image(systemName: "person")
+      Image(systemName: "smiley")
         .resizable()
         .foregroundColor(getColor())
         .frame(width: CGFloat(width), height: CGFloat(height))

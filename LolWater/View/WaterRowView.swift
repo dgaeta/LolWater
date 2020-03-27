@@ -10,15 +10,27 @@ import SwiftUI
 
 struct WaterRowView: View {
   var ozDrank: Int
-  var pixelMultiplier: CGFloat = 5
+  var pixelMultiplier = CGFloat(5)
+  var maxHeight = CGFloat(80*5)
 
-  
   var body: some View {
-    VStack(spacing: 10) {
-      RoundedRectangle(cornerRadius: 8)
-        .fill(Color.blue)
-        .frame(width: 30, height: CGFloat(ozDrank) * pixelMultiplier)
-        .frame(width: 30, height: 200)
+    VStack(alignment: .leading) {
+      ZStack(alignment: .bottomLeading) {
+        RoundedRectangle(cornerRadius: 8)
+        .fill(Color.white)
+        .frame(width: 30, height: (8*10) * pixelMultiplier)
+        .border(
+          LinearGradient(
+            gradient: Gradient(colors: [.green, .red]),
+            startPoint: .topLeading,
+            endPoint: .bottomTrailing),
+            width: 3)
+        
+        RoundedRectangle(cornerRadius: 8)
+          .fill(Color.blue)
+          .frame(width: 30, height: CGFloat(ozDrank) * pixelMultiplier >= maxHeight ? maxHeight : CGFloat(ozDrank) * pixelMultiplier)
+        
+      }
     }
   }
 }
