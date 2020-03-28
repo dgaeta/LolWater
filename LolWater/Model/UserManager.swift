@@ -15,8 +15,10 @@ final class UserManager: ObservableObject {
   @Published var profile: Profile = Profile(username: "")
   @Published var settings: Settings = Settings()
   
+  @Published var signedIn: Bool = false
+  
   var isRegistered: Bool {
-    return profile.username.isEmpty == false
+    return profile.username.isEmpty == true
   }
   
   init() {
@@ -31,9 +33,10 @@ final class UserManager: ObservableObject {
   }
   
   func signOut() {
+    clear()
     AWSMobileClient.default().signOut()
     self.profile.username = ""
-    clear()
+    self.signedIn = false
   }
   
   func signUp(username: String, password: String) {
@@ -48,6 +51,7 @@ final class UserManager: ObservableObject {
                 print("User is not confirmed and no verification is set up at the moment:  \(signUpResult).")
                 self.profile.username = username
                 self.persistProfile()
+                self.signedIn = true
             case .unknown:
                 print("Unexpected case")
             }
@@ -70,6 +74,7 @@ final class UserManager: ObservableObject {
     if let data = UserDefaults.standard.value(forKey: "user-profile") as? Data {
       if let profile = try? PropertyListDecoder().decode(Profile.self, from: data) {
         self.profile = profile
+        self.signedIn = true
         print(profile)
       }
     }

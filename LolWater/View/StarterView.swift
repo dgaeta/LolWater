@@ -14,7 +14,7 @@ struct StarterView: View {
   
   var body: some View {
     Group {
-      if self.userViewModel.isRegistered {
+      if self.userViewModel.signedIn {
         ReaderView(userViewModel: userViewModel)
           
       } else {

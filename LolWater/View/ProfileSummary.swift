@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ProfileSummary: View {
   @ObservedObject var readerViewModel: ReaderViewModel
+  @Binding var isPresented: Bool
   var profile: Profile
   var userViewModel: UserManager
   
@@ -24,8 +25,6 @@ struct ProfileSummary: View {
     
     var body: some View {
         Group {
-          
-            
             VStack(alignment: .leading, spacing: 20) {
               Text(userViewModel.profile.username)
                   .bold()
@@ -68,10 +67,6 @@ struct ProfileSummary: View {
                   readerViewModel: self.readerViewModel
                 )
               }.frame(height: 400)
-              
-              Button(action: self.userViewModel.signOut) {
-                Text("Sign out")
-              }
             }
             .padding(.all, 10.00)
             
@@ -84,6 +79,7 @@ struct ProfileSummary_Previews: PreviewProvider {
     static var previews: some View {
       ProfileSummary(
         readerViewModel: ReaderViewModel(),
+        isPresented: .constant(true),
         profile: Profile.default,
         userViewModel: UserManager())
     }

@@ -30,6 +30,16 @@ struct ReaderView: View {
               .padding()
       }
   }
+  
+  var signOutButton: some View {
+    Button(action: {
+      print(self.showingProfileSheet)
+      self.showingProfileSheet.toggle()
+      self.userViewModel.signOut()
+    }) {
+      Text("Sign out")
+    }
+  }
 
   init(userViewModel: UserManager) {
     self.userViewModel = userViewModel
@@ -73,21 +83,23 @@ struct ReaderView: View {
           DecreaseButtonView(action: self.readerViewModel.decreaseTodaysOzDrank)
           IncreaseButtonView(action: self.readerViewModel.increaseTodaysOzDrank)
         }
-
-        
-        
       }
       .navigationBarTitle(Text("LolWater"))
-      .navigationBarItems(trailing: profileButton)
+      .navigationBarItems(leading: signOutButton, trailing: profileButton)
       .sheet(isPresented: self.$showingProfileSheet, content: {
         ProfileSummary(
           readerViewModel: self.readerViewModel,
+          isPresented: self.$showingProfileSheet,
           profile: Profile(),
           userViewModel: self.userViewModel)
       })
     }
   }
 
+  func dismissProfileSheet() {
+    self.showingProfileSheet = false
+    print(self.showingProfileSheet)
+  }
   
   func getOz() -> Int {
     if self.readerViewModel.days.index(forKey: today) != nil {
