@@ -91,7 +91,7 @@ struct ReaderView: View {
         .navigationBarTitle(Text("LolWater"))
         .navigationBarItems(trailing: profileButton)
         .sheet(isPresented: self.$showingProfileSheet, content: {
-          ProfileSummary(profile: Profile(), userViewModel: self.userViewModel)
+          ProfileSummary(profile: Profile(), userViewModel: self.userViewModel, readerViewModel: self.model)
         })
       }
     }

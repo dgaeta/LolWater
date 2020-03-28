@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		674AC7A732C265E97680C9BD /* Pods_LolWater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E442B1B7290FD34EE0AB38 /* Pods_LolWater.framework */; };
-		821896EB241712A600551F3B /* CupDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821896EA241712A600551F3B /* CupDayView.swift */; };
-		821896ED24171A1100551F3B /* WaterStore+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821896EC24171A1100551F3B /* WaterStore+Identifiable.swift */; };
 		821896F624231FC900551F3B /* ReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821896F524231FC900551F3B /* ReaderView.swift */; };
 		821896F82423206500551F3B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821896F72423206500551F3B /* SettingsView.swift */; };
 		821896FA2423257A00551F3B /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821896F92423257A00551F3B /* Day.swift */; };
@@ -21,20 +19,10 @@
 		821897062424149E00551F3B /* IncreaseButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821897052424149E00551F3B /* IncreaseButtonView.swift */; };
 		821897082424151F00551F3B /* DecreaseButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821897072424151F00551F3B /* DecreaseButtonView.swift */; };
 		8218970A242543BA00551F3B /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82189709242543BA00551F3B /* DayView.swift */; };
-		8218970C24254A3D00551F3B /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8218970B24254A3D00551F3B /* WeekView.swift */; };
-		8218970E2425528A00551F3B /* TimeButtonDrawerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8218970D2425528A00551F3B /* TimeButtonDrawerView.swift */; };
 		824B159F23BF9D4500666BFD /* BadgeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B159E23BF9D4500666BFD /* BadgeBackground.swift */; };
 		824B15A123BF9EA600666BFD /* BadgeSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15A023BF9EA600666BFD /* BadgeSymbol.swift */; };
 		824B15A323C1142900666BFD /* RotatedBadgeSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15A223C1142900666BFD /* RotatedBadgeSymbol.swift */; };
 		824B15A623C119DB00666BFD /* WaterBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15A523C119DB00666BFD /* WaterBadge.swift */; };
-		824B15A823C2847900666BFD /* WaterCup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15A723C2847900666BFD /* WaterCup.swift */; };
-		824B15AB23C2B45400666BFD /* CupCap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15AA23C2B45400666BFD /* CupCap.swift */; };
-		824B15AD23C2B4A900666BFD /* CupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15AC23C2B4A900666BFD /* CupView.swift */; };
-		824B15B023C3EF6E00666BFD /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15AF23C3EF6E00666BFD /* Person.swift */; };
-		824B15B123C3EF6E00666BFD /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15AF23C3EF6E00666BFD /* Person.swift */; };
-		824B15B223C3EF6E00666BFD /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15AF23C3EF6E00666BFD /* Person.swift */; };
-		824B15B923C69FC700666BFD /* AddCup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15B823C69FC700666BFD /* AddCup.swift */; };
-		824B15BD23C6A66300666BFD /* RemoveCup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B15BC23C6A66300666BFD /* RemoveCup.swift */; };
 		8252593623DA7B9200E266A8 /* UserAndPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252593523DA7B9200E266A8 /* UserAndPassword.swift */; };
 		8252593923DA7BE900E266A8 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252593823DA7BE900E266A8 /* Keychain.swift */; };
 		8252593B23DA7BF800E266A8 /* SharedWebCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252593A23DA7BF800E266A8 /* SharedWebCredential.swift */; };
@@ -42,22 +30,14 @@
 		8252593F23DA7C2400E266A8 /* UserDataKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252593E23DA7C2400E266A8 /* UserDataKeychain.swift */; };
 		8252594123DA7C7200E266A8 /* WebApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252594023DA7C7200E266A8 /* WebApi.swift */; };
 		8252594323DA7C8E00E266A8 /* EnvironmentWindowKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252594223DA7C8E00E266A8 /* EnvironmentWindowKey.swift */; };
-		8252594C23DB98D000E266A8 /* EmptyCup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252594B23DB98D000E266A8 /* EmptyCup.swift */; };
-		8254063C240971F900A56AFE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8254063B240971F900A56AFE /* User.swift */; };
 		8254063E240972F700A56AFE /* StarterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8254063D240972F700A56AFE /* StarterView.swift */; };
 		825406412409732C00A56AFE /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825406402409732C00A56AFE /* RegisterView.swift */; };
-		825406432409734400A56AFE /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825406422409734400A56AFE /* WelcomeView.swift */; };
-		825406452409738000A56AFE /* User+ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825406442409738000A56AFE /* User+ObservableObject.swift */; };
 		82540647240ADC5400A56AFE /* WelcomeMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82540646240ADC5400A56AFE /* WelcomeMessageView.swift */; };
 		82540649240ADC7500A56AFE /* LogoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82540648240ADC7500A56AFE /* LogoImage.swift */; };
 		8254064C240AE2B700A56AFE /* BorderedViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8254064B240AE2B700A56AFE /* BorderedViewModifier.swift */; };
 		8254064F240B118200A56AFE /* KeyboardFollower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8254064E240B118200A56AFE /* KeyboardFollower.swift */; };
 		825BB1ED240D6B2300F67F1E /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825BB1EC240D6B2300F67F1E /* UserManager.swift */; };
 		825BB1EF240D6B4200F67F1E /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825BB1EE240D6B4200F67F1E /* Settings.swift */; };
-		825BB1F4240EEDBF00F67F1E /* WaterStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825BB1F3240EEDBF00F67F1E /* WaterStore.swift */; };
-		825BB1F6240EEF2D00F67F1E /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825BB1F5240EEF2D00F67F1E /* Week.swift */; };
-		825BB1F8240EFD5C00F67F1E /* WaterStore+ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825BB1F7240EFD5C00F67F1E /* WaterStore+ObservableObject.swift */; };
-		825BB1FB240F078500F67F1E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825BB1FA240F078500F67F1E /* HomeView.swift */; };
 		8276793824295EC60023D61A /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 8276793724295EC60023D61A /* awsconfiguration.json */; };
 		8276793A24295ECD0023D61A /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 8276793924295ECD0023D61A /* amplifyconfiguration.json */; };
 		8276793C24296FBE0023D61A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8276793B24296FBE0023D61A /* API.swift */; };
@@ -67,16 +47,11 @@
 		828F250023B7A1FB00B87743 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 828F24FF23B7A1FB00B87743 /* Preview Assets.xcassets */; };
 		828F250E23B7A1FB00B87743 /* LolWaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F250D23B7A1FB00B87743 /* LolWaterTests.swift */; };
 		828F251923B7A1FB00B87743 /* LolWaterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F251823B7A1FB00B87743 /* LolWaterUITests.swift */; };
-		828F252B23B7A2A300B87743 /* ProfileHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F252A23B7A2A300B87743 /* ProfileHost.swift */; };
 		828F253223B7D76400B87743 /* lolWaterData.json in Resources */ = {isa = PBXBuildFile; fileRef = 828F253123B7D76400B87743 /* lolWaterData.json */; };
-		828F253423B7DCBB00B87743 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F253323B7DCBB00B87743 /* Data.swift */; };
-		828F253923B7FE1A00B87743 /* GraphCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F253823B7FE1A00B87743 /* GraphCapsule.swift */; };
 		828F253D23BEAD6A00B87743 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F253C23BEAD6A00B87743 /* ProfileViewModel.swift */; };
 		828F253F23BEB19F00B87743 /* ProfileSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F253E23BEB19F00B87743 /* ProfileSummary.swift */; };
-		828F254123BEB52B00B87743 /* ProfileEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F254023BEB52B00B87743 /* ProfileEditor.swift */; };
 		828F254423BEBE7000B87743 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F254323BEBE7000B87743 /* Badge.swift */; };
 		828F254623BEBEA200B87743 /* HexagonParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F254523BEBEA200B87743 /* HexagonParameters.swift */; };
-		82ACDC5B23DF0D90009CED6B /* WeekdayColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ACDC5A23DF0D90009CED6B /* WeekdayColumn.swift */; };
 		82C5954A242E47AE00014454 /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C59549242E47AE00014454 /* MonthView.swift */; };
 		82C5954C242E487900014454 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C5954B242E487900014454 /* DateManager.swift */; };
 		82C5954E242E49EE00014454 /* ColorSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C5954D242E49EE00014454 /* ColorSettings.swift */; };
@@ -110,8 +85,6 @@
 		5B36840918258F48BA82DDF5 /* Pods_LolWater_LolWaterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LolWater_LolWaterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CECD06529B090680C572DC6 /* Pods-LolWaterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LolWaterTests.release.xcconfig"; path = "Target Support Files/Pods-LolWaterTests/Pods-LolWaterTests.release.xcconfig"; sourceTree = "<group>"; };
 		7DFB9C668B02E3D48832D756 /* Pods-LolWater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LolWater.release.xcconfig"; path = "Target Support Files/Pods-LolWater/Pods-LolWater.release.xcconfig"; sourceTree = "<group>"; };
-		821896EA241712A600551F3B /* CupDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupDayView.swift; sourceTree = "<group>"; };
-		821896EC24171A1100551F3B /* WaterStore+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterStore+Identifiable.swift"; sourceTree = "<group>"; };
 		821896F524231FC900551F3B /* ReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderView.swift; sourceTree = "<group>"; };
 		821896F72423206500551F3B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		821896F92423257A00551F3B /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
@@ -123,18 +96,10 @@
 		821897052424149E00551F3B /* IncreaseButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncreaseButtonView.swift; sourceTree = "<group>"; };
 		821897072424151F00551F3B /* DecreaseButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecreaseButtonView.swift; sourceTree = "<group>"; };
 		82189709242543BA00551F3B /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
-		8218970B24254A3D00551F3B /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
-		8218970D2425528A00551F3B /* TimeButtonDrawerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeButtonDrawerView.swift; sourceTree = "<group>"; };
 		824B159E23BF9D4500666BFD /* BadgeBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeBackground.swift; sourceTree = "<group>"; };
 		824B15A023BF9EA600666BFD /* BadgeSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeSymbol.swift; sourceTree = "<group>"; };
 		824B15A223C1142900666BFD /* RotatedBadgeSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatedBadgeSymbol.swift; sourceTree = "<group>"; };
 		824B15A523C119DB00666BFD /* WaterBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterBadge.swift; sourceTree = "<group>"; };
-		824B15A723C2847900666BFD /* WaterCup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterCup.swift; sourceTree = "<group>"; };
-		824B15AA23C2B45400666BFD /* CupCap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupCap.swift; sourceTree = "<group>"; };
-		824B15AC23C2B4A900666BFD /* CupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupView.swift; sourceTree = "<group>"; };
-		824B15AF23C3EF6E00666BFD /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		824B15B823C69FC700666BFD /* AddCup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCup.swift; sourceTree = "<group>"; };
-		824B15BC23C6A66300666BFD /* RemoveCup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveCup.swift; sourceTree = "<group>"; };
 		8252592D23DA4A7F00E266A8 /* LolWater.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LolWater.entitlements; sourceTree = "<group>"; };
 		8252593523DA7B9200E266A8 /* UserAndPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAndPassword.swift; sourceTree = "<group>"; };
 		8252593823DA7BE900E266A8 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
@@ -143,22 +108,14 @@
 		8252593E23DA7C2400E266A8 /* UserDataKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataKeychain.swift; sourceTree = "<group>"; };
 		8252594023DA7C7200E266A8 /* WebApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebApi.swift; sourceTree = "<group>"; };
 		8252594223DA7C8E00E266A8 /* EnvironmentWindowKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentWindowKey.swift; sourceTree = "<group>"; };
-		8252594B23DB98D000E266A8 /* EmptyCup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCup.swift; sourceTree = "<group>"; };
-		8254063B240971F900A56AFE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8254063D240972F700A56AFE /* StarterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterView.swift; sourceTree = "<group>"; };
 		825406402409732C00A56AFE /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
-		825406422409734400A56AFE /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
-		825406442409738000A56AFE /* User+ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+ObservableObject.swift"; sourceTree = "<group>"; };
 		82540646240ADC5400A56AFE /* WelcomeMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeMessageView.swift; sourceTree = "<group>"; };
 		82540648240ADC7500A56AFE /* LogoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImage.swift; sourceTree = "<group>"; };
 		8254064B240AE2B700A56AFE /* BorderedViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedViewModifier.swift; sourceTree = "<group>"; };
 		8254064E240B118200A56AFE /* KeyboardFollower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFollower.swift; sourceTree = "<group>"; };
 		825BB1EC240D6B2300F67F1E /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		825BB1EE240D6B4200F67F1E /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		825BB1F3240EEDBF00F67F1E /* WaterStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterStore.swift; sourceTree = "<group>"; };
-		825BB1F5240EEF2D00F67F1E /* Week.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
-		825BB1F7240EFD5C00F67F1E /* WaterStore+ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterStore+ObservableObject.swift"; sourceTree = "<group>"; };
-		825BB1FA240F078500F67F1E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		8276793724295EC60023D61A /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		8276793924295ECD0023D61A /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		8276793B24296FBE0023D61A /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -174,16 +131,11 @@
 		828F251423B7A1FB00B87743 /* LolWaterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LolWaterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		828F251823B7A1FB00B87743 /* LolWaterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolWaterUITests.swift; sourceTree = "<group>"; };
 		828F251A23B7A1FB00B87743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		828F252A23B7A2A300B87743 /* ProfileHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHost.swift; sourceTree = "<group>"; };
 		828F253123B7D76400B87743 /* lolWaterData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = lolWaterData.json; sourceTree = "<group>"; };
-		828F253323B7DCBB00B87743 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		828F253823B7FE1A00B87743 /* GraphCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphCapsule.swift; sourceTree = "<group>"; };
 		828F253C23BEAD6A00B87743 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		828F253E23BEB19F00B87743 /* ProfileSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSummary.swift; sourceTree = "<group>"; };
-		828F254023BEB52B00B87743 /* ProfileEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditor.swift; sourceTree = "<group>"; };
 		828F254323BEBE7000B87743 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		828F254523BEBEA200B87743 /* HexagonParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonParameters.swift; sourceTree = "<group>"; };
-		82ACDC5A23DF0D90009CED6B /* WeekdayColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayColumn.swift; sourceTree = "<group>"; };
 		82C59549242E47AE00014454 /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
 		82C5954B242E487900014454 /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
 		82C5954D242E49EE00014454 /* ColorSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSettings.swift; sourceTree = "<group>"; };
@@ -257,16 +209,13 @@
 			isa = PBXGroup;
 			children = (
 				821896F92423257A00551F3B /* Day.swift */,
-				825BB1EC240D6B2300F67F1E /* UserManager.swift */,
 				8252594023DA7C7200E266A8 /* WebApi.swift */,
 				825BB1EE240D6B4200F67F1E /* Settings.swift */,
-				8254063B240971F900A56AFE /* User.swift */,
-				825406442409738000A56AFE /* User+ObservableObject.swift */,
 				828F253C23BEAD6A00B87743 /* ProfileViewModel.swift */,
-				828F252C23B7ABF400B87743 /* Models */,
 				821896FF242329B000551F3B /* ReaderViewModel.swift */,
 				82C5954B242E487900014454 /* DateManager.swift */,
 				82C5954D242E49EE00014454 /* ColorSettings.swift */,
+				825BB1EC240D6B2300F67F1E /* UserManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -274,6 +223,8 @@
 		821896F12423195E00551F3B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8254063D240972F700A56AFE /* StarterView.swift */,
+				825406402409732C00A56AFE /* RegisterView.swift */,
 				821896F524231FC900551F3B /* ReaderView.swift */,
 				828F253E23BEB19F00B87743 /* ProfileSummary.swift */,
 				82189709242543BA00551F3B /* DayView.swift */,
@@ -284,21 +235,11 @@
 				82C59557242E585800014454 /* WeekdayHeaderView.swift */,
 				821897012423DF5C00551F3B /* WaterRowView.swift */,
 				821897032423F42400551F3B /* PersonSymbolView.swift */,
-				8218970B24254A3D00551F3B /* WeekView.swift */,
-				8218970D2425528A00551F3B /* TimeButtonDrawerView.swift */,
 				821897052424149E00551F3B /* IncreaseButtonView.swift */,
 				821897072424151F00551F3B /* DecreaseButtonView.swift */,
-				8254063D240972F700A56AFE /* StarterView.swift */,
 				8252593523DA7B9200E266A8 /* UserAndPassword.swift */,
-				828F253723B7F4CC00B87743 /* Supporting Views */,
 				824B15A423C1198B00666BFD /* Badge */,
-				828F252923B7A27600B87743 /* Profile */,
 				8254063F2409730C00A56AFE /* Welcome */,
-				824B15A923C2847F00666BFD /* WaterCup */,
-				824B15AE23C3EBCA00666BFD /* Person */,
-				824B15B723C69F7800666BFD /* AddCup */,
-				825BB1F0240EEC1B00F67F1E /* Water */,
-				825BB1F9240F074200F67F1E /* Home */,
 				821896F72423206500551F3B /* SettingsView.swift */,
 			);
 			path = View;
@@ -324,34 +265,6 @@
 			path = Badge;
 			sourceTree = "<group>";
 		};
-		824B15A923C2847F00666BFD /* WaterCup */ = {
-			isa = PBXGroup;
-			children = (
-				824B15A723C2847900666BFD /* WaterCup.swift */,
-				824B15AA23C2B45400666BFD /* CupCap.swift */,
-				824B15AC23C2B4A900666BFD /* CupView.swift */,
-				8252594B23DB98D000E266A8 /* EmptyCup.swift */,
-			);
-			path = WaterCup;
-			sourceTree = "<group>";
-		};
-		824B15AE23C3EBCA00666BFD /* Person */ = {
-			isa = PBXGroup;
-			children = (
-				824B15AF23C3EF6E00666BFD /* Person.swift */,
-			);
-			path = Person;
-			sourceTree = "<group>";
-		};
-		824B15B723C69F7800666BFD /* AddCup */ = {
-			isa = PBXGroup;
-			children = (
-				824B15B823C69FC700666BFD /* AddCup.swift */,
-				824B15BC23C6A66300666BFD /* RemoveCup.swift */,
-			);
-			path = AddCup;
-			sourceTree = "<group>";
-		};
 		8252593723DA7BBF00E266A8 /* CredentialStorage */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,8 +280,6 @@
 			isa = PBXGroup;
 			children = (
 				8254064A240AE29D00A56AFE /* Components */,
-				825406402409732C00A56AFE /* RegisterView.swift */,
-				825406422409734400A56AFE /* WelcomeView.swift */,
 				82540646240ADC5400A56AFE /* WelcomeMessageView.swift */,
 				82540648240ADC7500A56AFE /* LogoImage.swift */,
 			);
@@ -381,26 +292,6 @@
 				8254064B240AE2B700A56AFE /* BorderedViewModifier.swift */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		825BB1F0240EEC1B00F67F1E /* Water */ = {
-			isa = PBXGroup;
-			children = (
-				825BB1F5240EEF2D00F67F1E /* Week.swift */,
-				825BB1F3240EEDBF00F67F1E /* WaterStore.swift */,
-				825BB1F7240EFD5C00F67F1E /* WaterStore+ObservableObject.swift */,
-				821896EC24171A1100551F3B /* WaterStore+Identifiable.swift */,
-			);
-			path = Water;
-			sourceTree = "<group>";
-		};
-		825BB1F9240F074200F67F1E /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				825BB1FA240F078500F67F1E /* HomeView.swift */,
-				821896EA241712A600551F3B /* CupDayView.swift */,
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 		828F24EA23B7A1FA00B87743 = {
@@ -471,38 +362,12 @@
 			path = LolWaterUITests;
 			sourceTree = "<group>";
 		};
-		828F252923B7A27600B87743 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				828F252A23B7A2A300B87743 /* ProfileHost.swift */,
-				828F254023BEB52B00B87743 /* ProfileEditor.swift */,
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
-		828F252C23B7ABF400B87743 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				828F253323B7DCBB00B87743 /* Data.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		828F252F23B7D6BB00B87743 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				828F253123B7D76400B87743 /* lolWaterData.json */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		828F253723B7F4CC00B87743 /* Supporting Views */ = {
-			isa = PBXGroup;
-			children = (
-				828F253823B7FE1A00B87743 /* GraphCapsule.swift */,
-				82ACDC5A23DF0D90009CED6B /* WeekdayColumn.swift */,
-			);
-			path = "Supporting Views";
 			sourceTree = "<group>";
 		};
 		828F254223BEBE5C00B87743 /* BadgeBase */ = {
@@ -775,55 +640,35 @@
 				821897062424149E00551F3B /* IncreaseButtonView.swift in Sources */,
 				821897042423F42400551F3B /* PersonSymbolView.swift in Sources */,
 				82C59556242E583B00014454 /* CalendarHistoryView.swift in Sources */,
-				828F253423B7DCBB00B87743 /* Data.swift in Sources */,
 				8254063E240972F700A56AFE /* StarterView.swift in Sources */,
 				8252593D23DA7C0500E266A8 /* UserData.swift in Sources */,
-				824B15A823C2847900666BFD /* WaterCup.swift in Sources */,
 				82189700242329B000551F3B /* ReaderViewModel.swift in Sources */,
-				82ACDC5B23DF0D90009CED6B /* WeekdayColumn.swift in Sources */,
 				821896FA2423257A00551F3B /* Day.swift in Sources */,
-				824B15B023C3EF6E00666BFD /* Person.swift in Sources */,
 				8252593623DA7B9200E266A8 /* UserAndPassword.swift in Sources */,
-				828F254123BEB52B00B87743 /* ProfileEditor.swift in Sources */,
 				824B15A323C1142900666BFD /* RotatedBadgeSymbol.swift in Sources */,
-				824B15B923C69FC700666BFD /* AddCup.swift in Sources */,
 				8252594323DA7C8E00E266A8 /* EnvironmentWindowKey.swift in Sources */,
-				8252594C23DB98D000E266A8 /* EmptyCup.swift in Sources */,
-				824B15AB23C2B45400666BFD /* CupCap.swift in Sources */,
 				824B15A123BF9EA600666BFD /* BadgeSymbol.swift in Sources */,
 				8218970A242543BA00551F3B /* DayView.swift in Sources */,
 				82C5954E242E49EE00014454 /* ColorSettings.swift in Sources */,
 				821896FE2423293F00551F3B /* JSONUtil.swift in Sources */,
 				82C5954C242E487900014454 /* DateManager.swift in Sources */,
 				824B15A623C119DB00666BFD /* WaterBadge.swift in Sources */,
-				8254063C240971F900A56AFE /* User.swift in Sources */,
 				821897022423DF5C00551F3B /* WaterRowView.swift in Sources */,
 				821897082424151F00551F3B /* DecreaseButtonView.swift in Sources */,
 				82C59558242E585800014454 /* WeekdayHeaderView.swift in Sources */,
-				824B15BD23C6A66300666BFD /* RemoveCup.swift in Sources */,
 				825406412409732C00A56AFE /* RegisterView.swift in Sources */,
 				82C59552242E4E4A00014454 /* LolWaterDate.swift in Sources */,
 				82540649240ADC7500A56AFE /* LogoImage.swift in Sources */,
 				8254064C240AE2B700A56AFE /* BorderedViewModifier.swift in Sources */,
-				824B15AD23C2B4A900666BFD /* CupView.swift in Sources */,
 				828F24F723B7A1FA00B87743 /* AppDelegate.swift in Sources */,
-				825BB1F4240EEDBF00F67F1E /* WaterStore.swift in Sources */,
 				828F253D23BEAD6A00B87743 /* ProfileViewModel.swift in Sources */,
-				825BB1FB240F078500F67F1E /* HomeView.swift in Sources */,
 				8276793C24296FBE0023D61A /* API.swift in Sources */,
 				8252593F23DA7C2400E266A8 /* UserDataKeychain.swift in Sources */,
 				828F24F923B7A1FA00B87743 /* SceneDelegate.swift in Sources */,
-				828F253923B7FE1A00B87743 /* GraphCapsule.swift in Sources */,
 				8252594123DA7C7200E266A8 /* WebApi.swift in Sources */,
-				825BB1F8240EFD5C00F67F1E /* WaterStore+ObservableObject.swift in Sources */,
 				821896FC2423284800551F3B /* NetworkAPI.swift in Sources */,
-				825406432409734400A56AFE /* WelcomeView.swift in Sources */,
-				8218970E2425528A00551F3B /* TimeButtonDrawerView.swift in Sources */,
-				828F252B23B7A2A300B87743 /* ProfileHost.swift in Sources */,
-				825406452409738000A56AFE /* User+ObservableObject.swift in Sources */,
 				828F254423BEBE7000B87743 /* Badge.swift in Sources */,
 				82C59550242E4DE700014454 /* MonthCellView.swift in Sources */,
-				8218970C24254A3D00551F3B /* WeekView.swift in Sources */,
 				824B159F23BF9D4500666BFD /* BadgeBackground.swift in Sources */,
 				821896F82423206500551F3B /* SettingsView.swift in Sources */,
 				82540647240ADC5400A56AFE /* WelcomeMessageView.swift in Sources */,
@@ -832,9 +677,6 @@
 				8252593B23DA7BF800E266A8 /* SharedWebCredential.swift in Sources */,
 				82C5954A242E47AE00014454 /* MonthView.swift in Sources */,
 				828F253F23BEB19F00B87743 /* ProfileSummary.swift in Sources */,
-				821896ED24171A1100551F3B /* WaterStore+Identifiable.swift in Sources */,
-				825BB1F6240EEF2D00F67F1E /* Week.swift in Sources */,
-				821896EB241712A600551F3B /* CupDayView.swift in Sources */,
 				8254064F240B118200A56AFE /* KeyboardFollower.swift in Sources */,
 				8252593923DA7BE900E266A8 /* Keychain.swift in Sources */,
 				825BB1ED240D6B2300F67F1E /* UserManager.swift in Sources */,
@@ -845,7 +687,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				824B15B123C3EF6E00666BFD /* Person.swift in Sources */,
 				828F250E23B7A1FB00B87743 /* LolWaterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -854,7 +695,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				824B15B223C3EF6E00666BFD /* Person.swift in Sources */,
 				828F251923B7A1FB00B87743 /* LolWaterUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

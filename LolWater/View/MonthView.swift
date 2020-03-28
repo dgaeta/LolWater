@@ -12,6 +12,7 @@ struct MonthView: View {
   @Binding var isPresented: Bool
   
   var dateManager: DateManager
+  var readerViewModel: ReaderViewModel
   var monthOffset: Int
   let calendarUnitYMD = Set<Calendar.Component>([.year, .month, .day])
   let daysPerWeek = 7
@@ -202,6 +203,19 @@ struct MonthView: View {
       }
   }
   
+  func getOzDrank(date: Date) -> Int {
+    let isoFormat = self.readerViewModel.getISOFormat(date: date)
+    print("Get OZ for \(isoFormat)")
+    var ozDrank: Int
+    if self.readerViewModel.mapOfDays[isoFormat] != nil {
+      ozDrank =  self.readerViewModel.mapOfDays[isoFormat]!.ozDrank
+    } else {
+      ozDrank =  0
+    }
+    print("\(ozDrank)")
+    print(self.readerViewModel.mapOfDays)
+    return ozDrank
+  }
   
   
   var body: some View {
@@ -221,7 +235,7 @@ struct MonthView: View {
                                       isToday: self.isToday(date: column),
                                       isSelected: self.isSpecialDate(date: column),
                                       isBetweenStartAndEnd: self.isBetweenStartAndEnd(date: column)),
-                                      cellWidth: self.cellWidth)
+                                                cellWidth: self.cellWidth, ozDrank: self.getOzDrank(date: column))
                                       .onTapGesture { self.dateTapped(date: column) }
                               } else {
                                   Text("").frame(width: self.cellWidth, height: self.cellWidth)
@@ -238,6 +252,6 @@ struct MonthView: View {
 
 struct MonthView_Previews: PreviewProvider {
     static var previews: some View {
-      MonthView(isPresented: .constant(false), dateManager: DateManager(calendar: Calendar.current, minimumDate: Date(), maximumDate: Date().addingTimeInterval(60*60*24*365), mode: 0), monthOffset: 0)
+      MonthView(isPresented: .constant(false), dateManager: DateManager(calendar: Calendar.current, minimumDate: Date(), maximumDate: Date().addingTimeInterval(60*60*24*365), mode: 0), readerViewModel: ReaderViewModel(), monthOffset: 0)
     }
 }

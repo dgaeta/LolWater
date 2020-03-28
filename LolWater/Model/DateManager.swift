@@ -8,14 +8,6 @@
 
 import SwiftUI
 
-//
-//  RKManager.swift
-//  RKCalendar
-//
-//  Created by Raffi Kian on 7/14/19.
-//  Copyright © 2019 Raffi Kian. All rights reserved.
-//
-
 import SwiftUI
 
 class DateManager : ObservableObject {
@@ -39,6 +31,11 @@ class DateManager : ObservableObject {
         self.maximumDate = maximumDate
         self.selectedDates = selectedDates
         self.mode = mode
+    }
+  
+    func getISOFormat(date: Date) -> String {
+      let calendar = Calendar.current
+      return "\(calendar.dateComponents([.year], from: date))-\(calendar.dateComponents([.month], from: date))-\(calendar.dateComponents([.day], from: date).day!)"
     }
     
     func selectedDatesContains(date: Date) -> Bool {

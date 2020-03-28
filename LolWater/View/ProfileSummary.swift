@@ -9,10 +9,11 @@
 import SwiftUI
 
 struct ProfileSummary: View {
-    var profile: Profile
-    var userViewModel: UserManager
+  var profile: Profile
+  var userViewModel: UserManager
+  var readerViewModel: ReaderViewModel
   
-  var dateManager = DateManager(calendar: Calendar.current, minimumDate: Date(), maximumDate: Date().addingTimeInterval(60*60*24*365), mode: 2) // automatically goes to mode=2 after start selection, and vice versa.
+  var dateManager: DateManager
     
     static let goalFormat: DateFormatter = {
         let formatter = DateFormatter()
@@ -20,6 +21,13 @@ struct ProfileSummary: View {
         formatter.timeStyle = .none
         return formatter
     }()
+  
+  init(profile: Profile, userViewModel: UserManager, readerViewModel: ReaderViewModel) {
+    self.profile = profile
+    self.userViewModel = userViewModel
+    self.readerViewModel = readerViewModel
+    self.dateManager = DateManager(calendar: Calendar.current, minimumDate: readerViewModel.earliestDayRecord!, maximumDate: Date(), mode: 2) // automatically goes to mode=2 after start selection, and vice versa.
+  }
     
     var body: some View {
         Group {
@@ -57,18 +65,22 @@ struct ProfileSummary: View {
               
               
               VStack {
-                CalendarHistoryView(isPresented: .constant(true), dateManager: self.dateManager)
+                CalendarHistoryView(isPresented: .constant(true), dateManager: self.dateManager, readerViewModel: self.readerViewModel)
               }.frame(height: 400)
+              
+              Button(action: self.userViewModel.signOut) {
+                Text("Sign out")
+              }
             }
             .padding(.all, 10.00)
-          
-          
+            
+            
         }
     }
 }
 
 struct ProfileSummary_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileSummary(profile: Profile.default, userViewModel: UserManager())
+        ProfileSummary(profile: Profile.default, userViewModel: UserManager(), readerViewModel: ReaderViewModel())
     }
 }

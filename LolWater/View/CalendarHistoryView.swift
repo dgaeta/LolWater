@@ -12,6 +12,7 @@ struct CalendarHistoryView: View {
   @Binding var isPresented: Bool
   
   @ObservedObject var dateManager: DateManager
+  @ObservedObject var readerViewModel: ReaderViewModel
   
   var body: some View {
     Group {
@@ -19,7 +20,7 @@ struct CalendarHistoryView: View {
       Divider()
       List {
           ForEach(0..<numberOfMonths()) { index in
-              MonthView(isPresented: self.$isPresented, dateManager: self.dateManager, monthOffset: index)
+            MonthView(isPresented: self.$isPresented, dateManager: self.dateManager, readerViewModel: self.readerViewModel, monthOffset: index)
           }
           Divider()
       }
@@ -43,8 +44,8 @@ struct CalendarHistoryView: View {
 struct CalendarHistoryView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            CalendarHistoryView(isPresented: .constant(false), dateManager: DateManager(calendar: Calendar.current, minimumDate: Date(), maximumDate: Date().addingTimeInterval(60*60*24*365), mode: 0))
-            CalendarHistoryView(isPresented: .constant(false), dateManager: DateManager(calendar: Calendar.current, minimumDate: Date(), maximumDate: Date().addingTimeInterval(60*60*24*32), mode: 0))
+          CalendarHistoryView(isPresented: .constant(false), dateManager: DateManager(calendar: Calendar.current, minimumDate: Date(), maximumDate: Date().addingTimeInterval(60*60*24*365), mode: 0), readerViewModel: ReaderViewModel())
+            CalendarHistoryView(isPresented: .constant(false), dateManager: DateManager(calendar: Calendar.current, minimumDate: Date(), maximumDate: Date().addingTimeInterval(60*60*24*32), mode: 0), readerViewModel: ReaderViewModel())
                 .environment(\.colorScheme, .dark)
                 .environment(\.layoutDirection, .rightToLeft)
         }

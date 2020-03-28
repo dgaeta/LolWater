@@ -12,7 +12,7 @@ import Foundation
 import AWSMobileClient
 
 final class UserManager: ObservableObject {
-  @Published var profile: Profile = Profile(username: "TestDefault")
+  @Published var profile: Profile = Profile(username: "")
   @Published var settings: Settings = Settings()
   
   var isRegistered: Bool {
@@ -27,9 +27,13 @@ final class UserManager: ObservableObject {
   }
   
   func persistProfile() {
-//    if settings.rememberUser {
-      UserDefaults.standard.set(try? PropertyListEncoder().encode(profile), forKey: "user-profile")
-//    }
+    UserDefaults.standard.set(try? PropertyListEncoder().encode(profile), forKey: "user-profile")
+  }
+  
+  func signOut() {
+    AWSMobileClient.default().signOut()
+    self.profile.username = ""
+    clear()
   }
   
   func signUp(username: String, password: String) {

@@ -18,36 +18,51 @@ class ReaderViewModel: ObservableObject {
   var appSyncClient: AWSAppSyncClient?
   
   private let api = NetworkAPI()
-  let userName = "DanTest5"
-  let todayDate = "2020-03-24"
+  var todaysDateIsoFormat: String?
+  let dateFormatter = DateFormatter()
   @Published var lastSavedOzDrank = 0
   @Published var todayDay: Day = Day(id: "", date: "", weekday: "Today", ozDrank: 0)
   var todaysCurrentOzDrank = 0
   @Published private var daysMap: [String: Day] = [String: Day]()
-  @Published private var allDays = [
-    Day(id: "DanTest5_2020-03-18", date: "2020-03-18", weekday: "Sunday", ozDrank: 8),
-    Day(id: "DanTest5_2020-03-19", date: "2020-03-19", weekday: "Monday", ozDrank: 64),
-    Day(id: "DanTest5_2020-03-20", date: "2020-03-20", weekday: "Tuesday", ozDrank: 16),
-    Day(id: "DanTest5_2020-03-21", date: "2020-03-21", weekday: "Wednesdday", ozDrank: 48),
-    Day(id: "DanTest5_2020-03-22", date: "2020-03-22", weekday: "Thursday", ozDrank: 80),
-    Day(id: "DanTest5_2020-03-23", date: "2020-03-23", weekday: "Friday", ozDrank: 55),
-    Day(id: "DanTest5_2020-03-24", date: "2020-03-24", weekday: "Saturday", ozDrank: 60)
-  ]
+  @Published private var allDays: [Day] = []
   private var subscriptions = Set<AnyCancellable>()
   
   @Published var error: NetworkAPI.Error? = nil
   
+  var earliestDayRecordISO: String?
+  var earliestDayRecord: Date?
+  
   var days: [Day] {
     return allDays
   }
+
   
   var mapOfDays: [String: Day] {
     return daysMap
   }
   
+  func getDateFromISOFormat(isoFormat: String) -> Date {
+    dateFormatter.dateFormat = "yyyy/MM/dd HH:mm"
+    
+    let dateParts: Array<Substring> = isoFormat.split(separator: "-")
+    let someDateTime = dateFormatter.date(from: "\(dateParts[0])/\(dateParts[1])/\(dateParts[2]) 23:59")
+    return someDateTime!
+    
+  }
+  
+  func getISOFormat(date: Date) -> String {
+    let date = Date()
+    let calendar = Calendar.current
+    let components = calendar.dateComponents([.year, .month, .day], from: date)
+    return "\(components.year!)-\(String(describing: components.month!))-\(components.day!)"
+  }
+  
   init() {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     appSyncClient = appDelegate.appSyncClient
+    todaysDateIsoFormat = getISOFormat(date : Date())
+    earliestDayRecord = Date()
+    earliestDayRecordISO = todaysDateIsoFormat
   }
   
   func increaseTodaysOzDrank() {
@@ -76,6 +91,12 @@ class ReaderViewModel: ObservableObject {
       if ((result?.data?.getWaterData?.items?.count) != 0)  {
         result?.data?.getWaterData?.items?.forEach { print($0.debugDescription)
           let receivedDay = Day(id: $0!.id, date: $0!.date, weekday:  "Today", ozDrank: $0!.ozDrank!)
+          
+          if receivedDay.date < self.earliestDayRecordISO! {
+            self.earliestDayRecordISO = receivedDay.date
+            self.earliestDayRecord = self.getDateFromISOFormat(isoFormat: receivedDay.date)
+          }
+          self.allDays.append(receivedDay)
           self.todayDay = receivedDay
           self.daysMap[$0!.date] = receivedDay
           self.lastSavedOzDrank = $0!.ozDrank!
@@ -83,14 +104,15 @@ class ReaderViewModel: ObservableObject {
         print("not empty")
       } else {
         print("empty")
+        self.runMutation(username: userId)
       }
     }
   }
   
   func runMutation(username: String!){
-    let idCombo = username + "-" + todayDate
-    self.todayDay = Day(id: idCombo, date: todayDate, weekday: "Today", ozDrank: 0)
-    let mutationInput = CreateLolWaterDayDataInput(id: idCombo, userId: username, date: todayDate, ozDrank: 0)
+    let idCombo = username + "-" + self.todaysDateIsoFormat!
+    self.todayDay = Day(id: idCombo, date: self.todaysDateIsoFormat!, weekday: "Today", ozDrank: 0)
+    let mutationInput = CreateLolWaterDayDataInput(id: idCombo, userId: username, date: self.todaysDateIsoFormat!, ozDrank: 0)
     
       appSyncClient?.perform(mutation: CreateLolWaterDayDataMutation(input: mutationInput)) { (result, error) in
           if let error = error as? AWSAppSyncClientError {
