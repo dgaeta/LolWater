@@ -119,6 +119,7 @@ class ReaderViewModel: ObservableObject {
         print("not empty")
       } else {
         print("empty")
+        self.runMutation(username: userId)
       }
     }
   }

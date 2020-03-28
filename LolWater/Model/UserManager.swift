@@ -49,12 +49,14 @@ final class UserManager: ObservableObject {
             case .unconfirmed:
                 
                 print("User is not confirmed and no verification is set up at the moment:  \(signUpResult).")
-                self.profile.username = username
-                self.persistProfile()
-                self.signedIn = true
+                
             case .unknown:
                 print("Unexpected case")
             }
+          
+          self.profile.username = username
+          self.persistProfile()
+          self.signedIn = true
         } else if let error = error {
           print("ERROR ON SIGNUP")
             if let error = error as? AWSMobileClientError {
@@ -66,6 +68,36 @@ final class UserManager: ObservableObject {
                 }
             }
             print("\(error.localizedDescription)")
+        }
+    }
+  }
+  
+  func login(username: String, password: String) {
+    print("\(username) \(password)")
+    AWSMobileClient.default().signIn(username: username, password: password
+    ) { (signInResult, error) in
+      if let error = error as? AWSMobileClientError {
+                      print(error.localizedDescription)
+        print("\(AWSMobileClientError.cognitoIdentityPoolNotConfigured(message: error.localizedDescription))")
+        var newError = AWSMobileClientError.makeMobileClientError(from: error)
+        
+        print(newError)
+      }
+      
+        if let error = error  {
+            print("\(error.localizedDescription)")
+        } else if let signInResult = signInResult {
+            switch (signInResult.signInState) {
+            case .signedIn:
+                print("User is signed in.")
+              self.profile.username = username
+              self.persistProfile()
+              self.signedIn = true
+            case .smsMFA:
+                print("SMS message sent to \(signInResult.codeDetails!.destination!)")
+            default:
+                print("Sign In needs info which is not et supported.")
+            }
         }
     }
   }

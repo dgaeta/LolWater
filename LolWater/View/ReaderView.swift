@@ -76,6 +76,7 @@ struct ReaderView: View {
               .bold()
           }
         }
+        .frame(width: 200)
         .bordered()
         .disabled(self.readerViewModel.lastSavedOzDrank == self.readerViewModel.todayDay.ozDrank)
         

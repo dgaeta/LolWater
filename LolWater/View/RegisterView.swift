@@ -50,18 +50,33 @@ struct RegisterView : View {
         }
       }
 
-      Button(action: self.registerUser) {
+      Button(action: self.loginUser) {
         HStack {
           Image(systemName: "checkmark")
             .resizable()
             .frame(width: 16, height: 16, alignment: .center)
-          Text("OK")
+          Text("Login")
             .font(.body)
             .bold()
         }
       }
       .bordered()
       .disabled(!userManager.isUserNameValid(username: self.username))
+      
+      Button(action: self.registerUser) {
+        HStack {
+          Image(systemName: "checkmark")
+            .resizable()
+            .frame(width: 16, height: 16, alignment: .center)
+          Text("Signup")
+            .font(.body)
+            .bold()
+        }
+      }
+      .bordered()
+      .disabled(!userManager.isUserNameValid(username: self.username))
+      
+      
     })
       .padding(.bottom, keyboardHandler.keyboardHeight)
       .padding()
@@ -72,6 +87,11 @@ struct RegisterView : View {
 extension RegisterView {
   func registerUser() {
     userManager.signUp(username: username,
+                       password: password)
+  }
+  
+  func loginUser() {
+    userManager.login(username: username,
                        password: password)
   }
 }
