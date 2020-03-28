@@ -9,9 +9,9 @@
 import SwiftUI
 
 struct ProfileSummary: View {
+  @ObservedObject var readerViewModel: ReaderViewModel
   var profile: Profile
   var userViewModel: UserManager
-  var readerViewModel: ReaderViewModel
   
   // var dateManager: DateManager
     
@@ -21,13 +21,6 @@ struct ProfileSummary: View {
         formatter.timeStyle = .none
         return formatter
     }()
-  
-  init(profile: Profile, userViewModel: UserManager, readerViewModel: ReaderViewModel) {
-    self.profile = profile
-    self.userViewModel = userViewModel
-    self.readerViewModel = readerViewModel
-    // self.dateManager = DateManager(calendar: Calendar.current, minimumDate: readerViewModel.earliestDayRecord!, maximumDate: Date(), mode: 2) // automatically goes to mode=2 after start selection, and vice versa.
-  }
     
     var body: some View {
         Group {
@@ -65,7 +58,15 @@ struct ProfileSummary: View {
               
               
               VStack {
-                CalendarHistoryView(isPresented: .constant(true), dateManager: DateManager(calendar: Calendar.current, minimumDate: readerViewModel.earliestDayRecord!, maximumDate: Date(), mode: 2), readerViewModel: self.readerViewModel)
+                CalendarHistoryView(
+                  isPresented: .constant(true),
+                  dateManager: DateManager(
+                    calendar: Calendar.current,
+                    minimumDate: self.readerViewModel.earliestDayRecord ?? Date(),
+                    maximumDate: Date(),
+                    mode: 2),
+                  readerViewModel: self.readerViewModel
+                )
               }.frame(height: 400)
               
               Button(action: self.userViewModel.signOut) {
@@ -81,6 +82,9 @@ struct ProfileSummary: View {
 
 struct ProfileSummary_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileSummary(profile: Profile.default, userViewModel: UserManager(), readerViewModel: ReaderViewModel())
+      ProfileSummary(
+        readerViewModel: ReaderViewModel(),
+        profile: Profile.default,
+        userViewModel: UserManager())
     }
 }

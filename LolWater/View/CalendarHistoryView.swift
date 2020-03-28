@@ -20,7 +20,11 @@ struct CalendarHistoryView: View {
       Divider()
       List {
           ForEach(0..<numberOfMonths()) { index in
-            MonthView(isPresented: self.$isPresented, readerViewModel: self.readerViewModel, dateManager: self.dateManager, monthOffset: index)
+            MonthView(
+              isPresented:self.$isPresented,
+              readerViewModel: self.readerViewModel,
+              dateManager: self.dateManager,
+              monthOffset: index)
           }
           Divider()
       }

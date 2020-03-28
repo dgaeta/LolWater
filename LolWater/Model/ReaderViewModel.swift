@@ -16,11 +16,17 @@ import AWSMobileClient
 class ReaderViewModel: ObservableObject {
   @Published var lastSavedOzDrank = 0
   @Published var todayDay: Day = Day(id: "", date: "", weekday: "Today", ozDrank: 0)
-  @Published private var daysMap: [String: Day] = [String: Day]()
   @Published var error: NetworkAPI.Error? = nil
+  
+  @Published private var allDays: [String: Day] = [String: Day]() {
+    didSet {
+      print(allDays.debugDescription)
+    }
+  }
+  
 
-  var mapOfDays: [String: Day] {
-    return daysMap
+  var days: [String: Day] {
+    return allDays
   }
   
   // Reference AppSync client
@@ -56,12 +62,18 @@ class ReaderViewModel: ObservableObject {
   }
   
   func getOzFromDate(date: Date) -> Int {
+    print("Getting oz for date: \(date)")
     let isoFormatId = getISOFormat(date: date)
-    if self.mapOfDays[isoFormatId] != nil {
-      return self.mapOfDays[isoFormatId]!.ozDrank
+    if self.allDays[isoFormatId] != nil {
+      print("Found \(self.allDays[isoFormatId])")
+      print("\(self.allDays)")
+      return self.allDays[isoFormatId]!.ozDrank
     } else {
+      print("found nothing")
+      print("\(self.allDays)")
       return 0
     }
+    
   }
   
   func getISOFormat(date: Date) -> String {
@@ -101,7 +113,7 @@ class ReaderViewModel: ObservableObject {
             self.earliestDayRecord = self.getDateFromISOFormat(isoFormat: receivedDay.date)
           }
           self.todayDay = receivedDay
-          self.daysMap[$0!.date] = receivedDay
+          self.allDays[$0!.date] = receivedDay
           self.lastSavedOzDrank = $0!.ozDrank!
         }
         print("not empty")
@@ -112,7 +124,7 @@ class ReaderViewModel: ObservableObject {
   }
   
   func runMutation(username: String!){
-    let idCombo = username + "-" + self.todaysDateIsoFormat!
+    let idCombo = getIdCombo(username: username)
     self.todayDay = Day(id: idCombo, date: self.todaysDateIsoFormat!, weekday: "Today", ozDrank: 0)
     let mutationInput = CreateLolWaterDayDataInput(id: idCombo, userId: username, date: self.todaysDateIsoFormat!, ozDrank: 0)
     
@@ -129,8 +141,14 @@ class ReaderViewModel: ObservableObject {
       }
   }
   
+  func getIdCombo(username: String) -> String {
+    let idCombo = username + "-" + self.todaysDateIsoFormat!
+    return idCombo
+  }
+  
   func runUpdate(userId: String!) {
-    let mutationInput = UpdateLolWaterDayDataInput(id: todayDay.id, userId: userId, date: todayDay.date, ozDrank: todayDay.ozDrank)
+    let idCombo = self.getIdCombo(username: userId)
+    let mutationInput = UpdateLolWaterDayDataInput(id: idCombo, userId: userId, date: todayDay.date, ozDrank: todayDay.ozDrank)
     print("Date \(mutationInput.date)")
     print("ozDrank \(mutationInput.ozDrank)")
     print("id \(mutationInput.id)")
@@ -145,8 +163,9 @@ class ReaderViewModel: ObservableObject {
               return
           }
         
-          print("Mutation complete.")
-        self.daysMap[self.todayDay.id] = self.todayDay
+        print("Mutation complete for: \(idCombo) - \(self.todayDay.ozDrank)")
+        let isoFormatKey = self.getISOFormat(date: Date())
+        self.allDays[isoFormatKey] = self.todayDay
         self.lastSavedOzDrank = self.todayDay.ozDrank
       }
   }

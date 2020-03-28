@@ -39,62 +39,63 @@ struct ReaderView: View {
     self.readerViewModel = ReaderViewModel()
     self.readerViewModel.runQuery(userId: userViewModel.profile.username)
   }
+  
+  var body: some View {
+      
+    return
+      NavigationView {
+      VStack {
+        
+        Section() {
+          
+          HStack {
+            DayView(ozDrank: self.readerViewModel.todayDay.ozDrank)
+            
+            Text("Oz drank: \(self.readerViewModel.todayDay.ozDrank)")
+          }
+          
+        }.padding([.top], 90)
+        
+        Button(action: { self.readerViewModel.runUpdate(userId: self.userViewModel.profile.username)} ) {
+          HStack {
+            Image(systemName: "icloud.fill")
+              .resizable()
+              .frame(width: 16, height: 16, alignment: .center)
+            Text("save")
+              .font(.body)
+              .bold()
+          }
+        }
+        .bordered()
+        .disabled(self.readerViewModel.lastSavedOzDrank == self.readerViewModel.todayDay.ozDrank)
+        
+        HStack {
+          DecreaseButtonView(action: self.readerViewModel.decreaseTodaysOzDrank)
+          IncreaseButtonView(action: self.readerViewModel.increaseTodaysOzDrank)
+        }
+
+        
+        
+      }
+      .navigationBarTitle(Text("LolWater"))
+      .navigationBarItems(trailing: profileButton)
+      .sheet(isPresented: self.$showingProfileSheet, content: {
+        ProfileSummary(
+          readerViewModel: self.readerViewModel,
+          profile: Profile(),
+          userViewModel: self.userViewModel)
+      })
+    }
+  }
 
   
   func getOz() -> Int {
-    if self.readerViewModel.mapOfDays.index(forKey: today) != nil {
-      return self.readerViewModel.mapOfDays[today]!.ozDrank
+    if self.readerViewModel.days.index(forKey: today) != nil {
+      return self.readerViewModel.days[today]!.ozDrank
     } else {
       return 0
     }
   }
-  
-    var body: some View {
-        
-      return
-        NavigationView {
-        VStack {
-          
-          // Switch between Day, Week, Month, Year view
-          Section() {
-            
-            HStack {
-              DayView(ozDrank: self.readerViewModel.todayDay.ozDrank)
-              
-              // TimeButtonDrawerView()
-              Text("Oz drank: \(self.readerViewModel.todayDay.ozDrank)")
-            }
-            
-          }.padding([.top], 90)
-          
-          Button(action: { self.readerViewModel.runUpdate(userId: self.userViewModel.profile.username)} ) {
-            HStack {
-              Image(systemName: "icloud.fill")
-                .resizable()
-                .frame(width: 16, height: 16, alignment: .center)
-              Text("save")
-                .font(.body)
-                .bold()
-            }
-          }
-          .bordered()
-          .disabled(self.readerViewModel.lastSavedOzDrank == self.readerViewModel.todayDay.ozDrank)
-          
-          HStack {
-            DecreaseButtonView(action: self.readerViewModel.decreaseTodaysOzDrank)
-            IncreaseButtonView(action: self.readerViewModel.increaseTodaysOzDrank)
-          }
-
-          
-          
-        }
-        .navigationBarTitle(Text("LolWater"))
-        .navigationBarItems(trailing: profileButton)
-        .sheet(isPresented: self.$showingProfileSheet, content: {
-          ProfileSummary(profile: Profile(), userViewModel: self.userViewModel, readerViewModel: self.readerViewModel)
-        })
-      }
-    }
 }
 
 struct ReaderView_Previews: PreviewProvider {

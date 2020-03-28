@@ -12,7 +12,7 @@ struct MonthCellView: View {
   var lolwaterDate: LolWaterDate
   
   var cellWidth: CGFloat
-  var ozDrank: Int
+  @State var ozDrank: Int
 
   func getBackgroundColor() -> Color {
     if self.ozDrank == 0 {
@@ -52,7 +52,7 @@ struct MonthCellView: View {
             .background(getBackgroundColor())
         .cornerRadius(cellWidth/2)
       
-      Text("\(ozDrank) oz")
+      Text("\(self.ozDrank) oz")
         .foregroundColor(Color.blue)
         .font(.caption)
     }

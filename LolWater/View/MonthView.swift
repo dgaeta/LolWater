@@ -10,7 +10,8 @@ import SwiftUI
 
 struct MonthView: View {
   @Binding var isPresented: Bool
-  var readerViewModel: ReaderViewModel
+  
+  @ObservedObject var readerViewModel: ReaderViewModel
   
   var dateManager: DateManager
 
@@ -21,6 +22,40 @@ struct MonthView: View {
       monthArray()
   }
   let cellWidth = CGFloat(32)
+  
+  var body: some View {
+      VStack(alignment: HorizontalAlignment.center, spacing: 10){
+          Text(getMonthHeader()).foregroundColor(self.dateManager.colors.monthHeaderColor)
+          VStack(alignment: .leading, spacing: 5) {
+              ForEach(monthsArray, id:  \.self) { row in
+                  HStack() {
+                      ForEach(row, id:  \.self) { column in
+                          HStack() {
+                              Spacer()
+                              if self.isThisMonth(date: column) {
+                                  MonthCellView(lolwaterDate: LolWaterDate(
+                                      date: column,
+                                      dateManager: self.dateManager,
+                                      isDisabled: !self.isEnabled(date: column),
+                                      isToday: self.isToday(date: column),
+                                      isSelected: self.isSpecialDate(date: column),
+                                      isBetweenStartAndEnd: self.isBetweenStartAndEnd(date: column)),
+                                      cellWidth: self.cellWidth,
+                                      ozDrank:  self.readerViewModel.getOzFromDate(date: column)
+                        
+                                  )
+                                  .onTapGesture { self.dateTapped(date: column) }
+                              } else {
+                                  Text("").frame(width: self.cellWidth, height: self.cellWidth)
+                              }
+                              Spacer()
+                          }
+                      }
+                  }
+              }
+          }.frame(minWidth: 0, maxWidth: .infinity)
+      }.background(dateManager.colors.monthBackColor)
+  }
   
   
   func numberOfDays(offset : Int) -> Int {
@@ -204,44 +239,16 @@ struct MonthView: View {
           }
       }
   }
-  
-  
-  var body: some View {
-      VStack(alignment: HorizontalAlignment.center, spacing: 10){
-          Text(getMonthHeader()).foregroundColor(self.dateManager.colors.monthHeaderColor)
-          VStack(alignment: .leading, spacing: 5) {
-              ForEach(monthsArray, id:  \.self) { row in
-                  HStack() {
-                      ForEach(row, id:  \.self) { column in
-                          HStack() {
-                              Spacer()
-                              if self.isThisMonth(date: column) {
-                                  MonthCellView(lolwaterDate: LolWaterDate(
-                                      date: column,
-                                      dateManager: self.dateManager,
-                                      isDisabled: !self.isEnabled(date: column),
-                                      isToday: self.isToday(date: column),
-                                      isSelected: self.isSpecialDate(date: column),
-                                      isBetweenStartAndEnd: self.isBetweenStartAndEnd(date: column)),
-                                      cellWidth: self.cellWidth,
-                                      ozDrank: self.readerViewModel.getOzFromDate(date: column)
-                                  )
-                                  .onTapGesture { self.dateTapped(date: column) }
-                              } else {
-                                  Text("").frame(width: self.cellWidth, height: self.cellWidth)
-                              }
-                              Spacer()
-                          }
-                      }
-                  }
-              }
-          }.frame(minWidth: 0, maxWidth: .infinity)
-      }.background(dateManager.colors.monthBackColor)
-  }
 }
 
 struct MonthView_Previews: PreviewProvider {
     static var previews: some View {
-      MonthView(isPresented: .constant(false), readerViewModel: ReaderViewModel(), dateManager: DateManager(calendar: Calendar.current, minimumDate: Date(), maximumDate: Date().addingTimeInterval(60*60*24*365), mode: 0), monthOffset: 0)
+      MonthView(
+        isPresented: .constant(false),
+        readerViewModel: ReaderViewModel(),
+        dateManager: DateManager(calendar: Calendar.current,
+                                 minimumDate: Date(), maximumDate: Date().addingTimeInterval(60*60*24*365), mode: 0),
+        monthOffset: 0
+      )
     }
 }
