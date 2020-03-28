@@ -12,15 +12,15 @@ struct MonthCellView: View {
   var lolwaterDate: LolWaterDate
   
   var cellWidth: CGFloat
-  @State var ozDrank: Int
+  var ozDrank: Int
 
   func getBackgroundColor() -> Color {
-    if self.ozDrank == 0 {
+    if ozDrank == 0 {
       return Color.white
-    } else if self.ozDrank < 30 {
+    }else if ozDrank < 30 {
       return Color.red
-    } else if self.ozDrank < 63 {
-      return Color.green
+    } else if ozDrank < 64 {
+      return Color.yellow
     } else {
       return Color.green
     }
