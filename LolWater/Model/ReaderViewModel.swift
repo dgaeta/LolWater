@@ -14,31 +14,36 @@ import AWSMobileClient
 
 
 class ReaderViewModel: ObservableObject {
+  @Published var lastSavedOzDrank = 0
+  @Published var todayDay: Day = Day(id: "", date: "", weekday: "Today", ozDrank: 0)
+  @Published private var daysMap: [String: Day] = [String: Day]()
+  @Published var error: NetworkAPI.Error? = nil
+
+  var mapOfDays: [String: Day] {
+    return daysMap
+  }
+  
   // Reference AppSync client
   var appSyncClient: AWSAppSyncClient?
   
-  private let api = NetworkAPI()
-  var todaysDateIsoFormat: String?
+  // Time
   let dateFormatter = DateFormatter()
-  @Published var lastSavedOzDrank = 0
-  @Published var todayDay: Day = Day(id: "", date: "", weekday: "Today", ozDrank: 0)
-  var todaysCurrentOzDrank = 0
-  @Published private var daysMap: [String: Day] = [String: Day]()
-  @Published private var allDays: [Day] = []
-  private var subscriptions = Set<AnyCancellable>()
-  
-  @Published var error: NetworkAPI.Error? = nil
-  
+  var todaysDateIsoFormat: String?
   var earliestDayRecordISO: String?
   var earliestDayRecord: Date?
   
-  var days: [Day] {
-    return allDays
-  }
+  var todaysCurrentOzDrank = 0
+  
+  private var subscriptions = Set<AnyCancellable>()
 
   
-  var mapOfDays: [String: Day] {
-    return daysMap
+  
+  init() {
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    appSyncClient = appDelegate.appSyncClient
+    todaysDateIsoFormat = getISOFormat(date : Date())
+    earliestDayRecord = Date()
+    earliestDayRecordISO = todaysDateIsoFormat
   }
   
   func getDateFromISOFormat(isoFormat: String) -> Date {
@@ -50,19 +55,19 @@ class ReaderViewModel: ObservableObject {
     
   }
   
+  func getOzFromDate(date: Date) -> Int {
+    let isoFormatId = getISOFormat(date: date)
+    if self.mapOfDays[isoFormatId] != nil {
+      return self.mapOfDays[isoFormatId]!.ozDrank
+    } else {
+      return 0
+    }
+  }
+  
   func getISOFormat(date: Date) -> String {
-    let date = Date()
     let calendar = Calendar.current
     let components = calendar.dateComponents([.year, .month, .day], from: date)
     return "\(components.year!)-\(String(describing: components.month!))-\(components.day!)"
-  }
-  
-  init() {
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    appSyncClient = appDelegate.appSyncClient
-    todaysDateIsoFormat = getISOFormat(date : Date())
-    earliestDayRecord = Date()
-    earliestDayRecordISO = todaysDateIsoFormat
   }
   
   func increaseTodaysOzDrank() {
@@ -78,8 +83,8 @@ class ReaderViewModel: ObservableObject {
   }
   
   func runQuery(userId: String!) {
-    print("Query for id: \(userId)")
-    appSyncClient?.fetch(query: GetWaterDataQuery(userId: userId), cachePolicy: .returnCacheDataAndFetch) {(result, error) in
+    print("Query for id: \(userId!)")
+    appSyncClient?.fetch(query: GetWaterDataQuery(userId: userId!), cachePolicy: .returnCacheDataAndFetch) {(result, error) in
           if error != nil {
               print(error?.localizedDescription ?? "")
               return
@@ -87,7 +92,6 @@ class ReaderViewModel: ObservableObject {
           print("Query complete.")
           print("\(String(describing: result?.data))")
      
-      
       if ((result?.data?.getWaterData?.items?.count) != 0)  {
         result?.data?.getWaterData?.items?.forEach { print($0.debugDescription)
           let receivedDay = Day(id: $0!.id, date: $0!.date, weekday:  "Today", ozDrank: $0!.ozDrank!)
@@ -96,7 +100,6 @@ class ReaderViewModel: ObservableObject {
             self.earliestDayRecordISO = receivedDay.date
             self.earliestDayRecord = self.getDateFromISOFormat(isoFormat: receivedDay.date)
           }
-          self.allDays.append(receivedDay)
           self.todayDay = receivedDay
           self.daysMap[$0!.date] = receivedDay
           self.lastSavedOzDrank = $0!.ozDrank!
@@ -104,7 +107,6 @@ class ReaderViewModel: ObservableObject {
         print("not empty")
       } else {
         print("empty")
-        self.runMutation(username: userId)
       }
     }
   }
@@ -124,7 +126,6 @@ class ReaderViewModel: ObservableObject {
           }
         
           print("Mutation complete.")
-        self.runQuery(userId: username)
       }
   }
   
@@ -145,22 +146,8 @@ class ReaderViewModel: ObservableObject {
           }
         
           print("Mutation complete.")
-          self.lastSavedOzDrank = self.todayDay.ozDrank
+        self.daysMap[self.todayDay.id] = self.todayDay
+        self.lastSavedOzDrank = self.todayDay.ozDrank
       }
-  }
-
-  func fetchDays() {
-    api
-      .days()
-      .receive(on: DispatchQueue.main)
-      .sink(receiveCompletion: { completion in
-        if case .failure(let error) = completion {
-          self.error = error
-        }
-      }, receiveValue: { days in
-        self.allDays = days
-        self.error = nil
-      })
-      .store(in: &subscriptions)
   }
 }

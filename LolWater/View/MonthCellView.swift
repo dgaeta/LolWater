@@ -52,7 +52,9 @@ struct MonthCellView: View {
             .background(getBackgroundColor())
         .cornerRadius(cellWidth/2)
       
-      Text("\(ozDrank)")
+      Text("\(ozDrank) oz")
+        .foregroundColor(Color.blue)
+        .font(.caption)
     }
   }
 }

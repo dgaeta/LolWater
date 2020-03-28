@@ -52,6 +52,7 @@ final class UserManager: ObservableObject {
                 print("Unexpected case")
             }
         } else if let error = error {
+          print("ERROR ON SIGNUP")
             if let error = error as? AWSMobileClientError {
                 switch(error) {
                 case .usernameExists(let message):
@@ -63,7 +64,6 @@ final class UserManager: ObservableObject {
             print("\(error.localizedDescription)")
         }
     }
-
   }
   
   func load() {

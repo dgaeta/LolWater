@@ -13,7 +13,7 @@ struct ProfileSummary: View {
   var userViewModel: UserManager
   var readerViewModel: ReaderViewModel
   
-  var dateManager: DateManager
+  // var dateManager: DateManager
     
     static let goalFormat: DateFormatter = {
         let formatter = DateFormatter()
@@ -26,7 +26,7 @@ struct ProfileSummary: View {
     self.profile = profile
     self.userViewModel = userViewModel
     self.readerViewModel = readerViewModel
-    self.dateManager = DateManager(calendar: Calendar.current, minimumDate: readerViewModel.earliestDayRecord!, maximumDate: Date(), mode: 2) // automatically goes to mode=2 after start selection, and vice versa.
+    // self.dateManager = DateManager(calendar: Calendar.current, minimumDate: readerViewModel.earliestDayRecord!, maximumDate: Date(), mode: 2) // automatically goes to mode=2 after start selection, and vice versa.
   }
     
     var body: some View {
@@ -65,7 +65,7 @@ struct ProfileSummary: View {
               
               
               VStack {
-                CalendarHistoryView(isPresented: .constant(true), dateManager: self.dateManager, readerViewModel: self.readerViewModel)
+                CalendarHistoryView(isPresented: .constant(true), dateManager: DateManager(calendar: Calendar.current, minimumDate: readerViewModel.earliestDayRecord!, maximumDate: Date(), mode: 2), readerViewModel: self.readerViewModel)
               }.frame(height: 400)
               
               Button(action: self.userViewModel.signOut) {

@@ -212,10 +212,10 @@
 				8252594023DA7C7200E266A8 /* WebApi.swift */,
 				825BB1EE240D6B4200F67F1E /* Settings.swift */,
 				828F253C23BEAD6A00B87743 /* ProfileViewModel.swift */,
-				821896FF242329B000551F3B /* ReaderViewModel.swift */,
 				82C5954B242E487900014454 /* DateManager.swift */,
 				82C5954D242E49EE00014454 /* ColorSettings.swift */,
 				825BB1EC240D6B2300F67F1E /* UserManager.swift */,
+				821896FF242329B000551F3B /* ReaderViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

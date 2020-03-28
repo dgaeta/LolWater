@@ -12,12 +12,12 @@ import AWSMobileClient
 
 struct ReaderView: View {
   @Environment(\.colorScheme) var colorScheme: ColorScheme
+  @ObservedObject var readerViewModel: ReaderViewModel
   @EnvironmentObject var settings: Settings
   var userViewModel: UserManager
   @State var showingProfileSheet = false
   
   var today = "2020-03-24"
-  @ObservedObject var model: ReaderViewModel
   
   // Reference AppSync client
   var appSyncClient: AWSAppSyncClient?
@@ -31,19 +31,19 @@ struct ReaderView: View {
       }
   }
 
-  init(model: ReaderViewModel, userViewModel: UserManager) {
-    self.model = model
+  init(userViewModel: UserManager) {
     self.userViewModel = userViewModel
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     appSyncClient = appDelegate.appSyncClient
-    self.model.runQuery(userId: userViewModel.profile.username)
+    self.readerViewModel = ReaderViewModel()
+    self.readerViewModel.runQuery(userId: userViewModel.profile.username)
   }
 
   
   func getOz() -> Int {
-    if self.model.mapOfDays.index(forKey: today) != nil {
-      return self.model.mapOfDays[today]!.ozDrank
+    if self.readerViewModel.mapOfDays.index(forKey: today) != nil {
+      return self.readerViewModel.mapOfDays[today]!.ozDrank
     } else {
       return 0
     }
@@ -59,15 +59,15 @@ struct ReaderView: View {
           Section() {
             
             HStack {
-              DayView(ozDrank: self.model.todayDay.ozDrank)
+              DayView(ozDrank: self.readerViewModel.todayDay.ozDrank)
               
               // TimeButtonDrawerView()
-              Text("Oz drank: \(self.model.todayDay.ozDrank)")
+              Text("Oz drank: \(self.readerViewModel.todayDay.ozDrank)")
             }
             
           }.padding([.top], 90)
           
-          Button(action: { self.model.runUpdate(userId: self.userViewModel.profile.username)} ) {
+          Button(action: { self.readerViewModel.runUpdate(userId: self.userViewModel.profile.username)} ) {
             HStack {
               Image(systemName: "icloud.fill")
                 .resizable()
@@ -78,11 +78,11 @@ struct ReaderView: View {
             }
           }
           .bordered()
-          .disabled(self.model.lastSavedOzDrank == self.model.todayDay.ozDrank)
+          .disabled(self.readerViewModel.lastSavedOzDrank == self.readerViewModel.todayDay.ozDrank)
           
           HStack {
-            DecreaseButtonView(action: self.model.decreaseTodaysOzDrank)
-            IncreaseButtonView(action: self.model.increaseTodaysOzDrank)
+            DecreaseButtonView(action: self.readerViewModel.decreaseTodaysOzDrank)
+            IncreaseButtonView(action: self.readerViewModel.increaseTodaysOzDrank)
           }
 
           
@@ -91,7 +91,7 @@ struct ReaderView: View {
         .navigationBarTitle(Text("LolWater"))
         .navigationBarItems(trailing: profileButton)
         .sheet(isPresented: self.$showingProfileSheet, content: {
-          ProfileSummary(profile: Profile(), userViewModel: self.userViewModel, readerViewModel: self.model)
+          ProfileSummary(profile: Profile(), userViewModel: self.userViewModel, readerViewModel: self.readerViewModel)
         })
       }
     }
@@ -99,6 +99,7 @@ struct ReaderView: View {
 
 struct ReaderView_Previews: PreviewProvider {
   static var previews: some View {
-    ReaderView(model: ReaderViewModel(), userViewModel: UserManager())
+    ReaderView(userViewModel: UserManager())
+    .environmentObject(ReaderViewModel())
   }
 }

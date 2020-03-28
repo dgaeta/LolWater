@@ -32,11 +32,6 @@ class DateManager : ObservableObject {
         self.selectedDates = selectedDates
         self.mode = mode
     }
-  
-    func getISOFormat(date: Date) -> String {
-      let calendar = Calendar.current
-      return "\(calendar.dateComponents([.year], from: date))-\(calendar.dateComponents([.month], from: date))-\(calendar.dateComponents([.day], from: date).day!)"
-    }
     
     func selectedDatesContains(date: Date) -> Bool {
         if let _ = self.selectedDates.first(where: { calendar.isDate($0, inSameDayAs: date) }) {

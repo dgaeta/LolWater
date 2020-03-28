@@ -15,7 +15,8 @@ struct StarterView: View {
   var body: some View {
     Group {
       if self.userViewModel.isRegistered {
-          ReaderView(model: ReaderViewModel(), userViewModel: userViewModel)
+        ReaderView(userViewModel: userViewModel)
+          
       } else {
         RegisterView(keyboardHandler: KeyboardFollower())
       }
